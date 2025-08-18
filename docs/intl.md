@@ -2,7 +2,7 @@
 
 ## 基础框架 `react-intl`
 
-Zcloud UI 使用了 `React-Intl` 来管理页面的语言显示
+GaoCloud UI 使用了 `React-Intl` 来管理页面的语言显示
 
 关于[React-intl](https://github.com/formatjs/react-intl/blob/master/docs/README.md)
 

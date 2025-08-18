@@ -29,9 +29,9 @@ websocket来解决当前的通讯问题。
 定义方式和其它资源相同，URL中的group部分和REST接口有区分，如下
 
 ```
-/apis/ws.zcloud.cn/v1/resources
+/apis/ws.gaocloud.cn/v1/resources
 
-Group: ws.zcloud.cn
+Group: ws.gaocloud.cn
 
 Version: v1
 

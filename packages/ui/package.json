@@ -1,10 +1,10 @@
 {
-  "name": "@singlecloud/ui",
+  "name": "@GaoCloud-UI/ui",
   "version": "2.0.0",
-  "description": "Zcloud manage system ui",
+  "description": "GaoCloud manage system ui",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zdnscloud/singlecloud-ui.git"
+    "url": "git://github.com/gsmlg-opt/GaoCloud-UI.git"
   },
   "engines": {
     "npm": ">=5",
@@ -121,6 +121,7 @@
     "xterm-addon-fit": "0.3.0"
   },
   "devDependencies": {
+    "@babel/polyfill": "7.7.0",
     "@babel/cli": "7.7.4",
     "@babel/core": "7.7.4",
     "@babel/plugin-proposal-class-properties": "7.7.4",
@@ -188,12 +189,10 @@
     "svgo": "1.3.2",
     "terser-webpack-plugin": "2.2.1",
     "url-loader": "3.0.0",
-    "webapp-webpack-plugin": "^2.7.1",
     "webpack": "^4.41.2",
     "webpack-cli": "3.3.10",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0",
-    "webpack-pwa-manifest": "^4.1.1",
     "whatwg-fetch": "^3.0.0"
   }
 }

@@ -90,7 +90,7 @@ export const openAlarmChannelEpic = (action$, state$) =>
       const subject = webSocket(
         `${
           protocol === 'https:' ? 'wss:' : 'ws:'
-        }//${hostname}:${port}/apis/ws.zcloud.cn/v1/alarm`
+        }//${hostname}:${port}/apis/ws.gaocloud.cn/v1/alarm`
       );
 
       return subject

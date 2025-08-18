@@ -84,9 +84,9 @@ export const CreateApplicationPage = ({
 
   const reg = new RegExp('^/clusters/[^/]+/namespaces/[^/]+/([^/]+)/([^/]+)');
   const [path, res, chartID] = reg.exec(pathname) || [];
-  let isZcloudChart = false;
+  let isGaoCloudChart = false;
   if (res === 'charts') {
-    isZcloudChart = true;
+    isGaoCloudChart = true;
   }
   const chart = charts.get(chartID) || charts.clear();
 
@@ -109,7 +109,7 @@ export const CreateApplicationPage = ({
         chartVersion,
         ...formData
       } = formValues.toJS();
-      const url = `/apis/zcloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/applications`;
+      const url = `/apis/gaocloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/applications`;
       const data = {
         name,
         chartVersion,
@@ -132,7 +132,7 @@ export const CreateApplicationPage = ({
     }
   }
 
-  const storeTitle = isZcloudChart ? chartsMessages.pageTitle : chartsMessages.pageTitleUsers;
+  const storeTitle = isGaoCloudChart ? chartsMessages.pageTitle : chartsMessages.pageTitleUsers;
 
   return (
     <div className={classes.root}>

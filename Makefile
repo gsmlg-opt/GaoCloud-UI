@@ -15,14 +15,14 @@ bootstrap:
 	yarn && npm run bootstrap
 
 docker: build-image
-	docker push zdnscloud/singlecloud-ui:${BRANCH}
+	docker push gsmlg-opt/GaoCloud-UI:${BRANCH}
 
 build-image:
-	docker build -t zdnscloud/singlecloud-ui:${BRANCH} --build-arg version=${VERSION} --build-arg buildtime=${BUILD} --build-arg branch=${BRANCH} .
+	docker build -t gsmlg-opt/GaoCloud-UI:${BRANCH} --build-arg version=${VERSION} --build-arg buildtime=${BUILD} --build-arg branch=${BRANCH} .
 	docker image prune -f
 
 clean-image:
-	docker rmi zdnscloud/singlecloud-ui:${BRANCH}
+	docker rmi gsmlg-opt/GaoCloud-UI:${BRANCH}
 
 lint-staged:
 	npm run lint:staged

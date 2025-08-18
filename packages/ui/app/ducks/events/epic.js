@@ -22,7 +22,7 @@ export const eventEpic = (action$) =>
       const subject = webSocket(
         `${
           protocol === 'https:' ? 'wss:' : 'ws:'
-        }//${hostname}:${port}/apis/ws.zcloud.cn/v1/clusters/${clusterID}/event`
+        }//${hostname}:${port}/apis/ws.gaocloud.cn/v1/clusters/${clusterID}/event`
       );
 
       return subject

@@ -60,14 +60,14 @@ const ApplicationStorePage = ({
 
   const reg = new RegExp('^/clusters/[^/]+/namespaces/[^/]+/([^/]+)');
   const [path, res] = reg.exec(pathname) || [];
-  let isZcloudChart = false;
+  let isGaoCloudChart = false;
   if (res === 'charts') {
-    isZcloudChart = true;
+    isGaoCloudChart = true;
   }
 
   useEffect(() => {
     if (url) {
-      loadCharts(`${url}?${isZcloudChart ? 'is_zcloud_chart=true' : 'is_user_chart=true'}`, {
+      loadCharts(`${url}?${isGaoCloudChart ? 'is_gaocloud_chart=true' : 'is_user_chart=true'}`, {
         clusterID,
         namespaceID,
       });
@@ -75,14 +75,14 @@ const ApplicationStorePage = ({
     return () => {
       // try cancel something when unmount
     };
-  }, [clusterID, isZcloudChart, loadCharts, namespaceID, url]);
+  }, [clusterID, isGaoCloudChart, loadCharts, namespaceID, url]);
 
   const doSubmit = (formValues) => {
     setFilter(formValues.toJS());
   };
 
-  const pageTitle = isZcloudChart ? messages.pageTitle : messages.pageTitleUsers;
-  const pageDesc = isZcloudChart ? messages.pageDesc : messages.pageDescUsers;
+  const pageTitle = isGaoCloudChart ? messages.pageTitle : messages.pageTitleUsers;
+  const pageDesc = isGaoCloudChart ? messages.pageDesc : messages.pageDescUsers;
 
   return (
     <div className={classes.root}>

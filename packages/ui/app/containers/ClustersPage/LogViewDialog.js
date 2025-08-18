@@ -32,7 +32,7 @@ const LogViewDialog = ({ isOpen, id, closeDialog }) => {
   const { protocol, hostname, port } = window.location;
   const url = `${
     protocol === 'https:' ? 'wss:' : 'ws:'
-  }//${hostname}:${port}/apis/ws.zcloud.cn/v1/clusters/${id}/zkelog`;
+  }//${hostname}:${port}/apis/ws.gaocloud.cn/v1/clusters/${id}/zkelog`;
   const { open, close, logs } = useLogs();
 
   return (

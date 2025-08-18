@@ -23,7 +23,7 @@ export const selectDomain = (state) => state.get(c.prefix) || initialState;
 export const makeSelectURL = () =>
   createSelector(
     selectDomain,
-    (substate) => '/apis/zcloud.cn/v1/thresholds'
+    (substate) => '/apis/gaocloud.cn/v1/thresholds'
   );
 
 export const makeSelectData = () =>

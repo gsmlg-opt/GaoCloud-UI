@@ -1,7 +1,6 @@
 // Important modules this config uses
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 const OfflinePlugin = require('offline-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -59,7 +58,7 @@ module.exports = require('./webpack.base.babel')({
           name: 'vendor',
           chunks: 'all',
         },
-        zcloud: {
+        gaocloud: {
           chunks: 'all',
           minChunks: 2,
           reuseExistingChunk: true,
@@ -121,7 +120,7 @@ module.exports = require('./webpack.base.babel')({
         // This option is very dangerous.
         // This option should not be changed at all after you deploy ServiceWorker to production.
         // Changing it may corrupt the cache and leave old caches on users' devices.
-        cacheName: 'zcloud',
+      cacheName: 'gaocloud',
         events: true,
       },
       AppCache: {
@@ -134,37 +133,6 @@ module.exports = require('./webpack.base.babel')({
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
       minRatio: 0.8,
-    }),
-
-    new WebpackPwaManifest({
-      name: 'Zcloud UI',
-      short_name: 'Zcloud',
-      description: 'Zcloud UI project!',
-      background_color: '#fafafa',
-      theme_color: '#b1624d',
-      inject: true,
-      ios: true,
-      icons: [
-        {
-          src: path.resolve(
-            __dirname,
-            '..',
-            '..',
-            'app/images/icon-512x512.png'
-          ),
-          sizes: [72, 96, 128, 144, 192, 384, 512],
-        },
-        {
-          src: path.resolve(
-            __dirname,
-            '..',
-            '..',
-            'app/images/icon-512x512.png'
-          ),
-          sizes: [120, 152, 167, 180],
-          ios: true,
-        },
-      ],
     }),
 
     new HashedModuleIdsPlugin({
