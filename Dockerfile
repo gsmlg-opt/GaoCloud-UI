@@ -4,8 +4,8 @@ RUN apk --no-cache add make
 
 
 
-COPY . /singlecloud-ui
-RUN cd /singlecloud-ui && make build
+COPY . /GaoCloud-UI
+RUN cd /GaoCloud-UI && make build
 
 FROM alpine:latest
 
@@ -13,8 +13,8 @@ ARG version
 ARG buildtime
 ARG branch
 
-LABEL ui.zcloud/version=$version ui.zcloud/buildtime=$buildtime ui.zcloud/branch=$branch
+LABEL ui.gaocloud/version=$version ui.gaocloud/buildtime=$buildtime ui.gaocloud/branch=$branch
 
-COPY --from=uibuild /singlecloud-ui/packages/ui/build /www
+COPY --from=uibuild /GaoCloud-UI/packages/ui/build /www
 
 WORKDIR /www

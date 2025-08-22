@@ -19,7 +19,7 @@ export const selectDomain = (state) => state.get(c.prefix) || initialState;
  * Other specific selectors
  */
 export const makeSelectURL = () =>
-  createSelector(selectDomain, (substate) => '/apis/zcloud.cn/v1/svcmeshtap');
+  createSelector(selectDomain, (substate) => '/apis/gaocloud.cn/v1/svcmeshtap');
 
 export const makeSelectData = () =>
   createSelector(selectDomain, (substate) => substate.get('data'));

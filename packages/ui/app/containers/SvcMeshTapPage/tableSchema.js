@@ -174,7 +174,7 @@ const tableSchema = schema
               <OpenInNewIcon fontSize="small" />
             </IconButton>
           );
-          const curLink = (cur.get('link') || '').replace('/apis/zcloud.cn/v1', '');
+          const curLink = (cur.get('link') || '').replace('/apis/gaocloud.cn/v1', '');
 
           return (
             <Grid container direction="row" alignItems="center" spacing={1}>

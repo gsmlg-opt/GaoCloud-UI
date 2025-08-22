@@ -136,7 +136,7 @@ const LoginForm = (props) => {
               fontFamily="ArialMT, Arial"
               transform="translate(0 240)"
             >
-              Zcloud
+              GaoCloud
             </text>
           </g>
         </svg>

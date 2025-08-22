@@ -2,7 +2,7 @@
 
 ## 视图引擎 `React`
 
-**Zcloud** 使用 `React` 开发用户UI
+**GaoCloud** 使用 `React` 开发用户UI
 
 当前 React 版本为 16.9
 

@@ -2,7 +2,7 @@
   "name": "{{dashCase name}}",
   "version": "0.0.1",
   "description": "description of {{properCase name}}",
-  "repository": "zdnscloud/singlecloud-ui",
+  "repository": "gsmlg-opt/GaoCloud-UI",
   "license": "MIT",
   "authors": [
     "gsmlg"

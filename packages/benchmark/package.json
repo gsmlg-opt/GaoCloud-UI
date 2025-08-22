@@ -4,7 +4,7 @@
   "description": "benchmark for ui",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zdnscloud/singlecloud-ui.git"
+    "url": "git://github.com/gsmlg-opt/GaoCloud-UI.git"
   },
   "engines": {
     "npm": ">=5",

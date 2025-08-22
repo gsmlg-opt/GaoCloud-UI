@@ -3,7 +3,7 @@ authors = ["gsmlg"]
 language = "zh-CN"
 multilingual = false
 src = "docs"
-title = "Zcloud UI Documents"
+title = "GaoCloud UI Documents"
 
 [output.html]
 theme = "theme"

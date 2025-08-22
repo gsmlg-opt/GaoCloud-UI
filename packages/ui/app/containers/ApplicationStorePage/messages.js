@@ -11,11 +11,11 @@ export const scope = 'app.containers.ApplicationStorePage';
 export default defineMessages({
   pageTitle: {
     id: `${scope}.pageTitle`,
-    defaultMessage: 'ZcloudCharts Title',
+    defaultMessage: 'GaoCloudCharts Title',
   },
   pageDesc: {
     id: `${scope}.pageDesc`,
-    defaultMessage: 'Description of ZcloudChartsPage',
+    defaultMessage: 'Description of GaoCloudChartsPage',
   },
   pageTitleUsers: {
     id: `${scope}.pageTitleUsers`,

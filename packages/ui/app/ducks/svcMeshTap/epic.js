@@ -20,7 +20,7 @@ export const svcMeshTap = (action$, state$, { ajax, catchAjaxError }) =>
       const subject = webSocket(
         `${
           protocol === 'https:' ? 'wss:' : 'ws:'
-        }//${hostname}:${port}/apis/ws.zcloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/tap?resource_type=${
+        }//${hostname}:${port}/apis/ws.gaocloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/tap?resource_type=${
           payload.resource_type
         }&resource_name=${payload.resource_name}&to_resource_type=${
           payload.to_resource_type

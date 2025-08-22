@@ -137,7 +137,7 @@ const LogsPage = ({
     if(taskID){
       setLogUrl(`${
         protocol === 'https:' ? 'wss:' : 'ws:'
-      }//${hostname}:${port}/apis/ws.zcloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/workflows/${workFlowID}/workflowtasks/${taskID}/log`)
+      }//${hostname}:${port}/apis/ws.gaocloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/workflows/${workFlowID}/workflowtasks/${taskID}/log`)
     }
   }, [clusterID, hostname, namespaceID, port, protocol, workFlowID]);
 

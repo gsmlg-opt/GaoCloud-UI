@@ -171,7 +171,7 @@ export const makeSelectLogURL = () =>
         window.location.hostname
       }:${
         window.location.port
-      }/apis/ws.zcloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/pods/${substate.getIn(
+      }/apis/ws.gaocloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/pods/${substate.getIn(
         ['openingPodLog', 'podID']
       )}/containers/${substate.getIn(['openingPodLog', 'containerName'])}/log`
   );

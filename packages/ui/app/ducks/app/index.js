@@ -35,11 +35,11 @@ function appReducer(state = initialState, { type, payload }) {
       let url = null;
       if (kind === 'cluster') {
         const { clusterID } = data;
-        url = `${base}/apis/ws.zcloud.cn/v1/clusters/${clusterID}/shell`;
+        url = `${base}/apis/ws.gaocloud.cn/v1/clusters/${clusterID}/shell`;
       }
       if (kind === 'pod') {
         const { clusterID, namespaceID, podID, containerName } = data;
-        url = `${base}/apis/ws.zcloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/pods/${podID}/containers/${containerName}/shell`;
+        url = `${base}/apis/ws.gaocloud.cn/v1/clusters/${clusterID}/namespaces/${namespaceID}/pods/${podID}/containers/${containerName}/shell`;
       }
       return state.set('termUrl', url);
     }

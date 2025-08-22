@@ -17,7 +17,7 @@
   "app.containers.App.cluster": "集群",
   "app.containers.App.clusterEvents": "集群事件",
   "app.containers.App.global": "总览",
-  "app.containers.App.header": "Zcloud",
+  "app.containers.App.header": "GaoCloud",
   "app.containers.App.leftMenuAppConfiguration": "应用配置",
   "app.containers.App.leftMenuAppManagement": "应用管理",
   "app.containers.App.leftMenuAppStore": "应用商店",
