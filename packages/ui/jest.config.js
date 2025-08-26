@@ -27,4 +27,5 @@ module.exports = {
   setupFiles: ['raf/polyfill', '<rootDir>/internals/testing/enzyme-setup.js'],
   testRegex: 'tests/.*\\.test\\.js$',
   snapshotSerializers: ['enzyme-to-json/serializer'],
+  testEnvironment: 'jsdom',
 };
