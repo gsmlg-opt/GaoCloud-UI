@@ -15,11 +15,14 @@
   },
   "pre-commit": "lint:staged",
   "devDependencies": {
-    "lerna": "3.19.0",
-    "plop": "2.5.3"
+    "lerna": "8.2.3",
+    "plop": "4.0.1"
   },
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "resolutions": {
+    "cheerio": "<1.0.0-rc.3"
+  }
 }
