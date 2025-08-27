@@ -6,7 +6,6 @@
 
 import React, { useCallback, useState } from 'react';
 import { findDOMNode } from 'react-dom';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';

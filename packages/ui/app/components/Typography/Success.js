@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import withStyles from '@mui/material/styles/withStyles';
 import typographyStyle from './typographyStyle';
 
@@ -17,9 +16,6 @@ function Success({ ...props }) {
   );
 }
 
-Success.propTypes = {
-  classes: PropTypes.object.isRequired,
-  inverse: PropTypes.bool,
-};
+
 
 export default withStyles(typographyStyle)(Success);

@@ -132,7 +132,6 @@
     "babel-plugin-react-intl": "8.2.25",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-plugin-styled-components": "^2.1.4",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "body-parser": "^2.2.0",
     "change-case": "5.4.4",
     "circular-dependency-plugin": "^5.2.2",

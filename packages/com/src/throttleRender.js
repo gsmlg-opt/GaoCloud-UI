@@ -5,7 +5,6 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import { throttle, isEqual } from 'lodash';
 
 export const throttleRender = (View, throttleTime = 100) => {

@@ -1,6 +1,5 @@
 import React, { createRef, useCallback, useState } from 'react';
 import { findDOMNode } from 'react-dom';
-import PropTypes from 'prop-types';
 import { Pie } from '@visx/shape';
 import { Group } from '@visx/group';
 

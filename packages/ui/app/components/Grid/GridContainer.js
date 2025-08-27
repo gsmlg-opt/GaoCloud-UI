@@ -1,6 +1,5 @@
 import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from 'prop-types';
 
 // @mui/material components
 import withStyles from '@mui/material/styles/withStyles';
@@ -27,10 +26,6 @@ GridContainer.defaultProps = {
   className: '',
 };
 
-GridContainer.propTypes = {
-  classes: PropTypes.object.isRequired,
-  children: PropTypes.node,
-  className: PropTypes.string,
-};
+
 
 export default withStyles(style)(GridContainer);

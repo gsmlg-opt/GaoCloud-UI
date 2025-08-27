@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import withStyles from '@mui/material/styles/withStyles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import { Link } from 'react-router-dom';
@@ -55,9 +54,5 @@ function BreadcrumbsContainer({ ...props }) {
   );
 }
 
-BreadcrumbsContainer.propTypes = {
-  classes: PropTypes.object.isRequired,
-  children: PropTypes.node,
-  className: PropTypes.string,
-};
+
 export default withStyles(style)(BreadcrumbsContainer);

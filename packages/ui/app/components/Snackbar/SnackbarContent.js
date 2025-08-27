@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 // @mui/material components
 import Snack from '@mui/material/SnackbarContent';
@@ -46,9 +45,3 @@ export default function SnackbarContent(props) {
   );
 }
 
-SnackbarContent.propTypes = {
-  message: PropTypes.node.isRequired,
-  color: PropTypes.oneOf(['info', 'success', 'warning', 'danger', 'primary']),
-  close: PropTypes.bool,
-  icon: PropTypes.object,
-};

@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 // nodejs library to set properties for components
-import PropTypes from 'prop-types';
 // @mui/material components
 import withStyles from '@mui/material/styles/withStyles';
 import GridItem from 'components/Grid/GridItem';
@@ -33,10 +32,6 @@ function ErrorInfo({ ...props }) {
   );
 }
 
-ErrorInfo.propTypes = {
-  classes: PropTypes.object.isRequired,
-  errorText: PropTypes.string,
-  close: PropTypes.func,
-};
+
 
 export default withStyles(customErrorStyle)(ErrorInfo);

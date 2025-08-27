@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 import { withStyles } from '@mui/material/styles';
 import logo from 'images/favicon.png';
@@ -18,8 +17,6 @@ const Brand = ({ classes }) => (
   </div>
 );
 
-Brand.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+
 
 export default withStyles(styles)(Brand);

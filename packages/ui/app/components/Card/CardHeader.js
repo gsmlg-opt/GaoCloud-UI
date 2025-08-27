@@ -2,7 +2,6 @@ import React from 'react';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
 // nodejs library to set properties for components
-import PropTypes from 'prop-types';
 // @mui/material components
 import withStyles from '@mui/material/styles/withStyles';
 // @mui/icons-material
@@ -38,20 +37,6 @@ function CardHeader({ ...props }) {
 
 CardHeader.defaultProps = {};
 
-CardHeader.propTypes = {
-  classes: PropTypes.object.isRequired,
-  className: PropTypes.string,
-  color: PropTypes.oneOf([
-    'none',
-    'default',
-    'primary',
-    'secondary',
-    'azure',
-    'cyanInverse',
-  ]),
-  plain: PropTypes.bool,
-  stats: PropTypes.bool,
-  icon: PropTypes.bool,
-};
+
 
 export default withStyles(cardHeaderStyle)(CardHeader);

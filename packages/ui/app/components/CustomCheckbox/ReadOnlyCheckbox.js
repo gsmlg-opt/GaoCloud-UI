@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-import PropTypes from 'prop-types';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Danger from 'components/Typography/Danger';
 import Checkbox from '@mui/material/Checkbox';
@@ -29,13 +28,6 @@ const ReadOnlyCheckbox = ({
   </FormControl>
 );
 
-ReadOnlyCheckbox.propTypes = {
-  classes: PropTypes.object.isRequired,
-  label: PropTypes.node,
-  labelProps: PropTypes.object,
-  id: PropTypes.string,
-  inputProps: PropTypes.object,
-  meta: PropTypes.object,
-};
+
 
 export default ReadOnlyCheckbox;

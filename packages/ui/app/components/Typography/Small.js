@@ -1,6 +1,5 @@
 import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from 'prop-types';
 // @mui/material components
 import withStyles from '@mui/material/styles/withStyles';
 // core components
@@ -15,8 +14,6 @@ function Small({ ...props }) {
   );
 }
 
-Small.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+
 
 export default withStyles(typographyStyle)(Small);

@@ -1,5 +1,4 @@
 import Popover from '@mui/material/Popover';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { withStyles } from '@mui/material/styles';
 

@@ -1,12 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
-import PropTypes from 'prop-types';
 
-LinkVerticalElbow.propTypes = {
-  innerRef: PropTypes.func,
-  before: PropTypes.bool,
-  after: PropTypes.bool,
-};
+
 
 export default function LinkVerticalElbow({
   className,

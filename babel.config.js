@@ -36,12 +36,6 @@ const productionPlugins = [
   '@babel/plugin-transform-react-constant-elements',
   'transform-dev-warning',
   ['react-remove-properties', { properties: ['data-ui-test'] }],
-  [
-    'transform-react-remove-prop-types',
-    {
-      mode: 'unsafe-wrap',
-    },
-  ],
 ];
 
 export default {

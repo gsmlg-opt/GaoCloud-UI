@@ -1,6 +1,5 @@
 import React from 'react';
 import { bindActionCreators, compose } from 'redux';
-import PropTypes from 'prop-types';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { SubmissionError, submit } from 'redux-form';
 import { createStructuredSelector } from 'reselect';

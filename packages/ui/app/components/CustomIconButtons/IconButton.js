@@ -1,6 +1,5 @@
 import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from 'prop-types';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
 
@@ -36,11 +35,6 @@ function RegularIconButton({ ...props }) {
   );
 }
 
-RegularIconButton.propTypes = {
-  classes: PropTypes.object.isRequired,
-  size: PropTypes.oneOf(['small', 'medium']),
-  disabled: PropTypes.bool,
-  block: PropTypes.bool,
-};
+
 
 export default withStyles(iconButtonStyle)(RegularIconButton);

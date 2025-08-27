@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Danger from 'components/Typography/Danger';
-import PropTypes from 'prop-types';
 import Checkbox from '@mui/material/Checkbox';
 import FormControl from '@mui/material/FormControl';
 
@@ -42,13 +41,6 @@ CustomCheckbox.defaultProps = {
   inputProps: {},
 };
 
-CustomCheckbox.propTypes = {
-  classes: PropTypes.object,
-  labelText: PropTypes.node,
-  id: PropTypes.string,
-  inputProps: PropTypes.object,
-  formControlProps: PropTypes.object,
-  meta: PropTypes.object,
-};
+
 
 export default CustomCheckbox;

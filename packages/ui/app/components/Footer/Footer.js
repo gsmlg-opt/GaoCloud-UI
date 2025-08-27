@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 // @mui/material components
 import withStyles from '@mui/material/styles/withStyles';
 import ListItem from '@mui/material/ListItem';
@@ -26,8 +25,6 @@ function Footer({ ...props }) {
   );
 }
 
-Footer.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
+
 
 export default withStyles(footerStyle)(Footer);

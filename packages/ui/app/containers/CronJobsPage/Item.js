@@ -4,7 +4,6 @@
  *
  */
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { useIntl, FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';

@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 
 import Snack from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
@@ -65,12 +64,3 @@ export default function Snackbar(props) {
   );
 }
 
-Snackbar.propTypes = {
-  message: PropTypes.node.isRequired,
-  color: PropTypes.oneOf(['info', 'success', 'warning', 'danger', 'primary']),
-  close: PropTypes.bool,
-  icon: PropTypes.object,
-  place: PropTypes.oneOf(['tl', 'tr', 'tc', 'br', 'bl', 'bc']),
-  open: PropTypes.bool,
-  closeNotification: PropTypes.func,
-};

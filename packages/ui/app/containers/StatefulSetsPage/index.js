@@ -5,7 +5,6 @@
  */
 
 import React, { useEffect, useState, memo } from 'react';
-import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { nodeShape } from '@data-ui/network';
 
 import DeploymentIcon from '../TreeGraph/icons/Deployment';
