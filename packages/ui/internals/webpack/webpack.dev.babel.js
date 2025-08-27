@@ -2,12 +2,13 @@
  * DEVELOPMENT WEBPACK CONFIGURATION
  */
 
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CircularDependencyPlugin = require('circular-dependency-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CircularDependencyPlugin from 'circular-dependency-plugin';
+import webpackBase from './webpack.base.babel.js';
 
-module.exports = require('./webpack.base.babel')({
+export default webpackBase({
   mode: 'development',
 
   // Add hot reloading in development

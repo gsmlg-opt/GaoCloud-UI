@@ -2,6 +2,7 @@
   "name": "GaoCloud-UI",
   "version": "2.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "node packages/ui/server",
     "prebuild": "npm run build:clean",

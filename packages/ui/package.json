@@ -1,6 +1,7 @@
 {
   "name": "@GaoCloud-UI/ui",
   "version": "2.0.0",
+  "type": "module",
   "description": "GaoCloud manage system ui",
   "repository": {
     "type": "git",

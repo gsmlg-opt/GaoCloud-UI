@@ -1,4 +1,4 @@
-const bpmr = require('babel-plugin-module-resolver');
+import bpmr from 'babel-plugin-module-resolver';
 
 function resolvePath(sourcePath, currentFile, opts) {
   if (sourcePath === 'markdown') {
@@ -21,7 +21,7 @@ if (process.env.BABEL_ENV === 'es') {
     [
       '@babel/preset-env',
       {
-        modules: ['esm', 'production-umd'].includes(process.env.BABEL_ENV) ? false : 'commonjs',
+        modules: ['esm', 'production-umd'].includes(process.env.BABEL_ENV) ? false : 'auto',
       },
     ],
   ];
@@ -44,7 +44,7 @@ const productionPlugins = [
   ],
 ];
 
-module.exports = {
+export default {
   presets: defaultPresets.concat(['@babel/preset-react']),
   plugins: [
     ['@babel/plugin-proposal-class-properties', { loose: true }],

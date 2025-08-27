@@ -1,12 +1,13 @@
 // Important modules this config uses
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const OfflinePlugin = require('offline-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import OfflinePlugin from 'offline-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
+import CompressionPlugin from 'compression-webpack-plugin';
+import webpackBase from './webpack.base.babel.js';
 
-module.exports = require('./webpack.base.babel')({
+export default webpackBase({
   mode: 'production',
 
   // In production, we skip all hot-reloading stuff

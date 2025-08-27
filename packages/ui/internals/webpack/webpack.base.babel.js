@@ -2,8 +2,8 @@
  * COMMON WEBPACK CONFIGURATION
  */
 
-const path = require('path');
-const webpack = require('webpack');
+import path from 'path';
+import webpack from 'webpack';
 
 // Remove this line once the following warning goes away (it was meant for webpack loader authors not users):
 // 'DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic,
@@ -19,7 +19,7 @@ const defaultAlias = {
   '@gsmlg/utils': `${WorkspaceRoot}/packages/utils/src`,
 };
 
-module.exports = (options) => ({
+export default (options) => (
   mode: options.mode,
   entry: options.entry,
   output: {
