@@ -6,8 +6,8 @@ const prettierOptions = JSON.parse(
 );
 
 module.exports = {
-  parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier', 'prettier/react'],
+  parser: '@babel/eslint-parser',
+  extends: ['airbnb', 'prettier'],
   plugins: ['prettier', 'react', 'react-hooks'],
   env: {
     jest: true,
@@ -95,6 +95,16 @@ module.exports = {
     'require-yield': 0,
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "react/function-component-definition": 0,
+    "react/jsx-no-useless-fragment": 0,
+    "default-param-last": 0,
+    "import/no-cycle": 0,
+    "react/jsx-no-bind": 0,
+    "import/extensions": 0,
+    "import/no-import-module-exports": 0,
+    "react/no-unknown-property": 0,
+    "prefer-regex-literals": 0,
+    "no-promise-executor-return": 0,
   },
   settings: {
     'import/resolver': {

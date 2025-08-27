@@ -1,8 +1,8 @@
 // Important modules this config uses
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OfflinePlugin = require('offline-plugin');
-const { HashedModuleIdsPlugin } = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
@@ -19,54 +19,6 @@ module.exports = require('./webpack.base.babel')({
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
-  },
-
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          warnings: false,
-          compress: {
-            comparisons: false,
-          },
-          parse: {},
-          mangle: true,
-          output: {
-            comments: false,
-            ascii_only: true,
-          },
-        },
-        parallel: true,
-        cache: true,
-        sourceMap: true,
-      }),
-    ],
-    nodeEnv: 'production',
-    sideEffects: true,
-    concatenateModules: true,
-    splitChunks: {
-      chunks: 'all',
-      minSize: 30000,
-      minChunks: 1,
-      maxAsyncRequests: 5,
-      maxInitialRequests: 3,
-      name: true,
-      cacheGroups: {
-        commons: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendor',
-          chunks: 'all',
-        },
-        gaocloud: {
-          chunks: 'all',
-          minChunks: 2,
-          reuseExistingChunk: true,
-          enforce: true,
-        },
-      },
-    },
-    runtimeChunk: true,
   },
 
   plugins: [
@@ -88,46 +40,6 @@ module.exports = require('./webpack.base.babel')({
       inject: true,
     }),
 
-    // Put it in the end to capture all the HtmlWebpackPlugin's
-    // assets manipulations and do leak its manipulations to HtmlWebpackPlugin
-    new OfflinePlugin({
-      relativePaths: false,
-      publicPath: '/',
-      appShell: '/',
-
-      // No need to cache .htaccess. See http://mxs.is/googmp,
-      // this is applied before any match in `caches` section
-      excludes: [],
-
-      caches: {
-        main: [':rest:'],
-
-        // All chunks marked as `additional`, loaded after main section
-        // and do not prevent SW to install. Change to `optional` if
-        // do not want them to be preloaded at all (cached only when first loaded)
-        additional: ['*.chunk.js'],
-      },
-
-      // Removes warning for about `additional` section usage
-      safeToUseOptionalCaches: true,
-
-      // autoUpdate
-      autoUpdate: true,
-
-      // Service Worker generation
-      ServiceWorker: {
-        output: 'sw.js',
-        // This option is very dangerous.
-        // This option should not be changed at all after you deploy ServiceWorker to production.
-        // Changing it may corrupt the cache and leave old caches on users' devices.
-      cacheName: 'gaocloud',
-        events: true,
-      },
-      AppCache: {
-        events: true,
-      },
-    }),
-
     new CompressionPlugin({
       algorithm: 'gzip',
       test: /\.js$|\.css$|\.html$/,
@@ -135,7 +47,7 @@ module.exports = require('./webpack.base.babel')({
       minRatio: 0.8,
     }),
 
-    new HashedModuleIdsPlugin({
+    new webpack.ids.HashedModuleIdsPlugin({
       hashFunction: 'sha256',
       hashDigest: 'hex',
       hashDigestLength: 20,
