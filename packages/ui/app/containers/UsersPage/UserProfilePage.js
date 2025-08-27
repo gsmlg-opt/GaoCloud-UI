@@ -14,9 +14,9 @@ import { fromJS } from 'immutable';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { Link } from 'react-router-dom';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Fab from '@material-ui/core/Fab';
-import KeyIcon from '@material-ui/icons/VpnKey';
+import CssBaseline from '@mui/material/CssBaseline';
+import Fab from '@mui/material/Fab';
+import KeyIcon from '@mui/icons-material/VpnKey';
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
 import CardHeader from 'components/Card/CardHeader';

@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import GridItem from 'components/Grid/GridItem';
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 import Button from 'components/CustomButtons/Button';
 import DeleteIcon from 'components/Icons/Delete';
 import Confirm from 'components/Confirm/Confirm';

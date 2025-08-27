@@ -11,16 +11,16 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import { Link } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import { withStyles } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 import { SimpleTable } from '@gsmlg/com';
-import Fab from '@material-ui/core/Fab';
-import EditIcon from '@material-ui/icons/Edit';
-import IconButton from '@material-ui/core/IconButton';
+import Fab from '@mui/material/Fab';
+import EditIcon from '@mui/icons-material/Edit';
+import IconButton from '@mui/material/IconButton';
 import ShellIcon from 'components/Icons/Shell';
 import LogIcon from 'components/Icons/Log';
-import Chip from '@material-ui/core/Chip';
+import Chip from '@mui/material/Chip';
 
 import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
 import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';

@@ -5,14 +5,14 @@ import { Field, FieldArray, reduxForm } from 'redux-form/immutable';
 import { FormattedMessage } from 'react-intl';
 import getByKey from '@gsmlg/utils/getByKey';
 
-import List from '@material-ui/core/List';
-import Button from '@material-ui/core/Button';
+import List from '@mui/material/List';
+import Button from '@mui/material/Button';
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import IconButton from '@material-ui/core/IconButton';
-import AddIcon from '@material-ui/icons/Add';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import IconButton from '@mui/material/IconButton';
+import AddIcon from '@mui/icons-material/Add';
 import MinusIcon from 'components/Icons/Minus';
 
 import Danger from 'components/Typography/Danger';

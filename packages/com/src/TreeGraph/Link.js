@@ -13,7 +13,7 @@ import {
   LinkHorizontalLine,
   LinkVerticalLine,
   LinkRadialLine,
-} from '@vx/shape';
+} from '@visx/shape';
 import { LinkHorizontalElbow, LinkVerticalElbow } from './elbow';
 
 function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {

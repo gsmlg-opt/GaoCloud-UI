@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Group } from '@vx/group';
+import { Group } from '@visx/group';
 
 import Node from './Node';
 import { getTopLeft } from './utils';

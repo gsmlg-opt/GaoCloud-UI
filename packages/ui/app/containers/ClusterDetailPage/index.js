@@ -13,7 +13,7 @@ import { bindActionCreators, compose } from 'redux';
 import { push } from 'connected-react-router';
 
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Helmet from 'components/Helmet/Helmet';

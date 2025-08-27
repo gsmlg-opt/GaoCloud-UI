@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import withStyles from '@mui/material/styles/withStyles';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
 import { Link } from 'react-router-dom';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import homeIcon from 'images/clusters/home.png';
 
 const style = {

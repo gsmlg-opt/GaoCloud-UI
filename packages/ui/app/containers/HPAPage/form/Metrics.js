@@ -2,11 +2,11 @@ import React, { PureComponent, Fragment, useState } from 'react';
 import { fromJS, is } from 'immutable';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { FieldArray } from 'redux-form/immutable';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
 
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';

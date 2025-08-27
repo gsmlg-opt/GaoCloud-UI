@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withStyles from '@material-ui/core/styles/withStyles';
+import withStyles from '@mui/material/styles/withStyles';
 import typographyStyle from './typographyStyle';
 
 function Warning({ ...props }) {

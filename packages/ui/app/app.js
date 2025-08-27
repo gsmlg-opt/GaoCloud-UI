@@ -14,10 +14,9 @@ import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
 // Import all the third party stuff
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router/immutable';
-import history from 'utils/history';
+import { BrowserRouter } from 'react-router-dom';
 
 // Import root app
 import App from 'containers/App';
@@ -38,15 +37,15 @@ import { translationMessages } from './i18n';
 const MOUNT_NODE = document.getElementById('app');
 
 const render = (messages) => {
-  ReactDOM.render(
+  const root = createRoot(MOUNT_NODE);
+  root.render(
     <Provider store={store}>
       <LanguageProvider messages={messages}>
-        <ConnectedRouter history={history}>
+        <BrowserRouter>
           <App />
-        </ConnectedRouter>
+        </BrowserRouter>
       </LanguageProvider>
-    </Provider>,
-    MOUNT_NODE
+    </Provider>
   );
 };
 

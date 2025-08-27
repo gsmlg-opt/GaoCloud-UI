@@ -11,10 +11,10 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import parseCmd from '@gsmlg/utils/parseCmd';
 
-import InputAdornment from '@material-ui/core/InputAdornment';
-import ButtonBase from '@material-ui/core/ButtonBase';
-import AddIcon from '@material-ui/icons/Add';
-import RemoveIcon from '@material-ui/icons/Remove';
+import InputAdornment from '@mui/material/InputAdornment';
+import ButtonBase from '@mui/material/ButtonBase';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Card from 'components/Card/Card';
@@ -22,9 +22,9 @@ import CardHeader from 'components/Card/CardHeader';
 import CardBody from 'components/Card/CardBody';
 import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
 import ReadOnlyCheckbox from 'components/CustomCheckbox/ReadOnlyCheckbox';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 import SwitchField from 'components/Field/SwitchField';
 
 import * as cActions from 'ducks/configMaps/actions';

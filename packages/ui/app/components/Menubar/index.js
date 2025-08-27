@@ -8,12 +8,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // import styled from 'styled-components';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import CloudIcon from '@material-ui/icons/Cloud';
+import { withStyles } from '@mui/material/styles';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import CloudIcon from '@mui/icons-material/Cloud';
 import logo from 'images/page-logo.png';
 
 import logoICon from 'images/logo.svg';

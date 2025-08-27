@@ -3,9 +3,9 @@ import React from 'react';
 import classNames from 'classnames';
 // nodejs library to set properties for components
 import PropTypes from 'prop-types';
-// @material-ui/core components
-import withStyles from '@material-ui/core/styles/withStyles';
-// @material-ui/icons
+// @mui/material components
+import withStyles from '@mui/material/styles/withStyles';
+// @mui/icons-material
 
 // core components
 import cardHeaderStyle from './cardHeaderStyle';

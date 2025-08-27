@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-// @material-ui/core components
-import Snack from '@material-ui/core/SnackbarContent';
-import IconButton from '@material-ui/core/IconButton';
-// @material-ui/icons
+// @mui/material components
+import Snack from '@mui/material/SnackbarContent';
+import IconButton from '@mui/material/IconButton';
+// @mui/icons-material
 import CloseIcon from 'components/Icons/Close';
 // core components
 import useStyles from './styles';

@@ -7,12 +7,12 @@ import getByKey from '@gsmlg/utils/getByKey';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/theme-tomorrow_night';
 
-import ListItem from '@material-ui/core/ListItem';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import Dialog from '@material-ui/core/Dialog';
-import AddIcon from '@material-ui/icons/Add';
-import DeleteIcon from '@material-ui/icons/Delete';
+import ListItem from '@mui/material/ListItem';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Dialog from '@mui/material/Dialog';
+import AddIcon from '@mui/icons-material/Add';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';

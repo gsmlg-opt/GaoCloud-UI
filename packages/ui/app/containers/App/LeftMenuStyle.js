@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import hexToRgb from '@gsmlg/utils/hexToRgb';
 
 export const styles = (theme) => ({

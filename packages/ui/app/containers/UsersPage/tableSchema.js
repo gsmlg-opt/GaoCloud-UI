@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { ucfirst } from '@gsmlg/utils';
-import Chip from '@material-ui/core/Chip';
-import PersonIcon from '@material-ui/icons/Person';
+import Chip from '@mui/material/Chip';
+import PersonIcon from '@mui/icons-material/Person';
 import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
 import Button from 'components/CustomButtons/Button';
 import { FormattedMessage } from 'react-intl';

@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 
 import boxImage from 'images/login-bg-box.png';
 import image from 'images/login-bg.jpg';

@@ -1,12 +1,12 @@
 import React, { Fragment, useState } from 'react';
 import Button from 'components/CustomButtons/Button';
 import { FormattedMessage } from 'react-intl';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/material/styles';
 import ChevronBottom from 'components/Icons/ChevronBottom';
-import Popper from '@material-ui/core/Popper';
-import ListItemText from '@material-ui/core/ListItemText';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import Popper from '@mui/material/Popper';
+import ListItemText from '@mui/material/ListItemText';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import messages from './messages';
 import styles from './styles';
 

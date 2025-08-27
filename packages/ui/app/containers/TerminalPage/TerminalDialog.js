@@ -11,12 +11,12 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
 import CardHeader from 'components/Card/CardHeader';
-import Dialog from '@material-ui/core/Dialog';
-import IconButton from '@material-ui/core/IconButton';
+import Dialog from '@mui/material/Dialog';
+import IconButton from '@mui/material/IconButton';
 import CloseIcon from 'components/Icons/Close';
 
 import { makeSelectTermUrl } from 'ducks/app/selectors';

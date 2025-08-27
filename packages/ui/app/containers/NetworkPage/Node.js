@@ -12,13 +12,13 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import { Pie } from '@vx/shape';
-import { Group } from '@vx/group';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import { Pie } from '@visx/shape';
+import { Group } from '@visx/group';
 
 import messages from './messages';
 import styles from './styles';

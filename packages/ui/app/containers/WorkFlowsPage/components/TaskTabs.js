@@ -12,10 +12,10 @@ import GridContainer from 'components/Grid/GridContainer';
 
 import { useLogs } from 'hooks/logs';
 
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 
 import Confirm from 'components/Confirm/Confirm';
 

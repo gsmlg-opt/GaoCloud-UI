@@ -12,13 +12,13 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import { Link } from 'react-router-dom';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Paper from '@material-ui/core/Paper';
-import { Pie } from '@vx/shape';
-import { Group } from '@vx/group';
-import { GradientPinkBlue } from '@vx/gradient';
-import { letterFrequency, browserUsage } from '@vx/mock-data';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import { Pie } from '@visx/shape';
+import { Group } from '@visx/group';
+import { GradientPinkBlue } from '@visx/gradient';
+import { letterFrequency, browserUsage } from '@visx/mock-data';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -6,10 +6,10 @@ import { FormattedMessage } from 'react-intl';
 import Confirm from 'components/Confirm/Confirm';
 import IconButton from 'components/CustomIconButtons/IconButton';
 import RestartIcon from 'components/Icons/Restart';
-// import IconButton from '@material-ui/core/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import ShellIcon from 'components/Icons/Shell';
 import LogIcon from 'components/Icons/Log';
-import Chip from '@material-ui/core/Chip';
+import Chip from '@mui/material/Chip';
 import messages from './messages';
 
 const schema = ['name', 'state', 'nodeName', 'containers', 'creationTimestamp'];

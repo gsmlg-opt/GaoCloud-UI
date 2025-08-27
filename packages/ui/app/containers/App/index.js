@@ -14,9 +14,8 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { MuiThemeProvider } from '@material-ui/core/styles';
-import { withRouter } from 'react-router';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { MuiThemeProvider } from '@mui/material/styles';
 
 import GlobalStyle from 'global-styles';
 import theme from 'theme';

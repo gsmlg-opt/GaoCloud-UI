@@ -17,12 +17,12 @@ import { bindActionCreators, compose } from 'redux';
 import { Switch, Route, Redirect, Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
-// @material-ui/core components
-import IconButton from '@material-ui/core/IconButton';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import Divider from '@material-ui/core/Divider';
-import Badge from '@material-ui/core/Badge';
+// @mui/material components
+import IconButton from '@mui/material/IconButton';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
+import Divider from '@mui/material/Divider';
+import Badge from '@mui/material/Badge';
 // core components
 import Snackbar from 'components/Snackbar/Snackbar';
 import Menubar from 'components/Menubar';

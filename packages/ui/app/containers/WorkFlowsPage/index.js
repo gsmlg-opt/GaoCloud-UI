@@ -11,11 +11,11 @@ import { connect } from 'react-redux';
 
 import Helmet from 'components/Helmet/Helmet';
 import { FormattedMessage } from 'react-intl';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 import { Link } from 'react-router-dom';
-import Typography from '@material-ui/core/Typography';
-import Fab from '@material-ui/core/Fab';
-import IconButton from '@material-ui/core/IconButton';
+import Typography from '@mui/material/Typography';
+import Fab from '@mui/material/Fab';
+import IconButton from '@mui/material/IconButton';
 import AddIcon from 'components/Icons/Add';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';

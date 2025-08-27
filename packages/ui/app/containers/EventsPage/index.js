@@ -16,12 +16,12 @@ import { Link } from 'react-router-dom';
 
 import history from 'utils/history';
 
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/material/styles';
 import Menubar from 'components/Menubar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Fab from '@material-ui/core/Fab';
-import IconButton from '@material-ui/core/IconButton';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import Fab from '@mui/material/Fab';
+import IconButton from '@mui/material/IconButton';
 
 import BackIcon from 'components/Icons/Back';
 import GridItem from 'components/Grid/GridItem';

@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import GridItem from 'components/Grid/GridItem';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import RightArrowIcon from 'components/Icons/RightArrow';
 import messages from '../messages';
 import useStyles from '../styles';

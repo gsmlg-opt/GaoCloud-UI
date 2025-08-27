@@ -1,5 +1,5 @@
 import React, { PureComponent, Fragment, useEffect, useState } from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/material/styles';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
@@ -7,7 +7,7 @@ import { bindActionCreators, compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import ShellIcon from 'components/Icons/Shell';
 import Confirm from 'components/Confirm/Confirm';
 

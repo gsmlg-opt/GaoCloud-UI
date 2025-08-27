@@ -1,10 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormLabel from '@material-ui/core/FormLabel';
-import Switch from '@material-ui/core/Switch';
+import { withStyles } from '@mui/material/styles';
+import FormControl from '@mui/material/FormControl';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormLabel from '@mui/material/FormLabel';
+import Switch from '@mui/material/Switch';
 import Danger from 'components/Typography/Danger';
 
 const IOSSwitch = ({ ...props }) => {

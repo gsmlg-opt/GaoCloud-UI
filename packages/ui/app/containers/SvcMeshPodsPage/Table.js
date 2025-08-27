@@ -12,7 +12,7 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { fromJS } from 'immutable';
 
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import { SimpleTable } from '@gsmlg/com';
 
 import { makeSelectLocation } from 'ducks/app/selectors';

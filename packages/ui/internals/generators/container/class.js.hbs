@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/material/styles';
 
 {{#if wantHeaders}}
 import {{ properCase name }}Helmet from 'components/Helmet/Helmet';
@@ -16,7 +16,7 @@ import {{ properCase name }}Helmet from 'components/Helmet/Helmet';
 {{#if wantMessages}}
 import { FormattedMessage } from 'react-intl';
 {{/if}}
-import CssBaseline from '@material-ui/core/CssBaseline';
+import CssBaseline from '@mui/material/CssBaseline';
 
 import { makeSelect{{ duck }} } from 'ducks/{{ duck }}/selectors';
 import * as actions from 'ducks/{{ duck }}/actions';

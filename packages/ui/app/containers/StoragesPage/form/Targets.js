@@ -4,11 +4,11 @@ import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames';
 
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import AddIcon from '@material-ui/icons/Add';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import AddIcon from '@mui/icons-material/Add';
 
 import Danger from 'components/Typography/Danger';
 import GridItem from 'components/Grid/GridItem';

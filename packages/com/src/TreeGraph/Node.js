@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Group } from '@vx/group';
+import { Group } from '@visx/group';
 
 // daemonset deployment statfulset
 import IngressIcon from './icons/Ingress';

@@ -15,8 +15,8 @@ import { reduxForm, getFormValues } from 'redux-form/immutable';
 
 import { usePush } from 'hooks/router';
 
-import { withStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { withStyles } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Card from 'components/Card/Card';
@@ -27,7 +27,7 @@ import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
 import Helmet from 'components/Helmet/Helmet';
 import { makeSelectClusters } from 'ducks/clusters/selectors';
 
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 
 import {
   makeSelectCurrent,

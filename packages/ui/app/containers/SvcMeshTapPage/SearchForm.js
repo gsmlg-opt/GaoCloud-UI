@@ -11,7 +11,7 @@ import {
 } from 'redux-form/immutable';
 import getByKey from '@gsmlg/utils/getByKey';
 
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
 import CardHeader from 'components/Card/CardHeader';

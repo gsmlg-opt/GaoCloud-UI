@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Group } from '@vx/group';
+import { Group } from '@visx/group';
 import { NodeGroup } from 'react-move';
 
 import Link from './Link';

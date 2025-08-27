@@ -1,12 +1,12 @@
-// @material-ui/icons
-import Dashboard from '@material-ui/icons/Dashboard';
-import Person from '@material-ui/icons/Person';
-import LibraryBooks from '@material-ui/icons/LibraryBooks';
-import BubbleChart from '@material-ui/icons/BubbleChart';
-import LocationOn from '@material-ui/icons/LocationOn';
-import Notifications from '@material-ui/icons/Notifications';
-import Unarchive from '@material-ui/icons/Unarchive';
-import Language from '@material-ui/icons/Language';
+// @mui/icons-material
+import Dashboard from '@mui/icons-material/Dashboard';
+import Person from '@mui/icons-material/Person';
+import LibraryBooks from '@mui/icons-material/LibraryBooks';
+import BubbleChart from '@mui/icons-material/BubbleChart';
+import LocationOn from '@mui/icons-material/LocationOn';
+import Notifications from '@mui/icons-material/Notifications';
+import Unarchive from '@mui/icons-material/Unarchive';
+import Language from '@mui/icons-material/Language';
 
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import ClustersPage, {

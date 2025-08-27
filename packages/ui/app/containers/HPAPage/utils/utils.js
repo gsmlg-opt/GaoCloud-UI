@@ -5,7 +5,7 @@ import { fromJS, is } from 'immutable';
 import InputField from 'components/Field/InputField';
 import SelectField from 'components/Field/SelectField';
 import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import Chip from '@material-ui/core/Chip';
+import Chip from '@mui/material/Chip';
 
 import messages from '../messages';
 

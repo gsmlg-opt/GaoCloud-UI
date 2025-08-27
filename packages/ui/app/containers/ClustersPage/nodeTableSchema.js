@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { ucfirst } from '@gsmlg/utils';
-import Chip from '@material-ui/core/Chip';
+import Chip from '@mui/material/Chip';
 import TimeCell from 'components/Cells/TimeCell';
 import { fromJS } from 'immutable';
 import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';

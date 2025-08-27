@@ -11,13 +11,13 @@ import {
   SubmissionError,
   submit,
 } from 'redux-form/immutable';
-// @material-ui/core components
+// @mui/material components
 import getByKey from '@gsmlg/utils/getByKey';
 
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import Danger from 'components/Typography/Danger';
 import ClusterWatchIcon from 'components/Icons/ClusterWatch';
 import ImageRegistryIcon from 'components/Icons/ImageRegistry';

@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import hexToRgb from '@gsmlg/utils/hexToRgb';
 
 const snackbarStyle = (theme) => ({

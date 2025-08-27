@@ -13,7 +13,7 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { Map, List } from 'immutable';
 
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import { SimpleTable } from '@gsmlg/com';
 
 import * as actions from 'ducks/applications/actions';

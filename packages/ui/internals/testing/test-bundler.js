@@ -1,3 +1,5 @@
-// needed for regenerator-runtime
-// (ES7 generator support is required by async function)
+// React Testing Library setup and polyfills
 import '@babel/polyfill';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+import './setup.js';

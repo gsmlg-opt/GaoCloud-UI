@@ -3,7 +3,7 @@ import { ucfirst } from '@gsmlg/utils';
 import { Link } from 'react-router-dom';
 import Button from 'components/CustomButtons/Button';
 import IconButton from 'components/CustomIconButtons/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
+import DeleteIcon from '@mui/icons-material/Delete';
 import TimeCell from 'components/Cells/TimeCell';
 import ShellIcon from 'components/Icons/Shell';
 import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';

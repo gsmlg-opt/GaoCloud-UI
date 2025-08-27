@@ -11,13 +11,13 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 import Menubar from 'components/Menubar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Fab from '@material-ui/core/Fab';
-import IconButton from '@material-ui/core/IconButton';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import Fab from '@mui/material/Fab';
+import IconButton from '@mui/material/IconButton';
 import AddIcon from 'components/Icons/Add';
 import Card from 'components/Card/Card';
 import CardHeader from 'components/Card/CardHeader';

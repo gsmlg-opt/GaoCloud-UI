@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 // nodejs library to set properties for components
 import PropTypes from 'prop-types';
-// @material-ui/core components
-import withStyles from '@material-ui/core/styles/withStyles';
+// @mui/material components
+import withStyles from '@mui/material/styles/withStyles';
 import GridItem from 'components/Grid/GridItem';
 import WarningIcon from 'components/Icons/ErrorWarning';
 import { FormattedMessage } from 'react-intl';
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 import closeIcon from 'images/close.png';
 import messages from './messages';
 import customErrorStyle from './styles';

@@ -20,8 +20,8 @@ import { usePush } from 'hooks/router';
 
 import Helmet from 'components/Helmet/Helmet';
 import { FormattedMessage, useIntl } from 'react-intl';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Button from '@material-ui/core/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import Button from '@mui/material/Button';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';

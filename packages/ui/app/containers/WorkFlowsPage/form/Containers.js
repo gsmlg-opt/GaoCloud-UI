@@ -9,8 +9,8 @@ import {
   FormSection,
   reduxForm,
 } from 'redux-form/immutable';
-import ListItem from '@material-ui/core/ListItem';
-import IconButton from '@material-ui/core/IconButton';
+import ListItem from '@mui/material/ListItem';
+import IconButton from '@mui/material/IconButton';
 
 import Danger from 'components/Typography/Danger';
 import GridItem from 'components/Grid/GridItem';

@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment, useState } from 'react';
 
 import TrueIcon from 'components/Icons/True';
 import FalseIcon from 'components/Icons/False';
-import CloseIcon from '@material-ui/icons/Close';
+import CloseIcon from '@mui/icons-material/Close';
 import HookIcon from 'components/Icons/Hook';
 import HourglassIcon from 'components/Icons/Hourglass';
 import LoaddingIcon from '../images/loadding.gif';

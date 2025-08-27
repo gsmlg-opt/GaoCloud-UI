@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// @material-ui/core components
-import withStyles from '@material-ui/core/styles/withStyles';
-import ListItem from '@material-ui/core/ListItem';
-import List from '@material-ui/core/List';
+// @mui/material components
+import withStyles from '@mui/material/styles/withStyles';
+import ListItem from '@mui/material/ListItem';
+import List from '@mui/material/List';
 // core components
 import footerStyle from './footerStyle';
 

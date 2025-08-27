@@ -13,13 +13,13 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { NavLink } from 'react-router-dom';
 
-// @material-ui/core components
-import Drawer from '@material-ui/core/Drawer';
-import Popper from '@material-ui/core/Popper';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
+// @mui/material components
+import Drawer from '@mui/material/Drawer';
+import Popper from '@mui/material/Popper';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 
 import ChevronRight from 'components/Icons/ChevronRight';
 

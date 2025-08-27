@@ -1,13 +1,10 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
 import hexToRgb from '@gsmlg/utils/hexToRgb';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   appBarHeight: 65,
   leftMenuWidth: 200,
   leftShrinkWidth: 85,
-  typography: {
-    useNextVariants: true,
-  },
   palette: {
     type: 'light',
     primary: {

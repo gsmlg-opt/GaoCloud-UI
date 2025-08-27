@@ -11,7 +11,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import Paper from '@material-ui/core/Paper';
+import Paper from '@mui/material/Paper';
 import { SimpleTable } from '@gsmlg/com';
 import { usePush } from 'hooks/router';
 import { fromJS } from 'immutable';

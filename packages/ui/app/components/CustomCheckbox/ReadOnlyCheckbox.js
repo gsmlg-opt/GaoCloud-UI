@@ -1,9 +1,9 @@
 import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import Danger from 'components/Typography/Danger';
-import Checkbox from '@material-ui/core/Checkbox';
-import FormControl from '@material-ui/core/FormControl';
+import Checkbox from '@mui/material/Checkbox';
+import FormControl from '@mui/material/FormControl';
 
 const ReadOnlyCheckbox = ({
   labelText,

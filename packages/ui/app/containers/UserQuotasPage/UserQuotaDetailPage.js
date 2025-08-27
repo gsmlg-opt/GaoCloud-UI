@@ -10,8 +10,8 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import { withStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { withStyles } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Card from 'components/Card/Card';
@@ -23,7 +23,7 @@ import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
 import ReadOnlyTextarea from 'components/CustomTextarea/ReadOnlyTextarea';
 import Helmet from 'components/Helmet/Helmet';
 
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 import {

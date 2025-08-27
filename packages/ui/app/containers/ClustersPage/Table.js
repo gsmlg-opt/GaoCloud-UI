@@ -11,11 +11,11 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 import { SimpleTable } from '@gsmlg/com';
-import IconButton from '@material-ui/core/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
 import ShellIcon from 'components/Icons/Shell';
 import SuccessIcon from 'components/Icons/Success';
 import FailureIcon from 'components/Icons/Failure';

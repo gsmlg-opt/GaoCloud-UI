@@ -16,8 +16,8 @@ import { SubmissionError, submit } from 'redux-form';
 
 import { usePush } from 'hooks/router';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Button from '@material-ui/core/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import Button from '@mui/material/Button';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Card from 'components/Card/Card';

@@ -1,8 +1,8 @@
 import React, { createRef, useCallback, useState } from 'react';
 import { findDOMNode } from 'react-dom';
 import PropTypes from 'prop-types';
-import { Pie } from '@vx/shape';
-import { Group } from '@vx/group';
+import { Pie } from '@visx/shape';
+import { Group } from '@visx/group';
 
 const Circle = (props) => {
   const { total, value, ...rest } = props;

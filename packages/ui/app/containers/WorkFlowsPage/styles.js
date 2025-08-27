@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles } from '@mui/styles';
 import pageStyles from 'jss/page';
 import dialogStyles from 'jss/dialog';
 import { autofill } from 'redux-form';

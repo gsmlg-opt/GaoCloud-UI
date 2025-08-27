@@ -2,12 +2,12 @@ import React, { useEffect, useState, memo, useRef } from 'react';
 import { bindActionCreators, compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import { FormattedMessage } from 'react-intl';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Popper from '@material-ui/core/Popper';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import ListItemText from '@mui/material/ListItemText';
+import Popper from '@mui/material/Popper';
 
 import { makeSelectLastNamespace } from 'ducks/app/selectors';
 import {

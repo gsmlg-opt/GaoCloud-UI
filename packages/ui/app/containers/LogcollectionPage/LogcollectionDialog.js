@@ -19,14 +19,14 @@ import {
 import { FormattedMessage } from 'react-intl';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
-import Dialog from '@material-ui/core/Dialog';
+import Dialog from '@mui/material/Dialog';
 import CButton from 'components/CustomButtons/Button';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';
 import CardHeader from 'components/Card/CardHeader';
 import CardFooter from 'components/Card/CardFooter';
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from '@mui/material/IconButton';
 import CloseIcon from 'components/Icons/Close';
 
 import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';

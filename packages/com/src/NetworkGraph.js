@@ -10,7 +10,7 @@ import {
   AtlasForceDirectedLayout,
   WithTooltip, withTooltipPropTypes,
 } from '@data-ui/network';
-import { Group } from '@vx/group';
+import { Group } from '@visx/group';
 
 import DirectedLink from './NetworkGraph/DirectedLink';
 import WorkloadNode from './NetworkGraph/WorkloadNode';

@@ -13,12 +13,12 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { procCollectionData } from '@gsmlg/utils/procData';
 
-// @material-ui/core components
-import CssBaseline from '@material-ui/core/CssBaseline';
+// @mui/material components
+import CssBaseline from '@mui/material/CssBaseline';
 // core components
 import Footer from 'components/Footer/Footer';
 import TerminalDialog from 'containers/TerminalPage/TerminalDialog';
@@ -144,19 +144,18 @@ export const Dashboard = ({
         <div className={classes.mainWrapper}>
           <div className={classNames(classes.mainPanel)} ref={redirectRef}>
             <div className={classes.content}>
-              <Switch>
+              <Routes>
                 {appRoutes.map((route, key) => (
                   <Route
-                    exact
                     key={key}
                     path={route.path}
-                    component={route.component}
+                    element={<route.component />}
                   />
                 ))}
-                <Redirect exact from="/" to={redirectUrl} />
-                <Redirect exact from="/index" to={redirectUrl} />
-                <Route component={NotFoundPage} />
-              </Switch>
+                <Route path="/" element={<Navigate to={redirectUrl} replace />} />
+                <Route path="/index" element={<Navigate to={redirectUrl} replace />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
             </div>
             <div className={classes.events}>
               <EventsList />

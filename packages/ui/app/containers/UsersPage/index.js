@@ -12,9 +12,9 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
+import CssBaseline from '@mui/material/CssBaseline';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
 import AddIcon from 'components/Icons/Add';
 import Menubar from 'components/Menubar';
 import GridItem from 'components/Grid/GridItem';

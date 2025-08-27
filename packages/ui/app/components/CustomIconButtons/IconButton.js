@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
 
-// @material-ui/core components
-import withStyles from '@material-ui/core/styles/withStyles';
-import IconButton from '@material-ui/core/IconButton';
+// @mui/material components
+import withStyles from '@mui/material/styles/withStyles';
+import IconButton from '@mui/material/IconButton';
 
 // core components
 

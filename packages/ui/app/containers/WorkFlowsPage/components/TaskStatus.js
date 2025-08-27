@@ -3,9 +3,9 @@ import { fromJS, is } from 'immutable';
 import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 
-import Fab from '@material-ui/core/Fab';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Button from '@material-ui/core/Button';
+import Fab from '@mui/material/Fab';
+import CircularProgress from '@mui/material/CircularProgress';
+import Button from '@mui/material/Button';
 
 
 import Card from 'components/Card/Card';

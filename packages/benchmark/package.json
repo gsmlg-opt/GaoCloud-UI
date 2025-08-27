@@ -6,10 +6,6 @@
     "type": "git",
     "url": "git://github.com/gsmlg-opt/GaoCloud-UI.git"
   },
-  "engines": {
-    "npm": ">=5",
-    "node": ">=8.10.0"
-  },
   "author": "GSMLG",
   "license": "MIT",
   "scripts": {
