@@ -5,7 +5,6 @@
  */
 
 import React, { Fragment } from 'react';
-import { findDOMNode } from 'react-dom';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector, createSelector } from 'reselect';

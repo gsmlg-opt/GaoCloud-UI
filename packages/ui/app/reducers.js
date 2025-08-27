@@ -6,8 +6,8 @@ import { combineReducers } from 'redux-immutable';
 import { connectRouter } from 'connected-react-router/immutable';
 import { reducer as formReducer } from 'redux-form/immutable';
 
-import history from 'utils/history';
-import languageProviderReducer from 'containers/LanguageProvider/reducer';
+import history from './utils/history.js';
+import languageProviderReducer from './containers/LanguageProvider/reducer.js';
 
 // import reducers start
 import appReducer from 'ducks/app';

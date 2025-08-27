@@ -16,9 +16,9 @@ import { Link } from 'react-router-dom';
 import { withStyles } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import ExpansionPanel from '@mui/material/ExpansionPanel';
-import ExpansionPanelDetails from '@mui/material/ExpansionPanelDetails';
-import ExpansionPanelSummary from '@mui/material/ExpansionPanelSummary';
+import Accordion from '@mui/material/Accordion';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
@@ -49,8 +49,8 @@ const PodsList = ({ data, nodeNetworks }) => {
         const podWithNodeNetwork = podIPs.filter((p) => p.get('ip') === nodeIp);
 
         return (
-          <ExpansionPanel key={id}>
-            <ExpansionPanelSummary
+          <Accordion key={id}>
+            <AccordionSummary
               expandIcon={<DownIcon style={{ color: '#000' }} />}
             >
               <div className={classes.podNode}>
@@ -90,8 +90,8 @@ const PodsList = ({ data, nodeNetworks }) => {
                   />
                 </div>
               </div>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
+            </AccordionSummary>
+            <AccordionDetails>
               <div className={classes.ipbox}>
                 {_.times(total, (nn) => {
                   const ipAddr = long2ip(ip2long(ip) + nn);
@@ -166,8 +166,8 @@ const PodsList = ({ data, nodeNetworks }) => {
                   </div>
                 </div>
               </div>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
+            </AccordionDetails>
+          </Accordion>
         );
       })}
     </Paper>

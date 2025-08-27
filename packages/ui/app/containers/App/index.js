@@ -8,7 +8,6 @@
  */
 
 import React, { PureComponent, Fragment } from 'react';
-import { findDOMNode } from 'react-dom';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
@@ -16,14 +15,14 @@ import { bindActionCreators, compose } from 'redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { MuiThemeProvider } from '@mui/material/styles';
 
-import GlobalStyle from 'global-styles';
-import theme from 'theme';
-import LoginPage from 'containers/LoginPage/Loadable';
-import ErrorDialog from 'containers/ErrorDialog';
+import GlobalStyle from 'global-styles.js';
+import theme from 'theme.js';
+import LoginPage from 'containers/LoginPage/Loadable.js';
+import ErrorDialog from 'containers/ErrorDialog/index.js';
 
-import * as roleActions from 'ducks/role/actions';
+import * as roleActions from 'ducks/role/actions.js';
 
-import Dashboard from './Dashboard';
+import Dashboard from './Dashboard.js';
 
 class App extends PureComponent {
   state = { hasError: false };

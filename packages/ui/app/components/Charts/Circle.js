@@ -1,5 +1,4 @@
 import React, { createRef, useCallback, useState } from 'react';
-import { findDOMNode } from 'react-dom';
 import { Pie } from '@visx/shape';
 import { Group } from '@visx/group';
 

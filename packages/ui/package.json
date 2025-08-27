@@ -35,18 +35,23 @@
     "prettify": "prettier --write"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@fortawesome/fontawesome-svg-core": "7.0.0",
     "@fortawesome/free-solid-svg-icons": "7.0.0",
     "@fortawesome/react-fontawesome": "3.0.0",
-    "@mui/material": "^5.16.7",
     "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
     "@mui/styles": "^5.16.7",
+    "@reduxjs/toolkit": "^2.2.7",
     "@visx/gradient": "^3.12.0",
     "@visx/group": "^3.12.0",
     "@visx/hierarchy": "^3.12.0",
     "@visx/mock-data": "^3.12.0",
     "@visx/scale": "^3.12.0",
     "@visx/shape": "^3.12.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
     "ansi-to-react": "^6.1.6",
     "autoresponsive-react": "^1.2.3",
     "chalk": "5.6.0",
@@ -83,7 +88,6 @@
     "react-transition-group": "^4.3.0",
     "react-virtualized": "9.21.2",
     "reconnecting-websocket": "4.2.0",
-    "@reduxjs/toolkit": "^2.2.7",
     "redux": "^5.0.1",
     "redux-form": "^8.3.10",
     "redux-immutable": "^4.0.0",
@@ -92,9 +96,7 @@
     "rxjs": "^7.8.2",
     "sockjs-client": "^1.6.1",
     "styled-components": "6.1.19",
-    "warning": "^4.0.3",
-    "@xterm/xterm": "^5.5.0",
-    "@xterm/addon-fit": "^0.10.0"
+    "warning": "^4.0.3"
   },
   "devDependencies": {
     "@babel/polyfill": "7.12.1",

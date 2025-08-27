@@ -229,4 +229,4 @@ const Base64 = {
   decode: base64decode,
 };
 
-module.exports = Base64;
+export default Base64;

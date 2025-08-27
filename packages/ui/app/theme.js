@@ -1,5 +1,5 @@
-import { createTheme } from '@mui/material/styles';
-import hexToRgb from 'utils/hexToRgb';
+import { createTheme } from '@mui/material/styles/index.js';
+import hexToRgb from 'utils/hexToRgb.js';
 
 const theme = createTheme({
   appBarHeight: 65,

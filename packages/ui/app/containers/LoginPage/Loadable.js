@@ -7,5 +7,5 @@
 import React, { lazy } from 'react';
 
 export default lazy(() =>
-  import(/* webpackChunkName: "LoginPage" */ './index')
+  import(/* webpackChunkName: "LoginPage" */ './index.js')
 );

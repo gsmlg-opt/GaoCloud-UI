@@ -4,8 +4,7 @@
  *
  */
 
-import React, { useCallback, useState } from 'react';
-import { findDOMNode } from 'react-dom';
+import React, { useCallback, useState, useRef } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
@@ -27,9 +26,7 @@ export const Node = (props) => {
   const [rect, setRect] = useState({ width: 100, height: 86 });
   const measuredRef = useCallback((node) => {
     if (node !== null) {
-      // eslint-disable-next-line react/no-find-dom-node
-      const el = findDOMNode(node);
-      setRect(el.getBoundingClientRect());
+      setRect(node.getBoundingClientRect());
     }
   }, []);
   const { classes, node } = props;

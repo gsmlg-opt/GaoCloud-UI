@@ -7,10 +7,10 @@
 
 // Needed for async function to generator support
 import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+import 'regenerator-runtime/runtime.js';
 
 // offline cache support
-import * as OfflinePluginRuntime from 'offline-plugin/runtime';
+import * as OfflinePluginRuntime from 'offline-plugin/runtime.js';
 
 // Import all the third party stuff
 import React from 'react';
@@ -19,20 +19,20 @@ import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
 // Import root app
-import App from 'containers/App';
+import App from 'containers/App/index.js';
 
 // Import Language Provider
-import LanguageProvider from 'containers/LanguageProvider';
+import LanguageProvider from 'containers/LanguageProvider/index.js';
 
 // Load the favicon and the .htaccess file
 /* eslint-disable import/no-unresolved, import/extensions */
 import '!file-loader?name=[name].[ext]!./images/logo.svg';
 /* eslint-enable import/no-unresolved, import/extensions */
 
-import store from './store';
+import store from './store.js';
 
 // Import i18n messages
-import { translationMessages } from './i18n';
+import { translationMessages } from './i18n.js';
 
 const MOUNT_NODE = document.getElementById('app');
 

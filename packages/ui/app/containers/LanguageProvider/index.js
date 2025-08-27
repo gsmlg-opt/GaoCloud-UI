@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
 import { IntlProvider } from 'react-intl';
 
-import { makeSelectLocale } from './selectors';
+import { makeSelectLocale } from './selectors.js';
 
 const LanguageProvider = ({ locale, messages, children }) => (
   <IntlProvider locale={locale} key={locale} messages={messages[locale]}>

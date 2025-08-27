@@ -13,7 +13,7 @@ import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { fromJS } from 'immutable';
 import { Link } from 'react-router-dom';
 
-import history from 'utils/history';
+import history from '../../utils/history.js';
 
 import { withStyles } from '@mui/material/styles';
 import Menubar from 'components/Menubar';

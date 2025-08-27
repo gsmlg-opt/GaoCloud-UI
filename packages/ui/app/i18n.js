@@ -2,22 +2,18 @@
  * i18n.js
  *
  * This will setup the i18n language files and locale data for your app.
- *
- *   IMPORTANT: This file is used by the internal build
- *   script `extract-intl`, and must use CommonJS module syntax
- *   You CANNOT use import/export in this file.
  */
-require('@formatjs/intl-relativetimeformat/polyfill');
-require('@formatjs/intl-relativetimeformat/dist/locale-data/en'); // Add locale data for en
-require('@formatjs/intl-relativetimeformat/dist/locale-data/zh'); // Add locale data for zh
+import '@formatjs/intl-relativetimeformat/polyfill';
+import '@formatjs/intl-relativetimeformat/dist/locale-data/en.js'; // Add locale data for en
+import '@formatjs/intl-relativetimeformat/dist/locale-data/zh.js'; // Add locale data for zh
 
-const enTranslationMessages = require('./translations/en.json');
-const zhTranslationMessages = require('./translations/zh.json');
+import enTranslationMessages from './translations/en.json';
+import zhTranslationMessages from './translations/zh.json';
 
-const DEFAULT_LOCALE = 'zh';
+export const DEFAULT_LOCALE = 'zh';
 
 // prettier-ignore
-const appLocales = [
+export const appLocales = [
   'zh',
   'en',
 ];
@@ -37,12 +33,7 @@ const formatTranslationMessages = (locale, messages) => {
   return Object.keys(messages).reduce(flattenFormattedMessages, {});
 };
 
-const translationMessages = {
+export const translationMessages = {
   en: formatTranslationMessages('en', enTranslationMessages),
   zh: formatTranslationMessages('zh', zhTranslationMessages),
 };
-
-exports.appLocales = appLocales;
-exports.formatTranslationMessages = formatTranslationMessages;
-exports.translationMessages = translationMessages;
-exports.DEFAULT_LOCALE = DEFAULT_LOCALE;

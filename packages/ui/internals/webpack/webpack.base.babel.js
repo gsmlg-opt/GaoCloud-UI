@@ -19,7 +19,7 @@ const defaultAlias = {
   'utils': `${WorkspaceRoot}/packages/ui/src/utils`,
 };
 
-export default (options) => (
+export default (options) => ({
   mode: options.mode,
   entry: options.entry,
   output: {
@@ -37,6 +37,9 @@ export default (options) => (
         use: {
           loader: 'babel-loader',
           options: options.babelQuery,
+        },
+        resolve: {
+          fullySpecified: false,
         },
       },
       {
@@ -112,6 +115,7 @@ export default (options) => (
     extensions: ['.js', '.jsx', '.react.js'],
     mainFields: ['browser', 'jsnext:main', 'main'],
     alias: defaultAlias,
+    fullySpecified: false,
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window

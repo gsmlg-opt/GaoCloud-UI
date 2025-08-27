@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components/dist/styled-components.cjs.js';
 
 const GlobalStyle = createGlobalStyle`
   html,

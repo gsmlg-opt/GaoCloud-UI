@@ -1,8 +1,8 @@
 import { fromJS } from 'immutable';
-import history from 'utils/history';
-import persistentSubState from 'persistentSubState';
+import history from './utils/history.js';
+import persistentSubState from './persistentSubState.js';
 
-import configureStore from './configureStore';
+import configureStore from './configureStore.js';
 
 // Create redux store with history
 const initialState = {};
