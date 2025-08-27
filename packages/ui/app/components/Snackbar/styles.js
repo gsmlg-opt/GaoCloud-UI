@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/material/styles';
-import hexToRgb from '@gsmlg/utils/hexToRgb';
+import hexToRgb from 'utils/hexToRgb';
 
 const snackbarStyle = (theme) => ({
   root: {

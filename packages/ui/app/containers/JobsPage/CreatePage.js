@@ -14,7 +14,7 @@ import {
   SubmissionError,
   submit,
 } from 'redux-form/immutable';
-import parseCmd from '@gsmlg/utils/parseCmd';
+import parseCmd from 'utils/parseCmd';
 
 import { usePush } from 'hooks/router';
 

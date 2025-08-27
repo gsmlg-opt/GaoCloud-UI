@@ -3,7 +3,7 @@ import { fromJS, is } from 'immutable';
 import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 import { FieldArray } from 'redux-form/immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import Danger from 'components/Typography/Danger';
 import GridItem from 'components/Grid/GridItem';

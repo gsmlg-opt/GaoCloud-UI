@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import Helmet from 'components/Helmet/Helmet';
 import { Link } from 'react-router-dom';

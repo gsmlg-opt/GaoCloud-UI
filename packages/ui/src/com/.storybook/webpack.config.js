@@ -11,8 +11,8 @@ module.exports = async ({ config, mode }) => {
     ...config.resolve,
     modules: ['node_modules', 'src'].concat(config.resolve.modules),
     alias: {
-      '@gsmlg/com': `${WorkspaceRoot}/packages/com/src`,
-      '@gsmlg/utils': `${WorkspaceRoot}/packages/utils/src`,
+      'com': `${WorkspaceRoot}/packages/ui/src/com`,
+      'utils': `${WorkspaceRoot}/packages/utils/src`,
     },
   };
 

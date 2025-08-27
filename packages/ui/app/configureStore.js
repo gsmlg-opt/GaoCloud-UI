@@ -9,7 +9,7 @@ import { createEpicMiddleware } from 'redux-observable';
 import { ajax } from 'rxjs/ajax';
 import { BehaviorSubject, concat, of, throwError } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import { httpError } from 'ducks/app/actions';
 

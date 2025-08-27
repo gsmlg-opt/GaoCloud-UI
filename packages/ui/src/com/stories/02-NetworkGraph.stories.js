@@ -1,4 +1,4 @@
-import uuid from '@gsmlg/utils/uuid';
+import uuid from 'utils/uuid';
 import React from 'react';
 import NetworkGraph from '../src/NetworkGraph';
 

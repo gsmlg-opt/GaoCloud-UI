@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 
 import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
 import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';

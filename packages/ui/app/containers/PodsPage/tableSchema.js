@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 import TimeCell from 'components/Cells/TimeCell';
 import Button from 'components/CustomButtons/Button';
 import { FormattedMessage } from 'react-intl';

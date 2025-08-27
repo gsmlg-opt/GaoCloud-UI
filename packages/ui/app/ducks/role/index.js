@@ -4,7 +4,7 @@
  *
  */
 import { fromJS } from 'immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import * as c from './constants';
 import * as a from './actions';

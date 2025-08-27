@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 import { Link } from 'react-router-dom';
 import { withStyles } from '@mui/material/styles';
 import { connect } from 'react-redux';

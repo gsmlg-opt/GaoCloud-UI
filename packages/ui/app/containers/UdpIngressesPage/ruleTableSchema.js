@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 
 const schema = ['port', 'serviceName', 'servicePort'];
 

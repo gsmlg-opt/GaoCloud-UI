@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ShellIcon from 'components/Icons/Shell';

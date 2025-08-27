@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 import Chip from '@mui/material/Chip';
 import TimeCell from 'components/Cells/TimeCell';
 import { fromJS } from 'immutable';

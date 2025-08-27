@@ -9,7 +9,7 @@ import {
   FormSection,
   reduxForm,
 } from 'redux-form/immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import Card from 'components/Card/Card';
 import CardBody from 'components/Card/CardBody';

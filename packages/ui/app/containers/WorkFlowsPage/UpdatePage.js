@@ -24,7 +24,7 @@ import Button from '@mui/material/Button';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import parseCmd from '@gsmlg/utils/parseCmd';
+import parseCmd from 'utils/parseCmd';
 import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
 import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
 import {

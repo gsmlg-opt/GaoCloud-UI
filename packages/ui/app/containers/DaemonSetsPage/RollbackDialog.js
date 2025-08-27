@@ -16,7 +16,7 @@ import {
   SubmissionError,
   submit,
 } from 'redux-form/immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';

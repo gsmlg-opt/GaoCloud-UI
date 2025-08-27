@@ -13,7 +13,7 @@ import { bindActionCreators, compose } from 'redux';
 import { withStyles } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 
 import { makeSelectNodes, makeSelectNodesList } from 'ducks/nodes/selectors';
 import { makeSelectLocation } from 'ducks/app/selectors';

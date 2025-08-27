@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import TimeCell from 'components/Cells/TimeCell';

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 import TimeCell from 'components/Cells/TimeCell';
 import { Link } from 'react-router-dom';
 import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';

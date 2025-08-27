@@ -2,7 +2,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 import { Field, reduxForm } from 'redux-form/immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 import classNames from 'classnames';
 
 import InputAdornment from '@mui/material/InputAdornment';

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Group } from '@visx/group';
 import NodeGroup from 'react-move/NodeGroup';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import Node from './Node';
 import { findCollapsedParent, getTopLeft } from './utils';

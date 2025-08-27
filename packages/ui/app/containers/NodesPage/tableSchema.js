@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 import React, { Fragment } from 'react';
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 import { Link } from 'react-router-dom';
 import Button from 'components/CustomButtons/Button';
 import Chip from '@mui/material/Chip';

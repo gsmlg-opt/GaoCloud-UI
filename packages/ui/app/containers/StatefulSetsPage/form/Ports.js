@@ -9,7 +9,7 @@ import {
   reduxForm,
   FormSection,
 } from 'redux-form/immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 import AceEditor from 'react-ace';
 import classNames from 'classnames';
 

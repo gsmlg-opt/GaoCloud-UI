@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { fromJS } from 'immutable';
 import { Field, FieldArray, reduxForm } from 'redux-form/immutable';
 import { FormattedMessage } from 'react-intl';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/theme-tomorrow_night';
 

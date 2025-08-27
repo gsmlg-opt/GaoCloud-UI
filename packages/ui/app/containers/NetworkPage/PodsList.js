@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import long2ip from '@gsmlg/utils/long2ip';
-import ip2long from '@gsmlg/utils/ip2long';
+import long2ip from 'utils/long2ip';
+import ip2long from 'utils/ip2long';
 import _ from 'lodash';
 
 import { Link } from 'react-router-dom';

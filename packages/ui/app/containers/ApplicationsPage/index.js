@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
 import { SubmissionError, submit } from 'redux-form';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';

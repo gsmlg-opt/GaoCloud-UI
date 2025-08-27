@@ -11,7 +11,7 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 
 import { makeSelectUsersList } from 'ducks/users/selectors';
 import * as actions from 'ducks/users/actions';

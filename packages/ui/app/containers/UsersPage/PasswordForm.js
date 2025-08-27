@@ -1,5 +1,5 @@
 import React, { PureComponent, useState,useEffect } from 'react';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 import { FormattedMessage } from 'react-intl';
 
 import Danger from 'components/Typography/Danger';

@@ -1,4 +1,4 @@
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 
 const schema = [
   'time',

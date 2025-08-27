@@ -11,7 +11,7 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { fromJS } from 'immutable';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 
 import { makeSelectLocation } from 'ducks/app/selectors';
 import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';

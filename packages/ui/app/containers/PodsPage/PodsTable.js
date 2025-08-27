@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { withStyles } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 import Fab from '@mui/material/Fab';
 import EditIcon from '@mui/icons-material/Edit';
 import IconButton from '@mui/material/IconButton';

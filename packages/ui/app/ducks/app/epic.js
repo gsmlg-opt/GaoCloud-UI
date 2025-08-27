@@ -4,7 +4,7 @@ import {
   mergeMap,
 } from 'rxjs/operators';
 import { ofType, combineEpics } from 'redux-observable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import { loadRole } from 'ducks/role/actions';
 

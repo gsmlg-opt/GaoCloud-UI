@@ -1,5 +1,5 @@
 import { pointRadial } from 'd3-shape';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 export function findCollapsedParent(node) {
   if (!getByKey(node, ['data', 'isExpanded'])) {

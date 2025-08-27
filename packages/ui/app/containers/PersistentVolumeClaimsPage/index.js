@@ -7,7 +7,7 @@ import React, { useEffect, useState, memo } from 'react';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import Helmet from 'components/Helmet/Helmet';
 import { FormattedMessage } from 'react-intl';

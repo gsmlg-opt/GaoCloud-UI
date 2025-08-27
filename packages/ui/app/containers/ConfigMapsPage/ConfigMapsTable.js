@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 import Dialog from '@mui/material/Dialog';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-yaml';

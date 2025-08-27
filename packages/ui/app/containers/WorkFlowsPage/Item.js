@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { useIntl, FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import parseCmd from '@gsmlg/utils/parseCmd';
+import parseCmd from 'utils/parseCmd';
 
 import InputAdornment from '@mui/material/InputAdornment';
 import ButtonBase from '@mui/material/ButtonBase';

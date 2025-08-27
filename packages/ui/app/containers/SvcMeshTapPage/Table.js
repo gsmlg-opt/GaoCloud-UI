@@ -8,12 +8,12 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import throttleRender from '@gsmlg/com/throttleRender';
+import throttleRender from 'com/throttleRender';
 
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';

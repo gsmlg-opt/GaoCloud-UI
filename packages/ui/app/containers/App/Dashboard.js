@@ -14,7 +14,7 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import classNames from 'classnames';
-import { procCollectionData } from '@gsmlg/utils/procData';
+import { procCollectionData } from 'utils/procData';
 
 // @mui/material components
 import CssBaseline from '@mui/material/CssBaseline';

@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { SubmissionError, submit } from 'redux-form';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { fromJS } from 'immutable';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import { withStyles } from '@mui/material/styles';
 import Menubar from 'components/Menubar';

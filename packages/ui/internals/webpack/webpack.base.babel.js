@@ -15,8 +15,8 @@ process.noDeprecation = true;
 const WorkspaceRoot = path.resolve(__dirname, '..', '..', '..', '..');
 
 const defaultAlias = {
-  '@gsmlg/com': `${WorkspaceRoot}/packages/com/src`,
-  '@gsmlg/utils': `${WorkspaceRoot}/packages/utils/src`,
+  'com': `${WorkspaceRoot}/packages/ui/src/com`,
+  'utils': `${WorkspaceRoot}/packages/ui/src/utils`,
 };
 
 export default (options) => (

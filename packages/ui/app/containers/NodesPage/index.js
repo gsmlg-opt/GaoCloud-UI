@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import { withStyles } from '@mui/material/styles';
 import Menubar from 'components/Menubar';

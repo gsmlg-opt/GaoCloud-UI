@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 import { withStyles } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 
 import { makeSelectEvents } from 'ducks/events/selectors';
 import * as actions from 'ducks/events/actions';

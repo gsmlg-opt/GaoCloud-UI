@@ -10,10 +10,9 @@
     "build:clean": "rimraf ./build",
     "generate": "plop --plopfile generators/index.js",
     "test": "bun run test",
-    "lint": "bun run lint:ui && bun run lint:utils",
+    "lint": "bun run lint:ui",
     "lint:staged": "bun run lint:staged",
-    "lint:ui": "cd packages/ui && bun run lint",
-    "lint:utils": "cd packages/utils && bun run lint"
+    "lint:ui": "cd packages/ui && bun run lint"
   },
   "pre-commit": "lint:staged",
   "devDependencies": {

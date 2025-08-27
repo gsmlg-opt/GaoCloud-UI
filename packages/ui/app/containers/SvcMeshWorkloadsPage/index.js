@@ -8,10 +8,10 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
 import { fromJS, groupBy } from 'immutable';
-import uuid from '@gsmlg/utils/uuid';
+import uuid from 'utils/uuid';
 import _ from 'lodash';
 
-import NetworkGraph from '@gsmlg/com/NetworkGraph';
+import NetworkGraph from 'com/NetworkGraph';
 import Helmet from 'components/Helmet/Helmet';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';

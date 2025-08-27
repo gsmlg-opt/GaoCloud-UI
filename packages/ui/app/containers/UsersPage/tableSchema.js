@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { ucfirst } from '@gsmlg/utils';
+import { ucfirst } from 'utils';
 import Chip from '@mui/material/Chip';
 import PersonIcon from '@mui/icons-material/Person';
 import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';

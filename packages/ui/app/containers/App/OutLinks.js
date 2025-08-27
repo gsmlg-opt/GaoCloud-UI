@@ -11,7 +11,7 @@ import {
   submit,
 } from 'redux-form/immutable';
 // @mui/material components
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';

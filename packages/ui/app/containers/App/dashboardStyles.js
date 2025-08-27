@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import hexToRgb from '@gsmlg/utils/hexToRgb';
+import hexToRgb from 'utils/hexToRgb';
 
 export const styles = (theme) => ({
   wrapper: {

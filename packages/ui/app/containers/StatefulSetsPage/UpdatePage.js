@@ -14,11 +14,11 @@ import {
   SubmissionError,
   submit,
 } from 'redux-form/immutable';
-import parseCmd from '@gsmlg/utils/parseCmd';
+import parseCmd from 'utils/parseCmd';
 
 import { usePush } from 'hooks/router';
 
-import list2str from '@gsmlg/utils/list2str';
+import list2str from 'utils/list2str';
 
 import Helmet from 'components/Helmet/Helmet';
 import { FormattedMessage } from 'react-intl';

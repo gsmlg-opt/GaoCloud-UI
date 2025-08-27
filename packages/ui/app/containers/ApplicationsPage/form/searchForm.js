@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { FormattedMessage } from 'react-intl';
-import getByKey from '@gsmlg/utils/getByKey';
+import getByKey from 'utils/getByKey';
 
 import Danger from 'components/Typography/Danger';
 import GridItem from 'components/Grid/GridItem';

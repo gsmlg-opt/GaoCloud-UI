@@ -13,7 +13,7 @@ import { bindActionCreators, compose } from 'redux';
 import { Map, List } from 'immutable';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from '@gsmlg/com';
+import { SimpleTable } from 'com';
 
 import * as actions from 'ducks/applications/actions';
 import { makeSelectCurrent } from 'ducks/applications/selectors';

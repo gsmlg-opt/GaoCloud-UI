@@ -3,7 +3,7 @@ import { Field } from 'redux-form/immutable';
 // import CustomInput from 'components/CustomInput/CustomInput';
 import FormControl from '@mui/material/FormControl';
 import Button from 'components/CustomButtons/Button';
-import { readAsText } from '@gsmlg/utils/readFile';
+import { readAsText } from 'utils/readFile';
 
 const Input = ({ label, input, classes, meta, buttonProps, ...custom }) => {
   const [node, setNode] = useState(null);

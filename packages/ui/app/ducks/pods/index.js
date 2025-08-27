@@ -4,8 +4,8 @@
  *
  */
 import { fromJS } from 'immutable';
-import getByKey from '@gsmlg/utils/getByKey';
-import { procCollectionData } from '@gsmlg/utils/procData';
+import getByKey from 'utils/getByKey';
+import { procCollectionData } from 'utils/procData';
 
 import * as constants from './constants';
 import * as actions from './actions';
