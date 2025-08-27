@@ -4,20 +4,20 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "SecretsPage" */ './index')
 );
 
-export const CreateSecretPage = loadable(() =>
+export const CreateSecretPage = lazy(() =>
   import(/* webpackChunkName: "CreateSecretPage" */ './CreateSecretPage')
 );
 
-export const ShowSecretPage = loadable(() =>
+export const ShowSecretPage = lazy(() =>
   import(/* webpackChunkName: "ShowSecretPage" */ './ShowSecretPage')
 );
 
-export const EditSecretPage = loadable(() =>
+export const EditSecretPage = lazy(() =>
   import(/* webpackChunkName: "EditSecretPage" */ './EditSecretPage')
 );

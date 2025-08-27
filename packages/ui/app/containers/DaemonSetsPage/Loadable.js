@@ -4,20 +4,20 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "DaemonSetsPage" */ './index')
 );
 
-export const CreateDaemonSetPage = loadable(() =>
+export const CreateDaemonSetPage = lazy(() =>
   import(/* webpackChunkName: "CreateDaemonSetPage" */ './CreatePage')
 );
 
-export const DaemonSetDetailPage = loadable(() =>
+export const DaemonSetDetailPage = lazy(() =>
   import(/* webpackChunkName: "DaemonSetDetailPage" */ './ShowItemPage')
 );
 
-export const UpdateDaemonSetPage = loadable(() =>
+export const UpdateDaemonSetPage = lazy(() =>
   import(/* webpackChunkName: "UpdateDaemonSetPage" */ './UpdatePage')
 );

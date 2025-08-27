@@ -4,24 +4,24 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "UsersPage" */ './index')
 );
 
-export const CreateUserPage = loadable(() =>
+export const CreateUserPage = lazy(() =>
   import(/* webpackChunkName: "CreateUsersPage" */ './CreateUserPage')
 );
 
-export const EditUserPage = loadable(() =>
+export const EditUserPage = lazy(() =>
   import(/* webpackChunkName: "EditUsersPage" */ './EditUserPage')
 );
 
-export const UserProfilePage = loadable(() =>
+export const UserProfilePage = lazy(() =>
   import(/* webpackChunkName: "UserProfilePage" */ './UserProfilePage')
 );
 
-export const PasswordSetupPage = loadable(() =>
+export const PasswordSetupPage = lazy(() =>
   import(/* webpackChunkName: "PasswordSetupPage" */ './PasswordSetupPage')
 );

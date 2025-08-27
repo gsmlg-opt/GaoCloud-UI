@@ -4,20 +4,20 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "StoragePage" */ './index')
 );
 
-export const CreateStoragePage = loadable(() =>
+export const CreateStoragePage = lazy(() =>
   import(/* webpackChunkName: "CreateStoragePage" */ './CreatePage')
 );
 
-export const EditStoragePage = loadable(() =>
+export const EditStoragePage = lazy(() =>
   import(/* webpackChunkName: "EditStoragePage" */ './EditPage')
 );
 
-export const StorageDetailPage = loadable(() =>
+export const StorageDetailPage = lazy(() =>
   import(/* webpackChunkName: "StorageDetailPage" */ './ShowItemPage')
 );

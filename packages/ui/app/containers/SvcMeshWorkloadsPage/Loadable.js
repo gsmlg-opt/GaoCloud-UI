@@ -4,12 +4,12 @@
  *
  */
 
-import loadable from '@loadable/component';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "SvcMeshWorkloadsPage" */ './index')
 );
 
-export const ShowSvcMeshWorkloadPage = loadable(() =>
+export const ShowSvcMeshWorkloadPage = lazy(() =>
   import(/* webpackChunkName: "ShowSvcMeshWorkloadPage" */ './ShowItemPage')
 );

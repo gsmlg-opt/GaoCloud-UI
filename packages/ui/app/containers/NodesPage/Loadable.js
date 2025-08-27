@@ -4,12 +4,12 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "NodesPage" */ './index')
 );
 
-export const NodeDetailPage = loadable(() =>
+export const NodeDetailPage = lazy(() =>
   import(/* webpackChunkName: "NodeDetailPage" */ './ShowItemPage')
 );

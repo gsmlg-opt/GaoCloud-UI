@@ -24,10 +24,8 @@
   "main": "./src/index.js",
   "peerDependencies": {},
   "dependencies": {
-    "@loadable/component": "5.16.7",
     "@mui/system": "^5.16.7",
     "@mui/utils": "^5.16.7",
-    "prop-types": "^15.7.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "styled-components": "^6.1.19",

@@ -4,16 +4,16 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "CronJobsPage" */ './index')
 );
 
-export const CreateCronJobPage = loadable(() =>
+export const CreateCronJobPage = lazy(() =>
   import(/* webpackChunkName: "CreateCronJobPage" */ './CreatePage')
 );
 
-export const CronJobDetailPage = loadable(() =>
+export const CronJobDetailPage = lazy(() =>
   import(/* webpackChunkName: "CronJobDetailPage" */ './ShowItemPage')
 );

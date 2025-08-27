@@ -4,27 +4,27 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "NamespacesPage" */ './index')
 );
 
-export const CreateNamespacePage = loadable(() =>
+export const CreateNamespacePage = lazy(() =>
   import(/* webpackChunkName: "CreateNamespacePage" */ './CreateNamespacePage')
 );
 
-export const NamespaceDetailPage = loadable(() =>
+export const NamespaceDetailPage = lazy(() =>
   import(/* webpackChunkName: "NamespaceDetailPage" */ './NamespaceDetailPage')
 );
 
-export const NamespaceOverviewPage = loadable(() =>
+export const NamespaceOverviewPage = lazy(() =>
   import(
     /* webpackChunkName: "NamespaceOverviewPage" */ './NamespaceOverviewPage'
   )
 );
 
-export const NamespaceThresholdsPage = loadable(() =>
+export const NamespaceThresholdsPage = lazy(() =>
   import(
     /* webpackChunkName: "NamespaceThresholdsPage" */ './NamespaceThresholdsPage'
   )

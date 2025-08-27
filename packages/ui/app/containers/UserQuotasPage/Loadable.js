@@ -4,30 +4,30 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "UserQuotasPage" */ './index')
 );
 
-export const CreateUserQuotaPage = loadable(() =>
+export const CreateUserQuotaPage = lazy(() =>
   import(/* webpackChunkName: "CreateUserQuotaPage" */ './CreateUserQuotaPage')
 );
 
-export const EditUserQuotaPage = loadable(() =>
+export const EditUserQuotaPage = lazy(() =>
   import(/* webpackChunkName: "EditUserQuotaPage" */ './EditUserQuotaPage')
 );
 
-export const UserQuotaDetailPage = loadable(() =>
+export const UserQuotaDetailPage = lazy(() =>
   import(/* webpackChunkName: "UserQuotaDetailPage" */ './UserQuotaDetailPage')
 );
 
-export const RequestUserQuotaPage = loadable(() =>
+export const RequestUserQuotaPage = lazy(() =>
   import(
     /* webpackChunkName: "RequestUserQuotaPage" */ './RequestUserQuotaPage'
   )
 );
 
-export const AdminUserQuotaPage = loadable(() =>
+export const AdminUserQuotaPage = lazy(() =>
   import(/* webpackChunkName: "AdminUserQuotaPage" */ './AdminUserQuotaPage')
 );

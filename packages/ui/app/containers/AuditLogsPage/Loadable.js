@@ -4,9 +4,9 @@
  *
  */
 
-import loadable from '@loadable/component';
+import React, { lazy } from 'react';
 
-export default loadable(() => import(/* webpackChunkName: "AuditLogsPage" */'./index'));
+export default lazy(() => import(/* webpackChunkName: "AuditLogsPage" */'./index'));
 
 
 

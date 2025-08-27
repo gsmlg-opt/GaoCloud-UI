@@ -4,15 +4,15 @@
  *
  */
 
-import loadable from '@loadable/component';
+import React, { lazy } from 'react';
 
-export default loadable(() => import(/* webpackChunkName: "WorkFlowsPage" */'./index'));
+export default lazy(() => import(/* webpackChunkName: "WorkFlowsPage" */'./index'));
 
-export const CreateWorkFlowPage = loadable(() => import(/* webpackChunkName: "CreateWorkFlowPage" */'./CreatePage'));
+export const CreateWorkFlowPage = lazy(() => import(/* webpackChunkName: "CreateWorkFlowPage" */'./CreatePage'));
 
-export const UpdateWorkFlowPage = loadable(() => import(/* webpackChunkName: "UpdateWorkFlowPage" */'./UpdatePage'));
+export const UpdateWorkFlowPage = lazy(() => import(/* webpackChunkName: "UpdateWorkFlowPage" */'./UpdatePage'));
 
-export const ShowWorkFlowPage = loadable(() => import(/* webpackChunkName: "ShowWorkFlowPage" */'./ShowItemPage'));
+export const ShowWorkFlowPage = lazy(() => import(/* webpackChunkName: "ShowWorkFlowPage" */'./ShowItemPage'));
 
-export const LogsPage = loadable(() => import(/* webpackChunkName: "ShowWorkFlowPage" */'./LogsPage'));
+export const LogsPage = lazy(() => import(/* webpackChunkName: "ShowWorkFlowPage" */'./LogsPage'));
 

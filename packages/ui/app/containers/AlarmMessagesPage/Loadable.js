@@ -4,8 +4,8 @@
  *
  */
 
-import loadable from '@loadable/component';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "AlarmMessagesPage" */ './index')
 );

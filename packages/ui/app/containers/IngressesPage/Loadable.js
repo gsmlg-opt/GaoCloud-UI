@@ -4,16 +4,16 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "IngressesPage" */ './index')
 );
 
-export const CreateIngressPage = loadable(() =>
+export const CreateIngressPage = lazy(() =>
   import(/* webpackChunkName: "CreateIngressPage" */ './CreatePage')
 );
 
-export const ShowIngressPage = loadable(() =>
+export const ShowIngressPage = lazy(() =>
   import(/* webpackChunkName: "ShowIngressPage" */ './ShowItemPage')
 );

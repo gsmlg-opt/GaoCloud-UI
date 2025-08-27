@@ -4,20 +4,20 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "StatefulSetsPage" */ './index')
 );
 
-export const CreateStatefulSetPage = loadable(() =>
+export const CreateStatefulSetPage = lazy(() =>
   import(/* webpackChunkName: "CreateStatefulSetPage" */ './CreatePage')
 );
 
-export const StatefulSetDetailPage = loadable(() =>
+export const StatefulSetDetailPage = lazy(() =>
   import(/* webpackChunkName: "StatefulSetDetailPage" */ './ShowItemPage')
 );
 
-export const UpdateStatefulSetPage = loadable(() =>
+export const UpdateStatefulSetPage = lazy(() =>
   import(/* webpackChunkName: "UpdateStatefulSetPage" */ './UpdatePage')
 );

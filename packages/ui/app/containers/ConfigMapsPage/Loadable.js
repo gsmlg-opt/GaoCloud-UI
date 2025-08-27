@@ -4,20 +4,20 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "ConfigMapsPage" */ './index')
 );
 
-export const CreateConfigMapPage = loadable(() =>
+export const CreateConfigMapPage = lazy(() =>
   import(/* webpackChunkName: "CreateConfigMapPage" */ './CreateConfigMapPage')
 );
 
-export const ShowConfigMapPage = loadable(() =>
+export const ShowConfigMapPage = lazy(() =>
   import(/* webpackChunkName: "ShowConfigMapPage" */ './ShowConfigMapPage')
 );
 
-export const EditConfigMapPage = loadable(() =>
+export const EditConfigMapPage = lazy(() =>
   import(/* webpackChunkName: "EditConfigMapPage" */ './EditConfigMapPage')
 );

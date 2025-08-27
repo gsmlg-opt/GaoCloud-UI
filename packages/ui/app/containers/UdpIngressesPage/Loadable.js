@@ -4,16 +4,16 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "UdpIngressesPage" */ './index')
 );
 
-export const CreateUdpIngressPage = loadable(() =>
+export const CreateUdpIngressPage = lazy(() =>
   import(/* webpackChunkName: "CreateUdpIngressPage" */ './CreatePage')
 );
 
-export const ShowUdpIngressPage = loadable(() =>
+export const ShowUdpIngressPage = lazy(() =>
   import(/* webpackChunkName: "ShowUdpIngressPage" */ './ShowItemPage')
 );

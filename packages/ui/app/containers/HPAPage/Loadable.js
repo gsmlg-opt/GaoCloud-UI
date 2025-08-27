@@ -4,20 +4,20 @@
  *
  */
 
-import loadable from '@loadable/component';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "HPAPage" */ './index')
 );
 
-export const CreateHPAPage = loadable(() =>
+export const CreateHPAPage = lazy(() =>
   import(/* webpackChunkName: "CreateHPAPage" */ './CreatePage')
 );
 
-export const UpdateHPAPage = loadable(() =>
+export const UpdateHPAPage = lazy(() =>
   import(/* webpackChunkName: "UpdateHPAPage" */ './UpdatePage')
 );
 
-export const ShowHPAPage = loadable(() =>
+export const ShowHPAPage = lazy(() =>
   import(/* webpackChunkName: "ShowHPAPage" */ './ShowItemPage')
 );

@@ -4,16 +4,16 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "ClustersPage" */ './index')
 );
 
-export const CreateClusterPage = loadable(() =>
+export const CreateClusterPage = lazy(() =>
   import(/* webpackChunkName: "CreateClusterPage" */ './CreatePage')
 );
 
-export const ClusterManagePage = loadable(() =>
+export const ClusterManagePage = lazy(() =>
   import(/* webpackChunkName: "ClusterManagePage" */ './ClusterManagePage')
 );

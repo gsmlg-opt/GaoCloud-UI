@@ -4,20 +4,20 @@
  *
  */
 
-import loadable from '@gsmlg/com/loadable';
+import React, { lazy } from 'react';
 
-export default loadable(() =>
+export default lazy(() =>
   import(/* webpackChunkName: "DeploymentsPage" */ './index')
 );
 
-export const CreateDeploymentPage = loadable(() =>
+export const CreateDeploymentPage = lazy(() =>
   import(/* webpackChunkName: "CreateDeploymentPage" */ './CreatePage')
 );
 
-export const DeploymentDetailPage = loadable(() =>
+export const DeploymentDetailPage = lazy(() =>
   import(/* webpackChunkName: "DeploymentDetailPage" */ './ShowItemPage')
 );
 
-export const UpdateDeploymentPage = loadable(() =>
+export const UpdateDeploymentPage = lazy(() =>
   import(/* webpackChunkName: "UpdateDeploymentPage" */ './UpdatePage')
 );
