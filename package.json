@@ -4,25 +4,26 @@
   "private": true,
   "scripts": {
     "start": "node packages/ui/server",
-    "bootstrap": "lerna bootstrap",
     "prebuild": "npm run build:clean",
-    "build": "NODE_ENV=production webpack --config packages/ui/internals/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build": "NODE_ENV=production webpack --config packages/ui/internals/webpack/webpack.prod.babel.js --color --progress",
     "build:clean": "rimraf ./build",
     "generate": "plop --plopfile generators/index.js",
-    "test": "lerna run test",
-    "lint": "lerna run lint",
-    "lint:staged": "lerna run lint:staged"
+    "test": "bun run test",
+    "lint": "bun run lint:ui && bun run lint:utils",
+    "lint:staged": "bun run lint:staged",
+    "lint:ui": "cd packages/ui && bun run lint",
+    "lint:utils": "cd packages/utils && bun run lint"
   },
   "pre-commit": "lint:staged",
   "devDependencies": {
-    "lerna": "8.2.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "plop": "4.0.1"
   },
   "workspaces": [
     "packages/*"
   ],
   "dependencies": {},
-  "resolutions": {
+  "overrides": {
     "cheerio": "<1.0.0-rc.3"
   }
 }
