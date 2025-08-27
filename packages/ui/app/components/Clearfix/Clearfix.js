@@ -2,7 +2,7 @@ import React from 'react';
 // nodejs library to set properties for components
 
 // mterial-ui components
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles';
 
 const style = {
   clearfix: {

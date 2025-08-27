@@ -12,7 +12,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';
 import Card from 'components/Card/Card';

@@ -1,6 +1,6 @@
 import React from 'react';
 // @mui/material components
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles';
 import Table from '@mui/material/Table';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';

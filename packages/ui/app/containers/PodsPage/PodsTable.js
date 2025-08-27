@@ -10,7 +10,7 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import { Link } from 'react-router-dom';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import { SimpleTable } from 'com';

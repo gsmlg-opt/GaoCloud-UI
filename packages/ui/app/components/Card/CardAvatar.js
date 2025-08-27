@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 // nodejs library to set properties for components
 // @mui/material components
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles';
 // @mui/icons-material
 // core components
 

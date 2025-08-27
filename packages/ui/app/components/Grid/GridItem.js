@@ -1,6 +1,6 @@
 import React from 'react';
 // @mui/material components
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles/withStyles';
 import Grid from '@mui/material/Grid';
 
 const style = {

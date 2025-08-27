@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles/index.js';
+import { createTheme } from '@mui/material/styles';
 import hexToRgb from 'utils/hexToRgb.js';
 
 const theme = createTheme({

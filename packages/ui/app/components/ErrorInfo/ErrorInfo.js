@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 // nodejs library to set properties for components
 // @mui/material components
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles';
 import GridItem from 'components/Grid/GridItem';
 import WarningIcon from 'components/Icons/ErrorWarning';
 import { FormattedMessage } from 'react-intl';

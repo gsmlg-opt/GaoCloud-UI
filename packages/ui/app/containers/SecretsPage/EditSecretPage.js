@@ -13,7 +13,7 @@ import { fromJS } from 'immutable';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { SubmissionError, submit } from 'redux-form';
 import { push } from 'connected-react-router';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';

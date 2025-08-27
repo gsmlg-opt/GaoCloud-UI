@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
 import getByKey from 'utils/getByKey';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Menubar from 'components/Menubar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';

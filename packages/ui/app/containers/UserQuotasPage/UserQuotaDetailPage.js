@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';

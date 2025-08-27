@@ -9,7 +9,7 @@ import ExpandMoreIcon from 'components/Icons/ExpandMore';
 import ArrowAltRightIcon from 'components/Icons/ArrowAltRight';
 import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
 import CircularProgress from '@mui/material/CircularProgress';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Tooltip from '@mui/material/Tooltip';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';

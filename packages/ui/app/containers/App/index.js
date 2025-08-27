@@ -13,7 +13,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { MuiThemeProvider } from '@mui/material/styles';
+import { MuiThemeProvider } from '@mui/styles';
 
 import GlobalStyle from 'global-styles.js';
 import theme from 'theme.js';

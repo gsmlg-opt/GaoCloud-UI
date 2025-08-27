@@ -14,7 +14,7 @@ import { reduxForm, getFormValues } from 'redux-form/immutable';
 
 import { usePush } from 'hooks/router';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';

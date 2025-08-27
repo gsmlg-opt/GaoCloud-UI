@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Paper from '@mui/material/Paper';
 import { SimpleTable } from 'com';
 import Dialog from '@mui/material/Dialog';

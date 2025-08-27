@@ -11,7 +11,7 @@ import { bindActionCreators, compose } from 'redux';
 import { fromJS } from 'immutable';
 
 import Helmet from 'components/Helmet/Helmet';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';

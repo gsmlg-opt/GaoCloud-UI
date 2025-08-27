@@ -7,7 +7,7 @@
 import React from 'react';
 
 // import styled from 'styled-components';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';

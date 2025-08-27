@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
 import { SubmissionError, submit } from 'redux-form';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import GridItem from 'components/Grid/GridItem';
 import GridContainer from 'components/Grid/GridContainer';

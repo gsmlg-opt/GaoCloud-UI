@@ -14,7 +14,7 @@ import getByKey from 'utils/getByKey';
 import AceEditor from 'react-ace';
 import classNames from 'classnames';
 
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles';
 import InputAdornment from '@mui/material/InputAdornment';
 import Icon from '@mui/material/Icon';
 import Checkbox from '@mui/material/Checkbox';

@@ -11,7 +11,7 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import dayjs from 'dayjs';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Menubar from 'components/Menubar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';

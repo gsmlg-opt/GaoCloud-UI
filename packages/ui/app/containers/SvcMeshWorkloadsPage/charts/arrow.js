@@ -2,7 +2,7 @@ import React from 'react';
 import _floor from 'lodash/floor';
 import _times from 'lodash/times';
 import _ceil from 'lodash/ceil';
-import grey from '@mui/material/colors/grey';
+import { grey } from '@mui/material/colors';
 
 const arrowColor = grey[500];
 const strokeOpacity = '0.7';

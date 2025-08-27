@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 import getByKey from 'utils/getByKey';
 import { Link } from 'react-router-dom';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';

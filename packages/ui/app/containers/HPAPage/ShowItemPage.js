@@ -11,7 +11,7 @@ import { createStructuredSelector, createSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { fromJS, List as list } from 'immutable';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';

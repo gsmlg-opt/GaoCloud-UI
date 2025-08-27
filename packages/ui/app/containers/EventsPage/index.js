@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 
 import history from '../../utils/history.js';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Menubar from 'components/Menubar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';

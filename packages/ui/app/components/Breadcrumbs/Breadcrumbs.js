@@ -1,5 +1,5 @@
 import React from 'react';
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import { Link } from 'react-router-dom';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';

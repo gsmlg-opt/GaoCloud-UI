@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 import { usePush } from 'hooks/router';
 
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';

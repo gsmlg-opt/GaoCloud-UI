@@ -13,7 +13,7 @@ import ip2long from 'utils/ip2long';
 import _ from 'lodash';
 
 import { Link } from 'react-router-dom';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 import Accordion from '@mui/material/Accordion';

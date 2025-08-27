@@ -1,6 +1,6 @@
 import Popover from '@mui/material/Popover';
 import React from 'react';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 
 const styles = (theme) => ({
   paper: {

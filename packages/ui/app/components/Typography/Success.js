@@ -1,5 +1,5 @@
 import React from 'react';
-import withStyles from '@mui/material/styles/withStyles';
+import withStyles from '@mui/styles';
 import typographyStyle from './typographyStyle';
 
 function Success({ ...props }) {

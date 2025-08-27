@@ -16,7 +16,7 @@ import { SubmissionError, submit } from 'redux-form';
 import { usePush } from 'hooks/router';
 
 import classNames from 'classnames';
-import { withStyles } from '@mui/material/styles';
+import { withStyles } from '@mui/styles';
 import Menubar from 'components/Menubar';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
