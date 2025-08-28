@@ -10,11 +10,11 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectAlarmsList } from 'ducks/alarms/selectors';
-import * as actions from 'ducks/alarms/actions';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import { makeSelectAlarmsList } from '../../ducks/alarms/selectors.js';
+import * as actions from '../../ducks/alarms/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

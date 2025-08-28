@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import hexToRgb from 'utils/hexToRgb';
+import hexToRgb from '../../../src/utils/hexToRgb.js';
 
 const snackbarStyle = (theme) => ({
   root: {

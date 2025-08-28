@@ -10,31 +10,31 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { Link } from 'react-router-dom';
-import Menubar from 'components/Menubar';
+import Menubar from "../../components/Menubar/index.js";
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Table from 'components/Table/Table';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Table from '../../components/Table/Table.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import * as actions from 'ducks/storages/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/storages/actions.js';
 import {
   makeSelectURL,
   makeSelectCurrent,
   makeSelectCurrentID,
-} from 'ducks/storages/selectors';
+} from '../../ducks/storages/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

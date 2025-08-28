@@ -8,25 +8,25 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
-import AddIcon from 'components/Icons/Add';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import AddIcon from '../../components/Icons/Add.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectURL } from 'ducks/ingresses/selectors';
-import * as actions from 'ducks/ingresses/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectURL } from '../../ducks/ingresses/selectors.js';
+import * as actions from '../../ducks/ingresses/actions.js';
 
 import useStyles from './styles';
 import messages from './messages';

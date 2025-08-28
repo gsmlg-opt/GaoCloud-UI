@@ -11,16 +11,16 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { fromJS } from 'immutable';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectCurrent,
   makeSelectCurrentID,
-} from 'ducks/svcMeshWorkloads/selectors';
-import * as actions from 'ducks/svcMeshWorkloads/actions';
+} from '../../ducks/svcMeshWorkloads/selectors.js';
+import * as actions from '../../ducks/svcMeshWorkloads/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

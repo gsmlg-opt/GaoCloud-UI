@@ -20,18 +20,18 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
-import ChevronRight from 'components/Icons/ChevronRight';
+import ChevronRight from '../../components/Icons/ChevronRight.js';
 
-import * as actions from 'ducks/app/actions';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import * as actions from '../../ducks/app/actions.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 
 import {
   makeSelectLeftMenus,
   makeSelectShowEvents,
   makeSelectLocation,
   makeSelectShowMenuText,
-} from 'ducks/app/selectors';
+} from '../../ducks/app/selectors.js';
 
 import messages from './messages';
 import useStyles from './LeftMenuStyle';

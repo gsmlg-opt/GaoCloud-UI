@@ -8,112 +8,112 @@ import Notifications from '@mui/icons-material/Notifications';
 import Unarchive from '@mui/icons-material/Unarchive';
 import Language from '@mui/icons-material/Language';
 
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import NotFoundPage from '../NotFoundPage/Loadable.js';
 import ClustersPage, {
   CreateClusterPage,
   ClusterManagePage,
-} from 'containers/ClustersPage/Loadable';
+} from '../ClustersPage/Loadable.js';
 import ClusterDetailPage, {
   ClusterThresholdsPage,
-} from 'containers/ClusterDetailPage/Loadable';
-import NodesPage, { NodeDetailPage } from 'containers/NodesPage/Loadable';
+} from '../ClusterDetailPage/Loadable.js';
+import NodesPage, { NodeDetailPage } from '../NodesPage/Loadable.js';
 import NamespacesPage, {
   CreateNamespacePage,
   NamespaceDetailPage,
   NamespaceOverviewPage,
   NamespaceThresholdsPage,
-} from 'containers/NamespacesPage/Loadable';
-import EventsPage from 'containers/EventsPage/Loadable';
+} from '../NamespacesPage/Loadable.js';
+import EventsPage from '../EventsPage/Loadable.js';
 import HPAPage, {
   CreateHPAPage,
   ShowHPAPage,
   UpdateHPAPage,
-} from 'containers/HPAPage/Loadable';
+} from '../HPAPage/Loadable.js';
 import DeploymentsPage, {
   CreateDeploymentPage,
   DeploymentDetailPage,
   UpdateDeploymentPage,
-} from 'containers/DeploymentsPage/Loadable';
+} from '../DeploymentsPage/Loadable.js';
 import StatefulSetsPage, {
   CreateStatefulSetPage,
   StatefulSetDetailPage,
   UpdateStatefulSetPage,
-} from 'containers/StatefulSetsPage/Loadable';
+} from '../StatefulSetsPage/Loadable.js';
 import DaemonSetsPage, {
   CreateDaemonSetPage,
   DaemonSetDetailPage,
   UpdateDaemonSetPage,
-} from 'containers/DaemonSetsPage/Loadable';
+} from '../DaemonSetsPage/Loadable.js';
 import CronJobsPage, {
   CreateCronJobPage,
   CronJobDetailPage,
-} from 'containers/CronJobsPage/Loadable';
+} from '../CronJobsPage/Loadable.js';
 import JobsPage, {
   CreateJobPage,
   JobDetailPage,
-} from 'containers/JobsPage/Loadable';
-import PersistentVolumeClaimsPage from 'containers/PersistentVolumeClaimsPage/Loadable';
+} from '../JobsPage/Loadable.js';
+import PersistentVolumeClaimsPage from '../PersistentVolumeClaimsPage/Loadable.js';
 import ConfigMapsPage, {
   CreateConfigMapPage,
   ShowConfigMapPage,
   EditConfigMapPage,
-} from 'containers/ConfigMapsPage/Loadable';
+} from '../ConfigMapsPage/Loadable.js';
 import SecretsPage, {
   CreateSecretPage,
   ShowSecretPage,
   EditSecretPage,
-} from 'containers/SecretsPage/Loadable';
+} from '../SecretsPage/Loadable.js';
 import ServicesPage, {
   CreateServicePage,
   ShowServicePage,
-} from 'containers/ServicesPage/Loadable';
+} from '../ServicesPage/Loadable.js';
 import SvcMeshWorkloadsPage, {
   ShowSvcMeshWorkloadPage,
-} from 'containers/SvcMeshWorkloadsPage/Loadable';
-import SvcMeshPodsPage from 'containers/SvcMeshPodsPage/Loadable';
-import SvcMeshTapPage from 'containers/SvcMeshTapPage/Loadable';
+} from '../SvcMeshWorkloadsPage/Loadable.js';
+import SvcMeshPodsPage from '../SvcMeshPodsPage/Loadable.js';
+import SvcMeshTapPage from '../SvcMeshTapPage/Loadable.js';
 import IngressesPage, {
   CreateIngressPage,
   ShowIngressPage,
-} from 'containers/IngressesPage/Loadable';
+} from '../IngressesPage/Loadable.js';
 import UdpIngressesPage, {
   CreateUdpIngressPage,
   ShowUdpIngressPage,
-} from 'containers/UdpIngressesPage/Loadable';
-import ServiceLinkPage from 'containers/ServiceLinkPage/Loadable';
+} from '../UdpIngressesPage/Loadable.js';
+import ServiceLinkPage from '../ServiceLinkPage/Loadable.js';
 import StoragesPage, {
   CreateStoragePage,
   EditStoragePage,
   StorageDetailPage,
-} from 'containers/StoragesPage/Loadable';
-import NetworkPage from 'containers/NetworkPage/Loadable';
+} from '../StoragesPage/Loadable.js';
+import NetworkPage from '../NetworkPage/Loadable.js';
 import UserQuotasPage, {
   CreateUserQuotaPage,
   UserQuotaDetailPage,
   RequestUserQuotaPage,
   AdminUserQuotaPage,
   EditUserQuotaPage,
-} from 'containers/UserQuotasPage/Loadable';
-import ApplicationStorePage from 'containers/ApplicationStorePage/Loadable';
+} from '../UserQuotasPage/Loadable.js';
+import ApplicationStorePage from '../ApplicationStorePage/Loadable.js';
 import ApplicationsPage, {
   ApplicationDetailPage,
   CreateApplicationPage,
-} from 'containers/ApplicationsPage/Loadable';
+} from '../ApplicationsPage/Loadable.js';
 import UsersPage, {
   CreateUserPage,
   EditUserPage,
   UserProfilePage,
   PasswordSetupPage,
-} from 'containers/UsersPage/Loadable';
-import AlarmMessagesPage from 'containers/AlarmMessagesPage';
-import GlobalConfigurationPage from 'containers/GlobalConfigurationPage';
-import AuditLogsPage from 'containers/AuditLogsPage/Loadable';
+} from '../UsersPage/Loadable.js';
+import AlarmMessagesPage from '../AlarmMessagesPage/Loadable.js';
+import GlobalConfigurationPage from '../GlobalConfigurationPage/Loadable.js';
+import AuditLogsPage from '../AuditLogsPage/Loadable.js';
 import WorkFlowPage, {
   CreateWorkFlowPage,
   ShowWorkFlowPage,
   UpdateWorkFlowPage,
   LogsPage,
-} from 'containers/WorkFlowsPage/Loadable';
+} from '../WorkFlowsPage/Loadable.js';
 
 const appRoutes = [
   {

@@ -18,27 +18,27 @@ import { usePush, useLocation } from 'hooks/router';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectURL as makeSelectChartsURL,
   makeSelectCurrentID as makeSelectCurrentChartID,
   makeSelectCurrent as makeSelectCurrentChart,
   makeSelectCharts,
-} from 'ducks/charts/selectors';
-import * as chartsActions from 'ducks/charts/actions';
-import * as actions from 'ducks/applications/actions';
+} from '../../ducks/charts/selectors.js';
+import * as chartsActions from '../../ducks/charts/actions.js';
+import * as actions from '../../ducks/applications/actions.js';
 import {
   makeSelectStorageClasses,
   makeSelectURL as makeSelectStorageClassesURL,
-} from 'ducks/storageClasses/selectors';
-import * as storagesActions from 'ducks/storageClasses/actions';
+} from '../../ducks/storageClasses/selectors.js';
+import * as storagesActions from '../../ducks/storageClasses/actions.js';
 
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 import messages from './messages';
 import useStyles from './styles';
 import ApplicationForm from './ApplicationForm';

@@ -13,19 +13,19 @@ import { usePush } from 'hooks/router';
 
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-import CButton from 'components/CustomButtons/Button';
+import CButton from '../../components/CustomButtons/Button.js';
 import Button from '@mui/material/Button';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
 import Dialog from '@mui/material/Dialog';
-import CloseIcon from 'components/Icons/Close';
-import CardFooter from 'components/Card/CardFooter';
+import CloseIcon from '../../components/Icons/Close.js';
+import CardFooter from '../../components/Card/CardFooter.js';
 import IconButton from '@mui/material/IconButton';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import * as actions from 'ducks/metrics/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import * as actions from '../../ducks/metrics/actions.js';
 
 import useStyles from './styles';
 import messages from './messages';

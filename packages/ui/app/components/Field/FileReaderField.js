@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from 'react';
 import { Field } from 'redux-form/immutable';
-// import CustomInput from 'components/CustomInput/CustomInput';
+// import CustomInput from '../CustomInput/CustomInput.js';
 import FormControl from '@mui/material/FormControl';
-import Button from 'components/CustomButtons/Button';
-import { readAsText } from 'utils/readFile';
+import Button from '../CustomButtons/Button.js';
+import { readAsText } from '../../../src/utils/readFile.js';
 
 const Input = ({ label, input, classes, meta, buttonProps, ...custom }) => {
   const [node, setNode] = useState(null);

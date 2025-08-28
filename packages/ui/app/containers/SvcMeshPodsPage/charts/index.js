@@ -12,15 +12,15 @@ import { bindActionCreators, compose } from 'redux';
 import { fromJS } from 'immutable';
 import Grid from '@mui/material/Grid';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectLocation } from '../../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../../ducks/namespaces/selectors.js';
 import {
   makeSelectCurrent,
   makeSelectCurrentID,
-} from 'ducks/svcMeshPods/selectors';
-import * as actions from 'ducks/svcMeshWorkloads/actions';
-import { makeSelectCurrentID as makeSelectSvcMeshWorkloadID } from 'ducks/svcMeshWorkloads/selectors';
+} from '../../../ducks/svcMeshPods/selectors.js';
+import * as actions from '../../../ducks/svcMeshWorkloads/actions.js';
+import { makeSelectCurrentID as makeSelectSvcMeshWorkloadID } from '../../../ducks/svcMeshWorkloads/selectors.js';
 
 import messages from '../messages';
 import useStyles from '../styles';

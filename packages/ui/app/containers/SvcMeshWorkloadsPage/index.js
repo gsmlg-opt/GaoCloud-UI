@@ -7,33 +7,33 @@ import React, { useEffect, useState, memo ,Fragment} from 'react';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { connect } from 'react-redux';
-import { fromJS, groupBy } from 'immutable';
-import uuid from 'utils/uuid';
+import { fromJS } from 'immutable';
+import uuid from '../../../src/utils/uuid.js';
 import _ from 'lodash';
 
 import NetworkGraph from 'com/NetworkGraph';
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import BlankIcon from 'components/Icons/Blank';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import BlankIcon from '../../components/Icons/Blank.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectURL,
   makeSelectSvcMeshWorkloadsList,
-} from 'ducks/svcMeshWorkloads/selectors';
-import * as actions from 'ducks/svcMeshWorkloads/actions';
+} from '../../ducks/svcMeshWorkloads/selectors.js';
+import * as actions from '../../ducks/svcMeshWorkloads/actions.js';
 
 import useStyles from './styles';
 import messages from './messages';

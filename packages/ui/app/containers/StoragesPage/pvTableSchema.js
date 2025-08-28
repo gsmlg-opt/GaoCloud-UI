@@ -1,5 +1,5 @@
 import React from 'react';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';

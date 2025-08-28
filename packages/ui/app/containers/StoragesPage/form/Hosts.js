@@ -9,7 +9,7 @@ import {
   reduxForm,
   FormSection,
 } from 'redux-form/immutable';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../../src/utils/getByKey.js';
 import AceEditor from 'react-ace';
 import classNames from 'classnames';
 
@@ -27,9 +27,9 @@ import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 
-import Danger from 'components/Typography/Danger';
-import GridContainer from 'components/Grid/GridContainer';
-import GridItem from 'components/Grid/GridItem';
+import Danger from '../../../components/Typography/Danger.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import GridItem from '../../../components/Grid/GridItem.js';
 
 import messages from '../messages';
 

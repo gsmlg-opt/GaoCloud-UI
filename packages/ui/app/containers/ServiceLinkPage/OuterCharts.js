@@ -11,15 +11,15 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import _ from 'lodash';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import CardFooter from 'components/Card/CardFooter';
-import OuterServiceTree from 'components/tree/OuterServiceTree';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import OuterServiceTree from '../../components/tree/OuterServiceTree.js';
 
-import { makeSelectOuterServices } from 'ducks/outerServices/selectors';
+import { makeSelectOuterServices } from '../../ducks/outerServices/selectors.js';
 
 import useStyles from './styles';
 import messages from './messages';

@@ -11,32 +11,32 @@ import {
   submit,
 } from 'redux-form/immutable';
 // @mui/material components
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Danger from 'components/Typography/Danger';
-import ClusterWatchIcon from 'components/Icons/ClusterWatch';
-import ImageRegistryIcon from 'components/Icons/ImageRegistry';
-import ConfirmDialog from 'components/Confirm/ConfirmDialog';
+import Danger from '../../components/Typography/Danger.js';
+import ClusterWatchIcon from '../../components/Icons/ClusterWatch.js';
+import ImageRegistryIcon from '../../components/Icons/ImageRegistry.js';
+import ConfirmDialog from '../../components/Confirm/ConfirmDialog.js';
 
-import * as actions from 'ducks/app/actions';
-import * as mActions from 'ducks/monitors/actions';
-import * as rActions from 'ducks/registries/actions';
-import * as eActions from 'ducks/efks/actions';
-import { makeSelectRole, makeSelectIsAdmin } from 'ducks/role/selectors';
-import { makeSelectShowMenuText } from 'ducks/app/selectors';
+import * as actions from '../../ducks/app/actions.js';
+import * as mActions from '../../ducks/monitors/actions.js';
+import * as rActions from '../../ducks/registries/actions.js';
+import * as eActions from '../../ducks/efks/actions.js';
+import { makeSelectRole, makeSelectIsAdmin } from '../../ducks/role/selectors.js';
+import { makeSelectShowMenuText } from '../../ducks/app/selectors.js';
 import {
   makeSelectCurrentID as makeSelectCurrentClusterID,
   makeSelectCurrent as makeSelectCurrentCluster,
-} from 'ducks/clusters/selectors';
+} from '../../ducks/clusters/selectors.js';
 import {
   makeSelectStorageClasses,
   makeSelectURL as makeSelectStorageClassesURL,
-} from 'ducks/storageClasses/selectors';
-import * as storagesActions from 'ducks/storageClasses/actions';
+} from '../../ducks/storageClasses/selectors.js';
+import * as storagesActions from '../../ducks/storageClasses/actions.js';
 
 import messages from './messages';
 import useStyles from './LeftMenuStyle';

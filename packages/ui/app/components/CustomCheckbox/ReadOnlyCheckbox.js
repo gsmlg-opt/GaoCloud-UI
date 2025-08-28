@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Danger from 'components/Typography/Danger';
+import Danger from '../Typography/Danger.js';
 import Checkbox from '@mui/material/Checkbox';
 import FormControl from '@mui/material/FormControl';
 

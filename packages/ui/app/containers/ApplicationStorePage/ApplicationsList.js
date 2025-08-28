@@ -11,12 +11,12 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/styles';
-import GridContainer from 'components/Grid/GridContainer';
+import GridContainer from '../../components/Grid/GridContainer.js';
 
-import * as actions from 'ducks/charts/actions';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectCharts, makeSelectChartsList } from 'ducks/charts/selectors';
+import * as actions from '../../ducks/charts/actions.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectCharts, makeSelectChartsList } from '../../ducks/charts/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

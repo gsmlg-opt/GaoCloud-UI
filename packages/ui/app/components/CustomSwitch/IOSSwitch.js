@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import Switch from '@mui/material/Switch';
-import Danger from 'components/Typography/Danger';
+import Danger from '../Typography/Danger.js';
 
 const IOSSwitch = ({ ...props }) => {
   const {

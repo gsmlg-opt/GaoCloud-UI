@@ -2,13 +2,13 @@ import React from 'react';
 // nodejs library to set properties for components
 
 // mterial-ui components
-import withStyles from '@mui/styles';
+import { withStyles } from '@mui/styles';
 
 const style = {
   clearfix: {
     '&:after,&:before': {
       display: 'table',
-      content: '" "',
+      content: ' "',
     },
     '&:after': {
       clear: 'both',

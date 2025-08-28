@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 
-import boxImage from 'images/login-bg-box.png';
-import image from 'images/login-bg.jpg';
+import boxImage from '../../images/login-bg-box.png';
+import image from '../../images/login-bg.jpg';
 
 const styles = (theme) => ({
   container: {
@@ -74,7 +74,7 @@ const styles = (theme) => ({
       display: 'block',
       left: '0',
       top: '0',
-      content: '""',
+      content: '"',
     },
     '& footer li a,& footer li a:hover,& footer li a:active': {
       color: '#FFFFFF',

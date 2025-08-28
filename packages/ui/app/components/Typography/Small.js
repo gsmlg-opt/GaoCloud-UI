@@ -1,7 +1,7 @@
 import React from 'react';
 // nodejs library to set properties for components
 // @mui/material components
-import withStyles from '@mui/styles';
+import { withStyles } from '@mui/styles';
 // core components
 import typographyStyle from './typographyStyle';
 

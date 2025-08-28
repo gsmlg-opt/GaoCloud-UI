@@ -2,7 +2,7 @@ import React from 'react';
 // nodejs library to set properties for components
 
 // @mui/material components
-import withStyles from '@mui/styles';
+import { withStyles } from '@mui/styles';
 import Grid from '@mui/material/Grid';
 
 const style = {

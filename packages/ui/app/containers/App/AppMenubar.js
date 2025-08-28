@@ -12,8 +12,7 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import { Switch, Route, Redirect, Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
+import { Routes, Route, Navigate, Link } from 'react-router-dom';
 
 // @mui/material components
 import IconButton from '@mui/material/IconButton';
@@ -22,28 +21,28 @@ import Menu from '@mui/material/Menu';
 import Divider from '@mui/material/Divider';
 import Badge from '@mui/material/Badge';
 // core components
-import Snackbar from 'components/Snackbar/Snackbar';
-import Menubar from 'components/Menubar';
-import DownIcon from 'components/Icons/Down';
-import ShellIcon from 'components/Icons/Shell';
-import AccountIcon from 'components/Icons/Account';
-import AlarmIcon from 'components/Icons/Alarm';
+import Snackbar from '../../components/Snackbar/Snackbar.js';
+import Menubar from '../../components/Menubar/index.js';
+import DownIcon from '../../components/Icons/Down.js';
+import ShellIcon from '../../components/Icons/Shell.js';
+import AccountIcon from '../../components/Icons/Account.js';
+import AlarmIcon from '../../components/Icons/Alarm.js';
 
-import * as roleActions from 'ducks/role/actions';
-import * as actions from 'ducks/app/actions';
-import * as alarmsActions from 'ducks/alarms/actions';
-import { makeSelectRole } from 'ducks/role/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
+import * as roleActions from '../../ducks/role/actions.js';
+import * as actions from '../../ducks/app/actions.js';
+import * as alarmsActions from '../../ducks/alarms/actions.js';
+import { makeSelectRole } from '../../ducks/role/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
 import {
   makeSelectShowEvents,
   makeSelectLocation,
   makeSelectUserMenus,
   makeSelectShowMenuText,
-} from 'ducks/app/selectors';
+} from '../../ducks/app/selectors.js';
 import {
   makeSelectUnreadCount,
   makeSelectNewAlarms,
-} from 'ducks/alarms/selectors';
+} from '../../ducks/alarms/selectors.js';
 
 import SelectMenu from './SelectMenu';
 import messages from './messages';

@@ -17,7 +17,7 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import Checkbox from '@mui/material/Checkbox';
 
-import * as actions from 'ducks/metrics/actions';
+import * as actions from '../../ducks/metrics/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

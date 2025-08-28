@@ -2,12 +2,12 @@ import React, { PureComponent } from 'react';
 import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 import { Field, reduxForm } from 'redux-form/immutable';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import AuthField from 'components/Field/AuthField';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import InputField from '../../components/Field/InputField.js';
+import AuthField from '../../components/Field/AuthField.js';
 
 import messages from './messages';
 

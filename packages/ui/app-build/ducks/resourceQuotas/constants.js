@@ -1,0 +1,27 @@
+/**
+ * Duck: ResourceQuotas
+ * constants: resourceQuotas
+ *
+ */
+export const prefix = 'resourceQuotas';
+
+/**
+ *  constants
+ */
+export const LOAD_RESOURCE_QUOTAS = `${prefix}/LOAD_RESOURCE_QUOTAS`;
+export const LOAD_RESOURCE_QUOTAS_SUCCESS = `${prefix}/LOAD_RESOURCE_QUOTAS_SUCCESS`;
+export const LOAD_RESOURCE_QUOTAS_FAILURE = `${prefix}/LOAD_RESOURCE_QUOTAS_FAILURE`;
+
+export const CREATE_RESOURCE_QUOTA = `${prefix}/CREATE_RESOURCE_QUOTA`;
+export const CREATE_RESOURCE_QUOTA_SUCCESS = `${prefix}/CREATE_RESOURCE_QUOTA_SUCCESS`;
+export const CREATE_RESOURCE_QUOTA_FAILURE = `${prefix}/CREATE_RESOURCE_QUOTA_FAILURE`;
+
+export const READ_RESOURCE_QUOTA = `${prefix}/READ_RESOURCE_QUOTA`;
+export const READ_RESOURCE_QUOTA_SUCCESS = `${prefix}/READ_RESOURCE_QUOTA_SUCCESS`;
+export const READ_RESOURCE_QUOTA_FAILURE = `${prefix}/READ_RESOURCE_QUOTA_FAILURE`;
+
+export const REMOVE_RESOURCE_QUOTA = `${prefix}/REMOVE_RESOURCE_QUOTA`;
+export const REMOVE_RESOURCE_QUOTA_SUCCESS = `${prefix}/REMOVE_RESOURCE_QUOTA_SUCCESS`;
+export const REMOVE_RESOURCE_QUOTA_FAILURE = `${prefix}/REMOVE_RESOURCE_QUOTA_FAILURE`;
+
+export const CLEAR_ERRORS_LIST = `${prefix}/CLEAR_ERRORS_LIST`;

@@ -9,24 +9,24 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import Popper from '@mui/material/Popper';
 
-import { makeSelectLastNamespace } from 'ducks/app/selectors';
+import { makeSelectLastNamespace } from '../../ducks/app/selectors.js';
 import {
   makeSelectCurrentID as makeSelectCurrentNamespaceID,
   makeSelectData as makeSelectNamespacesData,
-} from 'ducks/namespaces/selectors';
+} from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectClusters,
   makeSelectCurrentID as makeSelectCurrentClusterID,
   makeSelectURL,
-} from 'ducks/clusters/selectors';
-import * as actions from 'ducks/app/actions';
-import * as clusterActions from 'ducks/clusters/actions';
-import * as nsActions from 'ducks/namespaces/actions';
+} from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/app/actions.js';
+import * as clusterActions from '../../ducks/clusters/actions.js';
+import * as nsActions from '../../ducks/namespaces/actions.js';
 
 import { usePush } from 'hooks/router';
 
-import SelectIcon from 'components/Icons/Select';
-import ChevronRight from 'components/Icons/ChevronRight';
+import SelectIcon from '../../components/Icons/Select.js';
+import ChevronRight from '../../components/Icons/ChevronRight.js';
 import messages from './messages';
 import useStyles from './dashboardStyles';
 

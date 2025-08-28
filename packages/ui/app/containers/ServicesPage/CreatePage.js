@@ -18,35 +18,35 @@ import {
 
 import { usePush } from 'hooks/router';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import ConfirmDialog from 'components/Confirm/ConfirmDialog';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import ConfirmDialog from '../../components/Confirm/ConfirmDialog.js';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectURL } from 'ducks/services/selectors';
-import * as actions from 'ducks/services/actions';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectURL } from '../../ducks/services/selectors.js';
+import * as actions from '../../ducks/services/actions.js';
 import {
   makeSelectURL as makeSelectDeploymentsURL,
   makeSelectDeployments,
-} from 'ducks/deployments/selectors';
+} from '../../ducks/deployments/selectors.js';
 import {
   makeSelectURL as makeSelectDaemonSetsURL,
   makeSelectDaemonSets,
-} from 'ducks/daemonSets/selectors';
+} from '../../ducks/daemonSets/selectors.js';
 import {
   makeSelectURL as makeSelectStatefulSetsURL,
   makeSelectStatefulSets,
-} from 'ducks/statefulSets/selectors';
-import * as deployActions from 'ducks/deployments/actions';
-import * as dsActions from 'ducks/daemonSets/actions';
-import * as stsActions from 'ducks/statefulSets/actions';
+} from '../../ducks/statefulSets/selectors.js';
+import * as deployActions from '../../ducks/deployments/actions.js';
+import * as dsActions from '../../ducks/daemonSets/actions.js';
+import * as stsActions from '../../ducks/statefulSets/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

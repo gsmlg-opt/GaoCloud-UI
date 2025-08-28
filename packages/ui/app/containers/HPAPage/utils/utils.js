@@ -2,9 +2,9 @@ import React, { PureComponent, Fragment, useState } from 'react';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { fromJS, is } from 'immutable';
 
-import InputField from 'components/Field/InputField';
-import SelectField from 'components/Field/SelectField';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
+import InputField from '../../../components/Field/InputField.js';
+import SelectField from '../../../components/Field/SelectField.js';
+import ReadOnlyInput from '../../../components/CustomInput/ReadOnlyInput.js';
 import Chip from '@mui/material/Chip';
 
 import messages from '../messages';

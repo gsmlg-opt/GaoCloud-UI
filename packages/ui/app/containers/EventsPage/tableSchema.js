@@ -1,4 +1,4 @@
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 
 const schema = [
   'time',

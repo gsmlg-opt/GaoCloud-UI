@@ -12,26 +12,26 @@ import { fromJS } from 'immutable';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { SubmissionError, submit } from 'redux-form';
 
-import Menubar from 'components/Menubar';
+import Menubar from "../../components/Menubar/index.js";
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
-import AddIcon from 'components/Icons/Add';
+import AddIcon from '../../components/Icons/Add.js';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import CardFooter from 'components/Card/CardFooter';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectURL } from 'ducks/namespaceThresholds/selectors';
-import * as actions from 'ducks/namespaceThresholds/actions';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectURL } from '../../ducks/namespaceThresholds/selectors.js';
+import * as actions from '../../ducks/namespaceThresholds/actions.js';
 
 import { usePush } from 'hooks/router';
 

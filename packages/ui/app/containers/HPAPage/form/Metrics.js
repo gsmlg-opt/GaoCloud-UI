@@ -8,15 +8,15 @@ import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import SelectField from 'components/Field/SelectField';
-import PlusIcon from 'images/icons/plusHl.svg';
-import MinusIcon from 'components/Icons/Minus';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
+import Card from '../../../components/Card/Card.js';
+import CardBody from '../../../components/Card/CardBody.js';
+import Danger from '../../../components/Typography/Danger.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import SelectField from '../../../components/Field/SelectField.js';
+import PlusIcon from '../../../images/icons/plusHl.svg';
+import MinusIcon from '../../../components/Icons/Minus.js';
+import ReadOnlyInput from '../../../components/CustomInput/ReadOnlyInput.js';
 
 import messages from '../messages';
 import useStyles from '../styles';

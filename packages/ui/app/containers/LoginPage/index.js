@@ -14,14 +14,14 @@ import sha1 from 'crypto-js/sha1';
 import encHex from 'crypto-js/enc-hex';
 import _ from 'lodash';
 
-import GridContainer from 'components/Grid/GridContainer';
-import GridItem from 'components/Grid/GridItem';
-import Button from 'components/CustomButtons/Button';
-import Card from 'components/Card/Card';
-import Helmet from 'components/Helmet/Helmet';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import Button from '../../components/CustomButtons/Button.js';
+import Card from '../../components/Card/Card.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import * as roleActions from 'ducks/role/actions';
-import { makeSelectIsLogin } from 'ducks/role/selectors';
+import * as roleActions from '../../ducks/role/actions.js';
+import { makeSelectIsLogin } from '../../ducks/role/selectors.js';
 
 import useStyles from './styles';
 import messages from './messages';

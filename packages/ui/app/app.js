@@ -26,7 +26,7 @@ import LanguageProvider from 'containers/LanguageProvider/index.js';
 
 // Load the favicon and the .htaccess file
 /* eslint-disable import/no-unresolved, import/extensions */
-import '!file-loader?name=[name].[ext]!./images/logo.svg';
+
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import store from './store.js';

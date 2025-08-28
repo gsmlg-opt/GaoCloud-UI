@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "containers/*": ["./app/containers/*"],
+      "images/*": ["./app/images/*"],
+      "ducks/*": ["./app/ducks/*"],
+      "utils/*": ["./src/utils/*"],
+      "components/*": ["./app/components/*"],
+      "hooks/*": ["./app/hooks/*"],
+      "global-styles": ["./app/global-styles"],
+      "global-styles.js": ["./app/global-styles.js"],
+      "theme": ["./app/theme"],
+      "theme.js": ["./app/theme.js"],
+      "configureStore": ["./app/configureStore"],
+      "configureStore.js": ["./app/configureStore.js"],
+      "store": ["./app/store"],
+      "store.js": ["./app/store.js"],
+      "i18n": ["./app/i18n"],
+      "i18n.js": ["./app/i18n.js"],
+      "appReducers": ["./app/appReducers"],
+      "appReducers.js": ["./app/appReducers.js"],
+      "persistentSubState": ["./app/persistentSubState"],
+      "persistentSubState.js": ["./app/persistentSubState.js"],
+      "com/*": ["./src/com/*"]
+    }
+  },
+  "include": [
+    "app/**/*",
+    "src/**/*",
+    "app-build/**/*"
+  ]
+}

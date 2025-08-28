@@ -5,8 +5,8 @@
  */
 import _ from 'lodash';
 import { fromJS } from 'immutable';
-import getByKey from 'utils/getByKey';
-import { procCollectionData } from 'utils/procData';
+import getByKey from '../../../src/utils/getByKey.js';
+import { procCollectionData } from '../../../src/utils/procData.js';
 
 import * as constants from './constants';
 import * as actions from './actions';

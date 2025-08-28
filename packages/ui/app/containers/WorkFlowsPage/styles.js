@@ -1,6 +1,6 @@
 import { makeStyles } from '@mui/styles';
-import pageStyles from 'jss/page';
-import dialogStyles from 'jss/dialog';
+import pageStyles from '../../jss/page.js';
+import dialogStyles from '../../jss/dialog.js';
 import { autofill } from 'redux-form';
 
 export const styles = (theme) => ({

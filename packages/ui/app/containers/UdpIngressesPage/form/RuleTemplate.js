@@ -10,14 +10,14 @@ import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import SelectField from 'components/Field/SelectField';
-import PlusIcon from 'images/icons/plusHl.svg';
-import MinusIcon from 'components/Icons/Minus';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
+import Danger from '../../../components/Typography/Danger.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import InputField from '../../../components/Field/InputField.js';
+import SelectField from '../../../components/Field/SelectField.js';
+import PlusIcon from '../../../images/icons/plusHl.svg';
+import MinusIcon from '../../../components/Icons/Minus.js';
+import ReadOnlyInput from '../../../components/CustomInput/ReadOnlyInput.js';
 
 import useStyles from '../styles';
 import messages from '../messages';

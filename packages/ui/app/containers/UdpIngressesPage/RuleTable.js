@@ -10,9 +10,9 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import * as actions from 'ducks/ingresses/actions';
+import * as actions from '../../ducks/ingresses/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

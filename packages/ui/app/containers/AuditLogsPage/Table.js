@@ -10,15 +10,15 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
 import {
   makeSelectLocation,
-} from 'ducks/app/selectors';
+} from '../../ducks/app/selectors.js';
 import {
   makeSelectAuditLogsList,
-} from 'ducks/auditLogs/selectors';
-import * as actions from 'ducks/auditLogs/actions';
+} from '../../ducks/auditLogs/selectors.js';
+import * as actions from '../../ducks/auditLogs/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

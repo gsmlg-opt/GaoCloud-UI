@@ -3,11 +3,11 @@ import { fromJS, is } from 'immutable';
 import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
+import Card from '../../../components/Card/Card.js';
+import CardBody from '../../../components/Card/CardBody.js';
+import CardHeader from '../../../components/Card/CardHeader.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';

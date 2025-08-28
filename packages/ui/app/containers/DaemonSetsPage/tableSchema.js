@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
-import TimeCell from 'components/Cells/TimeCell';
+import { ucfirst } from '../../../src/utils/index.js';
+import TimeCell from '../../components/Cells/TimeCell.js';
 import { Link } from 'react-router-dom';
 import LinearProgress from '@mui/material/LinearProgress';
-import Button from 'components/CustomButtons/Button';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
-import LogcollectionDialog from 'containers/LogcollectionPage/LogcollectionDialog';
-import MetricsDialog from 'containers/MetricsPage/MetricsDialog';
-import UpdatingProgress from 'components/Progress/UpdatingProgress';
+import Button from '../../components/CustomButtons/Button.js';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
+import LogcollectionDialog from '../LogcollectionPage/LogcollectionDialog.js';
+import MetricsDialog from '../MetricsPage/MetricsDialog.js';
+import UpdatingProgress from '../../components/Progress/UpdatingProgress.js';
 import { FormattedMessage } from 'react-intl';
-import TableActions from 'components/TableActions/TableActions';
+import TableActions from '../../components/TableActions/TableActions.js';
 import messages from './messages';
 
 const schema = ['name', 'replicas', 'creationTimestamp'];

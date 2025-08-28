@@ -12,11 +12,11 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
 
-import img404 from 'images/404.png';
+import img404 from '../../images/404.png';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -13,25 +13,25 @@ import { Link } from 'react-router-dom';
 import { withStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 import Fab from '@mui/material/Fab';
 import EditIcon from '@mui/icons-material/Edit';
 import IconButton from '@mui/material/IconButton';
-import ShellIcon from 'components/Icons/Shell';
-import LogIcon from 'components/Icons/Log';
+import ShellIcon from '../../components/Icons/Shell.js';
+import LogIcon from '../../components/Icons/Log.js';
 import Chip from '@mui/material/Chip';
 
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import * as appActions from 'ducks/app/actions';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import * as appActions from '../../ducks/app/actions.js';
 import {
   makeSelectPodsList,
   makeSelectSTSPodsList,
   makeSelectDSPodsList,
   makeSelectCJPodsList,
   makeSelectJOBPodsList,
-} from 'ducks/pods/selectors';
-import * as actions from 'ducks/pods/actions';
+} from '../../ducks/pods/selectors.js';
+import * as actions from '../../ducks/pods/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -12,18 +12,18 @@ import { bindActionCreators, compose } from 'redux';
 import { fromJS } from 'immutable';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectCurrentID as makeSelectSvcMeshWorkloadID } from 'ducks/svcMeshWorkloads/selectors';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectCurrentID as makeSelectSvcMeshWorkloadID } from '../../ducks/svcMeshWorkloads/selectors.js';
 import {
   makeSelectCurrentID,
   makeSelectCurrent,
-} from 'ducks/svcMeshPods/selectors';
+} from '../../ducks/svcMeshPods/selectors.js';
 
-import * as actions from 'ducks/svcMeshPods/actions';
+import * as actions from '../../ducks/svcMeshPods/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

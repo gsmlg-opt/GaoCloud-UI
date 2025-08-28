@@ -12,8 +12,8 @@ import {
 import {
   makeSelectCurrent as makeSelectCurrentNamespace,
   makeSelectCurrentID as makeSelectCurrentNamespaceID,
-} from 'ducks/namespaces/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
+} from '../namespaces/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../clusters/selectors.js';
 
 import * as c from './constants';
 import { initialState } from './index';

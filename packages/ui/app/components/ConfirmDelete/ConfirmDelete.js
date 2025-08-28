@@ -1,16 +1,16 @@
 import React, { Fragment, useState } from 'react';
-import IconButton from 'components/CustomIconButtons/IconButton';
+import IconButton from '../CustomIconButtons/IconButton.js';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Button from '@mui/material/Button';
-import CButton from 'components/CustomButtons/Button';
+import CButton from '../CustomButtons/Button.js';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import removeICon from 'images/icons/remove.svg';
-import warningIcon from 'images/warning.png';
+import removeICon from '../../images/icons/remove.svg';
+import warningIcon from '../../images/warning.png';
 import messages from './messages';
 
 const ConfirmDelete = ({

@@ -14,31 +14,31 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import classNames from 'classnames';
-import { procCollectionData } from 'utils/procData';
+import { procCollectionData } from '../../../src/utils/procData.js';
 
 // @mui/material components
 import CssBaseline from '@mui/material/CssBaseline';
 // core components
-import Footer from 'components/Footer/Footer';
-import TerminalDialog from 'containers/TerminalPage/TerminalDialog';
-import GlobalStyle from 'global-styles';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import Footer from '../../components/Footer/Footer.js';
+import TerminalDialog from '../TerminalPage/TerminalDialog.js';
+import GlobalStyle from '../../global-styles.js';
+import NotFoundPage from '../NotFoundPage/Loadable.js';
 
-import * as actions from 'ducks/clusters/actions';
-import * as nsActions from 'ducks/namespaces/actions';
-import * as roleActions from 'ducks/role/actions';
-import * as eventsActions from 'ducks/events/actions';
-import * as appActions from 'ducks/app/actions';
-import * as alarmsActions from 'ducks/alarms/actions';
-import { makeSelectShowEvents, makeSelectLocation } from 'ducks/app/selectors';
+import * as actions from '../../ducks/clusters/actions.js';
+import * as nsActions from '../../ducks/namespaces/actions.js';
+import * as roleActions from '../../ducks/role/actions.js';
+import * as eventsActions from '../../ducks/events/actions.js';
+import * as appActions from '../../ducks/app/actions.js';
+import * as alarmsActions from '../../ducks/alarms/actions.js';
+import { makeSelectShowEvents, makeSelectLocation } from '../../ducks/app/selectors.js';
 import {
   makeSelectCurrentID as makeSelectCurrentClusterID,
   makeSelectCurrent as makeSelectCurrentCluster,
   makeSelectURL,
-} from 'ducks/clusters/selectors';
-import { makeSelectIsLogin, makeSelectIsAdmin } from 'ducks/role/selectors';
+} from '../../ducks/clusters/selectors.js';
+import { makeSelectIsLogin, makeSelectIsAdmin } from '../../ducks/role/selectors.js';
 
-import EventsList from 'containers/EventsPage/EventsList';
+import EventsList from '../EventsPage/EventsList.js';
 
 import useStyles from './dashboardStyles';
 

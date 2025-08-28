@@ -1,0 +1,253 @@
+/**
+ *
+ * Create Service Page
+ *
+ */
+import React, { Fragment, useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { bindActionCreators, compose } from 'redux';
+import { fromJS } from 'immutable';
+import {
+  reduxForm,
+  getFormValues,
+  SubmissionError,
+  submit,
+  change,
+} from 'redux-form/immutable.js';
+
+import { usePush } from 'hooks/router.js';
+
+import Helmet from 'components/Helmet/Helmet.js';
+import { FormattedMessage } from 'react-intl';
+import CssBaseline from '@mui/material/CssBaseline.js';
+import Button from '@mui/material/Button.js';
+import GridItem from 'components/Grid/GridItem.js';
+import GridContainer from 'components/Grid/GridContainer.js';
+import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs.js';
+import ConfirmDialog from 'components/Confirm/ConfirmDialog.js';
+
+import { makeSelectLocation } from '../../../app/ducks/app/selectors';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../../app/ducks/clusters/selectors';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../../app/ducks/namespaces/selectors';
+import { makeSelectURL } from '../../../app/ducks/services/selectors';
+import * as actions from '../../../app/ducks/services/actions';
+import {
+  makeSelectURL as makeSelectDeploymentsURL,
+  makeSelectDeployments,
+} from '../../../app/ducks/deployments/selectors';
+import {
+  makeSelectURL as makeSelectDaemonSetsURL,
+  makeSelectDaemonSets,
+} from '../../../app/ducks/daemonSets/selectors';
+import {
+  makeSelectURL as makeSelectStatefulSetsURL,
+  makeSelectStatefulSets,
+} from '../../../app/ducks/statefulSets/selectors';
+import * as deployActions from '../../../app/ducks/deployments/actions';
+import * as dsActions from '../../../app/ducks/daemonSets/actions';
+import * as stsActions from '../../../app/ducks/statefulSets/actions';
+
+import messages from './messages';
+import useStyles from './styles';
+import CreateServiceForm, { formName } from './CreateForm';
+
+export const CreateServicePage = ({
+  createService,
+  submitForm,
+  changeFormValue,
+  url,
+  clusterID,
+  namespaceID,
+  values,
+  deployURL,
+  dsURL,
+  stsURL,
+  loadDeployments,
+  loadDaemonSets,
+  loadStatefulSets,
+  deployments,
+  daemonSets,
+  statefulSets,
+  location,
+}) => {
+  const classes = useStyles();
+  const push = usePush();
+  const search = location.get('search');
+  let from = false;
+  let targetResourceType = '';
+  let targetName = '';
+  if (search && search.includes('from=true')) {
+    const [trt, type] = /targetResourceType=([a-zA-Z]+)/i.exec(search);
+    const [tn, name] = /targetName=([a-zA-Z0-9-]+)/i.exec(search);
+    from = true;
+    targetResourceType = type;
+    targetName = name;
+  }
+  useEffect(() => {
+    loadDeployments(deployURL, { clusterID, namespaceID });
+    loadDaemonSets(dsURL, { clusterID, namespaceID });
+    loadStatefulSets(stsURL, { clusterID, namespaceID });
+  }, [
+    clusterID,
+    deployURL,
+    dsURL,
+    loadDaemonSets,
+    loadDeployments,
+    loadStatefulSets,
+    namespaceID,
+    stsURL,
+  ]);
+  let exposedPorts = [];
+  if (from) {
+    let l = fromJS({});
+    if (targetResourceType === 'deployments') l = deployments;
+    if (targetResourceType === 'daemonSets') l = daemonSets;
+    if (targetResourceType === 'statefulSets') l = statefulSets;
+    const target = l.get(targetName);
+    if (target) {
+      exposedPorts = target
+        .get('containers')
+        .reduce(
+          (meno, c) => meno.concat(c.get('exposedPorts') || fromJS([])),
+          fromJS([])
+        )
+        .map((exposedPort) =>
+          exposedPort.set('targetPort', exposedPort.get('port'))
+        )
+        .toJS();
+    }
+  }
+  const initialValues = fromJS({
+    targetResourceType: from ? targetResourceType : 'deployments',
+    targetName: from ? targetName : '',
+    name: from ? targetName : '',
+    serviceType: 'clusterip',
+    exposedPorts,
+  });
+
+  const [open, setOpen] = useState(false);
+  async function doSubmit(formValues) {
+    try {
+      const data = formValues
+        .update('exposedPorts', (ports) => ports.filter((p) => p.get('enable')))
+        .toJS();
+
+      const { response } = await new Promise((resolve, reject) => {
+        createService(data, {
+          resolve,
+          reject,
+          url,
+          clusterID,
+          namespaceID,
+        });
+      });
+      setOpen(response.name);
+    } catch (error) {
+      throw new SubmissionError({ _error: error });
+    }
+  }
+
+  return (
+    <div className={classes.root}>
+      <Helmet
+        title={messages.createPageTitle}
+        description={messages.createPageDesc}
+      />
+      <CssBaseline />
+      <ConfirmDialog
+        open={!!open}
+        onClose={() => {
+          push(`/clusters/${clusterID}/namespaces/${namespaceID}/services`);
+        }}
+        onAction={() => {
+          const p = values
+            .get('exposedPorts')
+            .filter((v) => v.get('enable'))
+            .first()
+            .get('protocol');
+          const page = p === 'udp' ? 'udpingresses' : 'ingresses';
+
+          push(
+            `/clusters/${clusterID}/namespaces/${namespaceID}/${page}/create?from=true&targetResourceType=services&targetName=${open}`
+          );
+        }}
+        title={<FormattedMessage {...messages.successTitle} />}
+        content={<FormattedMessage {...messages.successContent} />}
+      />
+      <div className={classes.content}>
+        <Breadcrumbs
+          data={[
+            {
+              path: `/clusters/${clusterID}/namespaces/${namespaceID}/services`,
+              name: <FormattedMessage {...messages.pageTitle} />,
+            },
+            {
+              name: <FormattedMessage {...messages.createPageTitle} />,
+            },
+          ]}
+        />
+        <GridContainer className={classes.grid}>
+          <GridItem xs={12} sm={12} md={12}>
+            <CreateServiceForm
+              onSubmit={doSubmit}
+              formValues={values || initialValues}
+              initialValues={initialValues}
+              deployments={deployments.toList()}
+              daemonSets={daemonSets.toList()}
+              statefulSets={statefulSets.toList()}
+              changeFormValue={changeFormValue}
+            />
+            <div className={classes.buttonGroup}>
+              <Button variant="contained" color="primary" onClick={submitForm}>
+                <FormattedMessage {...messages.save} />
+              </Button>
+              <Button
+                variant="contained"
+                className={classes.cancleBtn}
+                onClick={() => {
+                  push(
+                    `/clusters/${clusterID}/namespaces/${namespaceID}/services`
+                  );
+                }}
+              >
+                <FormattedMessage {...messages.cancle} />
+              </Button>
+            </div>
+          </GridItem>
+        </GridContainer>
+      </div>
+    </div>
+  );
+};
+
+const mapStateToProps = createStructuredSelector({
+  clusterID: makeSelectClusterID(),
+  namespaceID: makeSelectNamespaceID(),
+  url: makeSelectURL(),
+  values: getFormValues(formName),
+  deployURL: makeSelectDeploymentsURL(),
+  dsURL: makeSelectDaemonSetsURL(),
+  stsURL: makeSelectStatefulSetsURL(),
+  deployments: makeSelectDeployments(),
+  daemonSets: makeSelectDaemonSets(),
+  statefulSets: makeSelectStatefulSets(),
+  location: makeSelectLocation(),
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(
+    {
+      ...actions,
+      loadDeployments: deployActions.loadDeployments,
+      loadDaemonSets: dsActions.loadDaemonSets,
+      loadStatefulSets: stsActions.loadStatefulSets,
+      changeFormValue: (...args) => change(formName, ...args),
+      submitForm: () => submit(formName),
+    },
+    dispatch
+  );
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withConnect)(CreateServicePage);

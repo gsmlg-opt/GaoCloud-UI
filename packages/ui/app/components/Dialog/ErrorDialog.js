@@ -14,7 +14,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-import warningIcon from 'images/warning.png';
+import warningIcon from '../../images/warning.png';
 
 const ErrorDialog = ({
   open,

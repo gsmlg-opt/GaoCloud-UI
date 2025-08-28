@@ -11,16 +11,16 @@ import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import CardFooter from 'components/Card/CardFooter';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import ReadOnlyTextarea from 'components/CustomTextarea/ReadOnlyTextarea';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import ReadOnlyTextarea from '../../components/CustomTextarea/ReadOnlyTextarea.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
@@ -29,8 +29,8 @@ import {
   makeSelectCurrent,
   makeSelectURL,
   makeSelectCurrentID,
-} from 'ducks/userQuotas/selectors';
-import * as actions from 'ducks/userQuotas/actions';
+} from '../../ducks/userQuotas/selectors.js';
+import * as actions from '../../ducks/userQuotas/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

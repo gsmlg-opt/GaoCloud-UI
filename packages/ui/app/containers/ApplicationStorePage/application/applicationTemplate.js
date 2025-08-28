@@ -1,9 +1,9 @@
 import React, { PureComponent, Fragment } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-import GridItem from 'components/Grid/GridItem';
+import GridItem from '../../../components/Grid/GridItem.js';
 import Button from '@mui/material/Button';
-import RightArrowIcon from 'components/Icons/RightArrow';
+import RightArrowIcon from '../../../components/Icons/RightArrow.js';
 import messages from '../messages';
 import useStyles from '../styles';
 

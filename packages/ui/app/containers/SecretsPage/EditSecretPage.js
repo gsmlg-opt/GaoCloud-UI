@@ -17,24 +17,24 @@ import { withStyles } from '@mui/styles';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import * as actions from 'ducks/secrets/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import * as actions from '../../ducks/secrets/actions.js';
 import {
   makeSelectURL,
   makeSelectCurrent,
   makeSelectCurrentID,
-} from 'ducks/secrets/selectors';
+} from '../../ducks/secrets/selectors.js';
 
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 import messages from './messages';
 import useStyles from './styles';
 import SecretForm from './SecretForm';

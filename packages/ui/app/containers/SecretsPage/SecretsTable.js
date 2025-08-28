@@ -12,16 +12,16 @@ import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/styles';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import * as actions from 'ducks/secrets/actions';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import * as actions from '../../ducks/secrets/actions.js';
 import {
   makeSelectURL,
   makeSelectSecrets,
   makeSelectSecretsList,
-} from 'ducks/secrets/selectors';
+} from '../../ducks/secrets/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

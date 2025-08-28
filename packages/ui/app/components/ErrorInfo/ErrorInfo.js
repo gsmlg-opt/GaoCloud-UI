@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 // nodejs library to set properties for components
 // @mui/material components
-import withStyles from '@mui/styles';
-import GridItem from 'components/Grid/GridItem';
-import WarningIcon from 'components/Icons/ErrorWarning';
+import { withStyles } from '@mui/styles';
+import GridItem from '../Grid/GridItem.js';
+import WarningIcon from '../Icons/ErrorWarning.js';
 import { FormattedMessage } from 'react-intl';
 import IconButton from '@mui/material/IconButton';
-import closeIcon from 'images/close.png';
+import closeIcon from '../../images/close.png';
 import messages from './messages';
 import customErrorStyle from './styles';
 

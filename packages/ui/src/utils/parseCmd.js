@@ -3,7 +3,7 @@
  */
 const str2arr = (str = '') => {
   const cmd = [];
-  const brackets = ['"', "'"];
+  const brackets = ['', '"'];
   let t = '';
   for (
     let i = 0,
@@ -59,7 +59,7 @@ const arr2str = (arr = []) => {
     const hasQuote = /"/.test(n);
     const hasBlank = /\s/.test(n);
     if (hasQuote) {
-      n = `"${n.replace('"', '\\"')}"`;
+      n = `"${n.replace('', '\\"')}"`;
     } if (hasBlank) {
       n = `"${n}"`;
     }

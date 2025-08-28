@@ -18,23 +18,23 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Button from '@mui/material/Button';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import * as actions from 'ducks/horizontalPodAutoscalers/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import * as actions from '../../ducks/horizontalPodAutoscalers/actions.js';
 import {
   makeSelectCurrentID,
   makeSelectCurrent,
   makeSelectURL,
-} from 'ducks/horizontalPodAutoscalers/selectors';
+} from '../../ducks/horizontalPodAutoscalers/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field } from 'redux-form/immutable';
-import CustomTextarea from 'components/CustomTextarea/CustomTextarea';
+import CustomTextarea from '../CustomTextarea/CustomTextarea.js';
 
 const Input = ({ label, input, meta, inputProps, ...custom }) => (
   <CustomTextarea

@@ -1,0 +1,88 @@
+import React from 'react';
+// nodejs library to set properties for components
+// nodejs library that concatenates classes
+import classNames from 'classnames';
+// @mui/material components
+import withStyles from '@mui/styles.js';
+import FormControl from '@mui/material/FormControl.js';
+import InputLabel from '@mui/material/InputLabel.js';
+import Input from '@mui/material/Input.js';
+import FormHelperText from '@mui/material/FormHelperText.js';
+
+import customInputStyle from './styles';
+
+function ReadOnlyInput({ ...props }) {
+  const {
+    classes,
+    formControlProps,
+    id,
+    label,
+    labelText,
+    labelProps,
+    inputProps,
+    white,
+    inputRootCustomClasses,
+    value,
+    fullWidth,
+    title,
+  } = props;
+
+  const touchedError = false;
+  const labelClasses = classNames({});
+  const underlineClasses = classNames({
+    [classes.underline]: true,
+    [classes.whiteUnderline]: white,
+  });
+  const marginTop = classNames({
+    [inputRootCustomClasses]: inputRootCustomClasses !== undefined,
+  });
+  const inputClasses = classNames({
+    [classes.input]: true,
+    [classes.whiteInput]: white,
+  });
+  let formControlClasses;
+  if (formControlProps !== undefined) {
+    formControlClasses = classNames(
+      formControlProps.className,
+      classes.formControl
+    );
+  } else {
+    formControlClasses = classes.formControl;
+  }
+  const text = labelText || label;
+
+  return (
+    <FormControl
+      {...formControlProps}
+      className={formControlClasses}
+      fullWidth={fullWidth}
+    >
+      {text !== undefined ? (
+        <InputLabel
+          className={`${classes.labelRoot} ${labelClasses}`}
+          htmlFor={id}
+          {...labelProps}
+        >
+          {text}
+        </InputLabel>
+      ) : null}
+      <Input
+        classes={{
+          input: inputClasses,
+          root: marginTop,
+          disabled: classes.disabled,
+          underline: underlineClasses,
+        }}
+        id={id}
+        value={`${value == null ? '' : value}`}
+        disabled
+        title={title}
+        {...inputProps}
+      />
+    </FormControl>
+  );
+}
+
+
+
+export default withStyles(customInputStyle)(ReadOnlyInput);

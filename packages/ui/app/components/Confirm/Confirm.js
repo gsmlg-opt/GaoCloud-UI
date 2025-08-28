@@ -7,7 +7,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import warningIcon from 'images/warning.png';
+import warningIcon from '../../images/warning.png';
 import messages from './messages';
 
 const Confirm = (props) => {

@@ -13,14 +13,14 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { MuiThemeProvider } from '@mui/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 import GlobalStyle from 'global-styles.js';
 import theme from 'theme.js';
-import LoginPage from 'containers/LoginPage/Loadable.js';
-import ErrorDialog from 'containers/ErrorDialog/index.js';
+import LoginPage from '../LoginPage/Loadable.js';
+import ErrorDialog from '../ErrorDialog/index.js';
 
-import * as roleActions from 'ducks/role/actions.js';
+import * as roleActions from '../../ducks/role/actions.js';
 
 import Dashboard from './Dashboard.js';
 
@@ -55,16 +55,16 @@ class App extends PureComponent {
     }
 
     return (
-      <MuiThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <Fragment>
-          <Switch>
+          <Routes>
             <Route path="/login" component={LoginPage} exact />
             <Route component={Dashboard} />
-          </Switch>
+          </Routes>
           <ErrorDialog />
           <GlobalStyle />
         </Fragment>
-      </MuiThemeProvider>
+      </ThemeProvider>
     );
   }
 }

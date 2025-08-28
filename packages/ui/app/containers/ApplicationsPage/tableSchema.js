@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 import { Link } from 'react-router-dom';
-import Button from 'components/CustomButtons/Button';
+import Button from '../../components/CustomButtons/Button.js';
 import LinearProgress from '@mui/material/LinearProgress';
-import TrueIcon from 'components/Icons/True';
-import FalseIcon from 'components/Icons/False';
+import TrueIcon from '../../components/Icons/True.js';
+import FalseIcon from '../../components/Icons/False.js';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 

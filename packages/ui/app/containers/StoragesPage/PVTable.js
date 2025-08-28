@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
 import messages from './messages';
 import useStyles from './styles';

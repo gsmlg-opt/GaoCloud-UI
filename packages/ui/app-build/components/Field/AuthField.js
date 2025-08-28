@@ -1,0 +1,125 @@
+import _ from 'lodash';
+import React, { Fragment } from 'react';
+import { Field } from 'redux-form/immutable.js';
+import { Map, List } from 'immutable';
+import { FormattedMessage } from 'react-intl';
+
+import FormControlLabel from '@mui/material/FormControlLabel.js';
+import FormControl from '@mui/material/FormControl.js';
+import InputLabel from '@mui/material/InputLabel.js';
+import FormHelperText from '@mui/material/FormHelperText.js';
+import FormGroup from '@mui/material/FormGroup.js';
+import Checkbox from '@mui/material/Checkbox.js';
+import Button from 'components/CustomButtons/Button.js';
+
+import messages from '../../../app/containers/UsersPage/messages';
+
+const CustomCheckbox = ({
+  label,
+  cluster,
+  namespace,
+  onChange,
+  onBlur,
+  readOnly,
+  value: val,
+  ...rest
+}) => {
+  const value = val || List([]);
+  const iv = Map({ cluster, namespace });
+
+  return (
+    <FormControlLabel
+      control={
+        <Checkbox
+          {...rest}
+          checked={value.includes(iv)}
+          onChange={(evt) => {
+            if (readOnly) {
+              return evt.preventDefault();
+            }
+            const { checked } = evt.target;
+            let newValue = value;
+            const i = newValue.indexOf(iv);
+            if (checked && i < 0) {
+              newValue = newValue.push(iv);
+            }
+            if (!checked && i >= 0) {
+              newValue = newValue.delete(i);
+            }
+
+            onChange(newValue);
+            return null;
+          }}
+        />
+      }
+      label={label}
+    />
+  );
+};
+
+const renderClusters = ({
+  label,
+  input,
+  meta,
+  clusters,
+  namespacesData,
+  ...custom
+}) => (
+  <Fragment>
+    {clusters.toList().map((c, i) => {
+      const name = c.get('name');
+      const ns = namespacesData.get(c.get('id')) || namespacesData.clear();
+      const { value, ...ipt } = input;
+      return (
+        <Fragment key={i}>
+          <FormGroup row>
+            <CustomCheckbox
+              {...ipt}
+              {...custom}
+              label={
+                <FormattedMessage
+                  {...messages.clusterAllNamespaces}
+                  values={{ cluster: name }}
+                />
+              }
+              value={value}
+              cluster={name}
+              namespace="_all_namespaces"
+            />
+          </FormGroup>
+          {ns.size > 0 ? (
+            <FormGroup row>
+              {ns.toList().map((n, ii) => {
+                const nname = n.get('name');
+                return (
+                  <CustomCheckbox
+                    key={ii}
+                    {...ipt}
+                    {...custom}
+                    label={
+                      <FormattedMessage
+                        {...messages.clusterNamespace}
+                        values={{ cluster: name, namespace: nname }}
+                      />
+                    }
+                    value={value}
+                    cluster={name}
+                    namespace={nname}
+                  />
+                );
+              })}
+            </FormGroup>
+          ) : null}
+        </Fragment>
+      );
+    })}
+  </Fragment>
+);
+
+const AuthField = (props) => {
+  const { component, ...rest } = props;
+
+  return <Field {...rest} component={renderClusters} />;
+};
+
+export default AuthField;

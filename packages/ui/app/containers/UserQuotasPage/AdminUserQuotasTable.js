@@ -14,15 +14,15 @@ import { Link } from 'react-router-dom';
 import { withStyles } from '@mui/styles';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import * as actions from 'ducks/userQuotas/actions';
+import * as actions from '../../ducks/userQuotas/actions.js';
 import {
   makeSelectUserQuotas,
   makeSelectUserQuotasList,
-} from 'ducks/userQuotas/selectors';
+} from '../../ducks/userQuotas/selectors.js';
 
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
 
 import messages from './messages';
 import useStyles from './styles';

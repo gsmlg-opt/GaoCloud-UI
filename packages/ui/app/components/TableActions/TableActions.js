@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react';
-import Button from 'components/CustomButtons/Button';
+import Button from '../CustomButtons/Button.js';
 import { FormattedMessage } from 'react-intl';
 import { withStyles } from '@mui/styles';
-import ChevronBottom from 'components/Icons/ChevronBottom';
+import ChevronBottom from '../Icons/ChevronBottom.js';
 import Popper from '@mui/material/Popper';
 import ListItemText from '@mui/material/ListItemText';
 import Menu from '@mui/material/Menu';

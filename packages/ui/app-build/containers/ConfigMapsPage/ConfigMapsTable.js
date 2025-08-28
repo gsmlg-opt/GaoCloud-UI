@@ -1,0 +1,111 @@
+/**
+ *
+ * ConfigMaps Table
+ *
+ */
+
+import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
+import { createStructuredSelector } from 'reselect';
+import { bindActionCreators, compose } from 'redux';
+
+import { withStyles } from '@mui/styles.js';
+import Paper from '@mui/material/Paper.js';
+import { SimpleTable } from 'com';
+import Dialog from '@mui/material/Dialog.js';
+import AceEditor from 'react-ace';
+import 'ace-builds/src-noconflict/mode-yaml';
+import 'ace-builds/src-noconflict/theme-github';
+
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../../app/ducks/clusters/selectors';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../../app/ducks/namespaces/selectors';
+import * as actions from '../../../app/ducks/configMaps/actions';
+import {
+  makeSelectURL,
+  makeSelectConfigMaps,
+  makeSelectConfigMapsList,
+} from '../../../app/ducks/configMaps/selectors';
+
+import messages from './messages';
+import useStyles from './styles';
+import schema from './tableSchema';
+
+/* eslint-disable react/prefer-stateless-function */
+const ConfigMapsTable = ({
+  data,
+  configMaps,
+  clusterID,
+  namespaceID,
+  removeConfigMap,
+}) => {
+  const classes = useStyles();
+  const [openID, setOpenID] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const mergedSchema = schema
+    .map((s) => ({
+      ...s,
+      label: <FormattedMessage {...messages[`tableTitle${s.label}`]} />,
+    }))
+    .map((sch) => {
+      if (sch.id === 'actions') {
+        return {
+          ...sch,
+          props: { removeConfigMap, clusterID, namespaceID },
+        };
+      }
+      if (sch.id === 'name') {
+        return {
+          ...sch,
+          props: { clusterID, namespaceID ,classes },
+        };
+      }
+      return sch;
+    });
+
+  return (
+    <Paper className={classes.tableWrapper}>
+      <Dialog
+        open={openID != null}
+        onClose={() => {
+          setOpenID(null);
+          setOpenIndex(null);
+        }}
+        aria-labelledby="form-dialog-title"
+      >
+        <AceEditor
+          focus
+          mode="yaml"
+          theme="github"
+          value={configMaps.getIn([openID, 'configs', openIndex, 'data'])}
+          readOnly
+        />
+      </Dialog>
+      <SimpleTable
+        className={classes.table}
+        schema={mergedSchema}
+        data={data}
+      />
+    </Paper>
+  );
+};
+
+const mapStateToProps = createStructuredSelector({
+  clusterID: makeSelectCurrentClusterID(),
+  namespaceID: makeSelectCurrentNamespaceID(),
+  configMaps: makeSelectConfigMaps(),
+  data: makeSelectConfigMapsList(),
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(
+    {
+      ...actions,
+    },
+    dispatch
+  );
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withConnect)(ConfigMapsTable);

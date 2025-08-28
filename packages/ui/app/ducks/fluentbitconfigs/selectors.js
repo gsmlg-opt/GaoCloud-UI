@@ -12,9 +12,9 @@ import {
 import {
   makeSelectCurrent as makeSelectCurrentDeployment,
   makeSelectCurrentID as makeSelectCurrentDeploymentID,
-} from 'ducks/deployments/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
+} from '../deployments/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../namespaces/selectors.js';
 
 import * as c from './constants';
 import { initialState } from './index';

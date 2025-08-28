@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import Snack from '@mui/material/Snackbar';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from 'components/Icons/Close';
+import CloseIcon from '../Icons/Close.js';
 
 import useStyles from './styles';
 

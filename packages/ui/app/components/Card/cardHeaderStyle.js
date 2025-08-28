@@ -1,4 +1,4 @@
-import hexToRgb from 'utils/hexToRgb';
+import hexToRgb from '../../../src/utils/hexToRgb.js';
 
 const cardHeaderStyle = (theme) => ({
   cardHeader: {

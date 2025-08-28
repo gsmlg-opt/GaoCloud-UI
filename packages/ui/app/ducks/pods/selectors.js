@@ -4,29 +4,29 @@ import {
   getLocation,
 } from 'connected-react-router/immutable';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectClusterID } from '../clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../namespaces/selectors.js';
 
 import {
   makeSelectCurrentID as makeSelectDeploymentID,
   makeSelectCurrent as makeSelectCurrentDeployment,
-} from 'ducks/deployments/selectors';
+} from '../deployments/selectors.js';
 import {
   makeSelectCurrentID as makeSelectStatefulSetID,
   makeSelectCurrent as makeSelectCurrentStatefulSet,
-} from 'ducks/statefulSets/selectors';
+} from '../statefulSets/selectors.js';
 import {
   makeSelectCurrentID as makeSelectDaemonSetID,
   makeSelectCurrent as makeSelectCurrentDaemonSet,
-} from 'ducks/daemonSets/selectors';
+} from '../daemonSets/selectors.js';
 import {
   makeSelectCurrentID as makeSelectCronJobID,
   makeSelectCurrent as makeSelectCurrentCronJob,
-} from 'ducks/cronJobs/selectors';
+} from '../cronJobs/selectors.js';
 import {
   makeSelectCurrentID as makeSelectJobID,
   makeSelectCurrent as makeSelectCurrentJob,
-} from 'ducks/jobs/selectors';
+} from '../jobs/selectors.js';
 import { prefix } from './constants';
 
 /**

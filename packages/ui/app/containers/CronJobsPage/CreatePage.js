@@ -14,32 +14,32 @@ import {
   SubmissionError,
   submit,
 } from 'redux-form/immutable';
-import parseCmd from 'utils/parseCmd';
+import parseCmd from '../../../src/utils/parseCmd.js';
 
 import { usePush } from 'hooks/router';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectURL } from 'ducks/cronJobs/selectors';
-import * as actions from 'ducks/cronJobs/actions';
-import * as sActions from 'ducks/secrets/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectURL } from '../../ducks/cronJobs/selectors.js';
+import * as actions from '../../ducks/cronJobs/actions.js';
+import * as sActions from '../../ducks/secrets/actions.js';
 import {
   makeSelectSecrets,
   makeSelectURL as makeSelectSecretURL,
-} from 'ducks/secrets/selectors';
-import * as cActions from 'ducks/configMaps/actions';
+} from '../../ducks/secrets/selectors.js';
+import * as cActions from '../../ducks/configMaps/actions.js';
 import {
   makeSelectConfigMaps,
   makeSelectURL as makeSelectConfigMapURL,
-} from 'ducks/configMaps/selectors';
+} from '../../ducks/configMaps/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

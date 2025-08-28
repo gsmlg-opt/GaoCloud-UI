@@ -15,20 +15,20 @@ import {
 } from 'redux-form/immutable';
 import { connect } from 'react-redux';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import ConfirmDialog from 'components/Confirm/ConfirmDialog';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import ConfirmDialog from '../../components/Confirm/ConfirmDialog.js';
 
 import {
   makeSelectURL,
   makeSelectThresholdsList,
-} from 'ducks/thresholds/selectors';
-import * as actions from 'ducks/thresholds/actions';
+} from '../../ducks/thresholds/selectors.js';
+import * as actions from '../../ducks/thresholds/actions.js';
 
 import useStyles from './styles';
 import messages from './messages';

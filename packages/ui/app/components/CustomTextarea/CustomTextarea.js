@@ -3,7 +3,7 @@ import React from 'react';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
 // @mui/material components
-import withStyles from '@mui/styles';
+import { withStyles } from '@mui/styles';
 import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import TextField from '@mui/material/TextField';

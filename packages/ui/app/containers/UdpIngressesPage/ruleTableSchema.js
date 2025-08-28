@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 
 const schema = ['port', 'serviceName', 'servicePort'];
 

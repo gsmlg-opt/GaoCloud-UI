@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field } from 'redux-form/immutable';
-import Checkbox from 'components/CustomCheckbox/CustomCheckbox';
+import Checkbox from '../CustomCheckbox/CustomCheckbox.js';
 
 const CheckboxComponent = ({
   label,

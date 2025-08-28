@@ -1,0 +1,303 @@
+import React, { PureComponent, Fragment, useState,useEffect } from 'react';
+import { fromJS } from 'immutable';
+import { compose } from 'redux';
+import { FormattedMessage } from 'react-intl';
+import {
+  Field,
+  Fields,
+  FieldArray,
+  FormSection,
+  reduxForm,
+} from 'redux-form/immutable.js';
+import getByKey from '../../../src/utils/getByKey';
+
+import Card from 'components/Card/Card.js';
+import CardBody from 'components/Card/CardBody.js';
+import CardHeader from 'components/Card/CardHeader.js';
+import Danger from 'components/Typography/Danger.js';
+import GridItem from 'components/Grid/GridItem.js';
+import GridContainer from 'components/Grid/GridContainer.js';
+import CheckboxField from 'components/Field/CheckboxField.js';
+import InputField from 'components/Field/InputField.js';
+import SelectField from 'components/Field/SelectField.js';
+import SwitchField from 'components/Field/SwitchField.js';
+import RadioField from 'components/Field/RadioField.js';
+import ConfirmDialog from 'components/Confirm/ConfirmDialog.js';
+
+import useStyles from './styles';
+import messages from './messages';
+import Containers from './form/Containers';
+import VolumeClaimTemplate from './form/VolumeClaimTemplate';
+
+export const formName = 'createWorkFlowForm';
+
+const validate = (values) => {
+  const errors = { git:{} ,image:{}};
+  const requiredFields = ['name'];
+  requiredFields.forEach((field) => {
+    if (!values.get(field)) {
+      errors[field] = 'Required';
+    }
+  });
+  const gitFields = ['repositoryUrl','revision'];
+  gitFields.forEach((field) => {
+    if (!values.getIn(['git',field])) {
+      errors.git[field] = 'Required';
+    }
+  });
+  const imageFields = ['name','registryUser','registryPassword'];
+  imageFields.forEach((field) => {
+    if (!values.getIn(['image',field])) {
+      errors.image[field] = 'Required';
+    }
+  });
+  return errors;
+};
+
+const Form = ({
+  formValues,
+  handleSubmit,
+  error,
+  configMaps,
+  secrets,
+  storageClasses,
+  role,
+  pvc,
+}) => {
+  const classes = useStyles();
+  const options =[];
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (error) {
+      setOpen(true);
+    }
+  }, [error]);
+
+  return (
+    <form className={classes.form} onSubmit={handleSubmit}>
+      <GridContainer>
+        {error ? <ConfirmDialog
+          open={open}
+          onClose={() => {
+            setOpen(false)
+          }}
+          content={<p className={classes.saveFaildText}>{getByKey(error, ['response', 'message'])}</p>}
+          hideActions
+          type="save"
+          showCloseIcon
+        />: null}
+        <GridItem xs={12} sm={12} md={12}>
+          <Card>
+            <CardBody>
+              <GridContainer>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formName} />}
+                    name="name"
+                    fullWidth
+                    disabled={role === 'update'}
+                  />
+                </GridItem>
+              </GridContainer>
+            </CardBody>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={12} md={12}>
+          <Card>
+            <CardHeader>
+              <h4>
+                <FormattedMessage {...messages.formBuildConfiguration } />
+              </h4>
+            </CardHeader>
+            <CardBody>
+              <GridContainer>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formGitRepositoryUrl} />}
+                    name="git.repositoryUrl"
+                    fullWidth
+                  />
+                </GridItem>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formGitRevision} />}
+                    name="git.revision"
+                    fullWidth
+                  />
+                </GridItem>
+              </GridContainer>
+              <GridContainer>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formGitUser} />}
+                    name="git.user"
+                    fullWidth
+                  />
+                </GridItem>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formGitPassword} />}
+                    name="git.password"
+                    fullWidth
+                    inputProps={ { type: 'password', autoComplete: 'off' } }
+                  />
+                </GridItem>
+              </GridContainer>
+            </CardBody>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={12} md={12}>
+          <Card>
+            <CardBody>
+              <GridContainer>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formImageName} />}
+                    name="image.name"
+                    fullWidth
+                  />
+                </GridItem>
+              </GridContainer>
+              <GridContainer>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formImageRegistryUser} />}
+                    name="image.registryUser"
+                    fullWidth
+                  />
+                </GridItem>
+                <GridItem xs={3} sm={3} md={3}>
+                  <InputField
+                    label={<FormattedMessage {...messages.formImageRegistryPassword} />}
+                    name="image.registryPassword"
+                    fullWidth
+                    inputProps={ { type: 'password', autoComplete: 'off' } }
+                  />
+                </GridItem>
+              </GridContainer>
+            </CardBody>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={12} md={12}>
+          <Card>
+            <CardBody>
+              <GridContainer>
+                <GridItem xs={2} sm={2} md={2}>
+                  <span className={classes.serviceConfig}>
+                    <FormattedMessage {...messages.formServiceConfiguration} />:
+                  </span>
+                </GridItem>
+                <GridItem xs={3} sm={3} md={3}>
+                  <SwitchField
+                    name="autoDeploy"
+                    disabled={role === 'update'}
+                    label={<FormattedMessage {...messages.formAutoDeploy} />}
+                  />
+                </GridItem>
+              </GridContainer>
+            </CardBody>
+          </Card>
+        </GridItem>
+        
+        {formValues && formValues.get('autoDeploy') ? (
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader>
+                <h4>
+                  <FormattedMessage {...messages.formDeploymentConfiguration } />
+                </h4>
+              </CardHeader>
+              <CardBody>
+                <FormSection name="deploy">
+                  <GridContainer>
+                    <GridItem xs={3} sm={3} md={3}>
+                      <InputField
+                        label={<FormattedMessage {...messages.formReplicas} />}
+                        name="replicas"
+                        fullWidth
+                        disabled={role === 'update'}
+                        normalize={(val) => (val ? Number(val) : val)}
+                        inputProps={ { 
+                          type: 'number',
+                          autoComplete: 'off',
+                          min: 1,
+                          max: 255,
+                        }}
+                      />
+                    </GridItem>
+                    <GridItem xs={3} sm={3} md={3}>
+                      <CheckboxField
+                        name="advancedOptions.injectServiceMesh"
+                        label={
+                          <FormattedMessage {...messages.formInjectServiceMesh} />
+                        }
+                        disabled={role === 'update'}
+                      />
+                    </GridItem>
+                  </GridContainer>
+              
+                  <FieldArray 
+                    name="containers" 
+                    component={Containers} 
+                    classes={classes} 
+                    formValues={formValues}
+                    configMaps={configMaps}
+                    secrets={secrets}
+                    role={role}
+                  />
+            
+                  <GridContainer>
+                    <GridItem xs={3} sm={3} md={3}>
+                      <InputField
+                        label={<FormattedMessage {...messages.formExposedMetricPath} />}
+                        name="advancedOptions.exposedMetric.path"
+                        fullWidth
+                        disabled={role === 'update'}
+                      />
+                    </GridItem>
+                    <GridItem xs={3} sm={3} md={3}>
+                      <InputField
+                        label={<FormattedMessage {...messages.formExposedMetricPort} />}
+                        name="advancedOptions.exposedMetric.port"
+                        fullWidth
+                        normalize={(val) => (val ? Number(val) : val)}
+                        inputProps={{
+                          type: 'number',
+                          autoComplete: 'off',
+                          min: 1,
+                          max: 65535,
+                        }}
+                        disabled={role === 'update'}
+                      />
+                    </GridItem>
+                    <GridItem xs={12} sm={12} md={12}>
+                      <FieldArray 
+                        name="persistentVolumes" 
+                        classes={classes} 
+                        formValues={formValues}
+                        component={VolumeClaimTemplate}
+                        storageClasses={storageClasses}
+                        role={role}
+                        pvc={pvc}
+                      />
+                    </GridItem>
+                  </GridContainer>
+                </FormSection>
+              </CardBody>
+            </Card>
+          </GridItem> 
+        ):null}      
+      </GridContainer>
+    </form>
+  );
+}
+
+const CreateWorkFlowForm = reduxForm({
+  form: formName,
+  validate,
+})(Form);
+
+export default CreateWorkFlowForm;

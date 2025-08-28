@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import hexToRgb from 'utils/hexToRgb.js';
+import hexToRgb from '../src/utils/hexToRgb.js';
 
 const theme = createTheme({
   appBarHeight: 65,
@@ -55,7 +55,7 @@ const theme = createTheme({
       gray: '#999999',
     },
     defaultFont: {
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      fontFamily: 'Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: '300',
       lineHeight: '1.5em',
     },

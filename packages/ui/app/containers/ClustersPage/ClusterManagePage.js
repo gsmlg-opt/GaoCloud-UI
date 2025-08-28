@@ -17,17 +17,17 @@ import { withStyles } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
 import {
   makeSelectCurrent,
   makeSelectCurrentID,
   makeSelectURL,
-} from 'ducks/clusters/selectors';
-import * as actions from 'ducks/clusters/actions';
+} from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/clusters/actions.js';
 
 import { usePush } from 'hooks/router';
 

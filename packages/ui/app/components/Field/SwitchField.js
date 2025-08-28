@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field } from 'redux-form/immutable';
-import IOSSwitch from 'components/CustomSwitch/IOSSwitch';
+import IOSSwitch from '../CustomSwitch/IOSSwitch.js';
 
 const SwitchComponent = ({
   label,

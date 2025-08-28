@@ -19,19 +19,19 @@ import {
 
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
 import Dialog from '@mui/material/Dialog';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from 'components/Icons/Close';
+import CloseIcon from '../../components/Icons/Close.js';
 
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectDeployments } from 'ducks/deployments/selectors';
-import * as actions from 'ducks/deployments/actions';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectDeployments } from '../../ducks/deployments/selectors.js';
+import * as actions from '../../ducks/deployments/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

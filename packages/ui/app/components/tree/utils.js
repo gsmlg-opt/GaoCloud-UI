@@ -1,5 +1,5 @@
 import { pointRadial } from 'd3-shape';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 
 export function findCollapsedParent(node) {
   if (!getByKey(node, ['data', 'isExpanded'])) {

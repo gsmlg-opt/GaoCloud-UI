@@ -9,11 +9,11 @@ import {
   reduxForm,
   FormSection,
 } from 'redux-form/immutable';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 import AceEditor from 'react-ace';
 import classNames from 'classnames';
 
-import withStyles from '@mui/styles';
+import { withStyles } from '@mui/styles';
 import InputAdornment from '@mui/material/InputAdornment';
 import Icon from '@mui/material/Icon';
 import Checkbox from '@mui/material/Checkbox';
@@ -31,21 +31,21 @@ import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
-import CustomInput from 'components/CustomInput/CustomInput';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import SelectField from 'components/Field/SelectField';
-import SwitchField from 'components/Field/SwitchField';
-import RadioField from 'components/Field/RadioField';
-import PlusIcon from 'components/Icons/Plus';
-import MinusIcon from 'components/Icons/Minus';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import CustomInput from '../../components/CustomInput/CustomInput.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import Danger from '../../components/Typography/Danger.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import InputField from '../../components/Field/InputField.js';
+import SelectField from '../../components/Field/SelectField.js';
+import SwitchField from '../../components/Field/SwitchField.js';
+import RadioField from '../../components/Field/RadioField.js';
+import PlusIcon from '../../components/Icons/Plus.js';
+import MinusIcon from '../../components/Icons/Minus.js';
 
 import messages from './messages';
 

@@ -1,12 +1,12 @@
 /* eslint-disable indent */
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 import { Link } from 'react-router-dom';
-import Button from 'components/CustomButtons/Button';
+import Button from '../../components/CustomButtons/Button.js';
 import Chip from '@mui/material/Chip';
-import TimeCell from 'components/Cells/TimeCell';
+import TimeCell from '../../components/Cells/TimeCell.js';
 import { FormattedMessage } from 'react-intl';
-import Confirm from 'components/Confirm/Confirm';
+import Confirm from '../../components/Confirm/Confirm.js';
 import messages from './messages';
 
 const schema = [

@@ -15,7 +15,7 @@ import { SubmissionError, submit } from 'redux-form';
 
 import classNames from 'classnames';
 import { withStyles } from '@mui/styles';
-import Menubar from 'components/Menubar';
+import Menubar from "../../components/Menubar/index.js";
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -30,24 +30,24 @@ import 'ace-builds/src-noconflict/mode-yaml';
 import 'ace-builds/src-noconflict/theme-github';
 import 'ace-builds/src-noconflict/theme-tomorrow_night';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import * as actions from 'ducks/configMaps/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import * as actions from '../../ducks/configMaps/actions.js';
 import {
   makeSelectCurrentID,
   makeSelectCurrent,
   makeSelectURL,
-} from 'ducks/configMaps/selectors';
+} from '../../ducks/configMaps/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

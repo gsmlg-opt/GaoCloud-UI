@@ -1,0 +1,16 @@
+import React from 'react';
+import Helmet from 'react-helmet';
+import { useIntl } from 'react-intl';
+
+const ZcloudHelmet = ({ title, description }) => {
+  const intl = useIntl();
+
+  return (
+    <Helmet>
+      <title>Zcloud</title>
+      <meta name="description" content={intl.formatMessage(description)} />
+    </Helmet>
+  );
+};
+
+export default ZcloudHelmet;

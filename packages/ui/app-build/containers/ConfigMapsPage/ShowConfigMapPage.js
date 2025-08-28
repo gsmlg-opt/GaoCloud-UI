@@ -1,0 +1,215 @@
+/**
+ *
+ * ShowConfigMapPage
+ *
+ */
+
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
+import { createStructuredSelector, createSelector } from 'reselect';
+import { bindActionCreators, compose } from 'redux';
+import { fromJS } from 'immutable';
+import { reduxForm, getFormValues } from 'redux-form/immutable.js';
+import { SubmissionError, submit } from 'redux-form';
+
+import classNames from 'classnames';
+import { withStyles } from '@mui/styles.js';
+import Menubar from "../../components/Menubar/index.js";
+import CssBaseline from '@mui/material/CssBaseline.js';
+import Typography from '@mui/material/Typography.js';
+import TextField from '@mui/material/TextField.js';
+import List from '@mui/material/List.js';
+import ListItem from '@mui/material/ListItem.js';
+import ListItemText from '@mui/material/ListItemText.js';
+import Button from '@mui/material/Button.js';
+import Dialog from '@mui/material/Dialog.js';
+import AttachmentIcon from '@mui/icons-material/Attachment.js';
+import AceEditor from 'react-ace';
+import 'ace-builds/src-noconflict/mode-yaml';
+import 'ace-builds/src-noconflict/theme-github';
+import 'ace-builds/src-noconflict/theme-tomorrow_night';
+
+import GridItem from 'components/Grid/GridItem.js';
+import GridContainer from 'components/Grid/GridContainer.js';
+import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs.js';
+import Card from 'components/Card/Card.js';
+import CardBody from 'components/Card/CardBody.js';
+import CardHeader from 'components/Card/CardHeader.js';
+import CardFooter from 'components/Card/CardFooter.js';
+import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput.js';
+import Helmet from 'components/Helmet/Helmet.js';
+
+import { makeSelectCurrentID as makeSelectClusterID } from '../../../app/ducks/clusters/selectors';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../../app/ducks/namespaces/selectors';
+import * as actions from '../../../app/ducks/configMaps/actions';
+import {
+  makeSelectCurrentID,
+  makeSelectCurrent,
+  makeSelectURL,
+} from '../../../app/ducks/configMaps/selectors';
+
+import messages from './messages';
+import useStyles from './styles';
+
+export const ShowConfigMap = ({
+  clusterID,
+  namespaceID,
+  id,
+  url,
+  configMap,
+  readConfigMap,
+}) => {
+  const classes = useStyles();
+  useEffect(() => {
+    readConfigMap(id, { url: `${url}/${id}`, clusterID, namespaceID });
+  }, [clusterID, id, namespaceID, readConfigMap, url]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [fileIndex, setFileIndex] = useState(null);
+
+  const configs = configMap.get('configs') || [];
+
+  return (
+    <div className={classes.root}>
+      <Helmet title={messages.pageTitle} description={messages.pageDesc} />
+      <CssBaseline />
+      <div className={classes.content}>
+        <Breadcrumbs
+          data={[
+            {
+              path: `/clusters/${clusterID}/namespaces/${namespaceID}/configmaps`,
+              name: <FormattedMessage {...messages.pageTitle} />,
+            },
+            {
+              name: <FormattedMessage {...messages.showConfigMap} />,
+            },
+          ]}
+        />
+        <GridContainer className={classes.grid}>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader>
+                <h4>
+                  <FormattedMessage {...messages.showConfigMap} />
+                </h4>
+              </CardHeader>
+              <CardBody>
+                <GridContainer>
+                  <GridItem xs={3} sm={3} md={3} className={classes.formLine}>
+                    <ReadOnlyInput
+                      labelText={<FormattedMessage {...messages.formName} />}
+                      value={configMap && configMap.get('name')}
+                      formControlProps={{
+                        className: classes.nameControl,
+                      }}
+                      fullWidth
+                    />
+                  </GridItem>
+                  <GridItem xs={12} sm={12} md={12}>
+                    <GridContainer>
+                      {configMap &&
+                        configMap.get('configs') &&
+                        configMap.get('configs').map((cfg, idx) => (
+                          <GridItem
+                            xs={3}
+                            sm={3}
+                            md={3}
+                            key={`${idx}-${cfg.get('name')}`}
+                          >
+                            <ReadOnlyInput
+                              labelText={
+                                <FormattedMessage {...messages.formFileName} />
+                              }
+                              value={cfg.get('name')}
+                              fullWidth
+                              formControlProps={{
+                                className: classes.nameControl,
+                              }}
+                              classes={{
+                                input: classes.fileNameLink,
+                              }}
+                              inputProps={{
+                                disabled: false,
+                                readOnly: true,
+                                onClick: (evt) => {
+                                  setIsOpen(true);
+                                  setFileIndex(idx);
+                                },
+                              }}
+                            />
+                          </GridItem>
+                        ))}
+                    </GridContainer>
+                  </GridItem>
+                </GridContainer>
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+        <Dialog
+          maxWidth="lg"
+          fullWidth
+          open={isOpen}
+          onClose={() => {
+            setIsOpen(false);
+            setFileIndex(null);
+          }}
+          PaperProps={{ style: { overflow: 'hidden' } }}
+        >
+          <Card className={classes.dialogCard}>
+            <CardHeader color="light" className={classes.dialogHeader}>
+              <h4>
+                <FormattedMessage {...messages.formShowFile} />
+              </h4>
+            </CardHeader>
+            <CardBody>
+              <AceEditor
+                focus
+                mode="yaml"
+                theme="tomorrow_night"
+                value={
+                  configMap && configMap.getIn(['configs', fileIndex, 'data'])
+                }
+                height="calc(100vh - 225px)"
+                width="calc(100vw - 200px)"
+                readOnly
+              />
+            </CardBody>
+            <CardFooter>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={() => {
+                  setIsOpen(false);
+                  setFileIndex(null);
+                }}
+              >
+                <FormattedMessage {...messages.formCloseFile} />
+              </Button>
+            </CardFooter>
+          </Card>
+        </Dialog>
+      </div>
+    </div>
+  );
+};
+
+const mapStateToProps = createStructuredSelector({
+  clusterID: makeSelectClusterID(),
+  namespaceID: makeSelectNamespaceID(),
+  id: makeSelectCurrentID(),
+  configMap: makeSelectCurrent(),
+  url: makeSelectURL(),
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(
+    {
+      ...actions,
+    },
+    dispatch
+  );
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withConnect)(ShowConfigMap);

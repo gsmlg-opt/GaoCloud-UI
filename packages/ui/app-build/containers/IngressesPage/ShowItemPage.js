@@ -1,0 +1,154 @@
+/**
+ *
+ * IngressDetailPage
+ *
+ */
+import React, { Fragment, useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { bindActionCreators, compose } from 'redux';
+
+import Helmet from 'components/Helmet/Helmet.js';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
+import Menubar from "../../components/Menubar/index.js";
+import CssBaseline from '@mui/material/CssBaseline.js';
+import Typography from '@mui/material/Typography.js';
+import Fab from '@mui/material/Fab.js';
+import AddIcon from '@mui/icons-material/Add.js';
+import MinimizeIcon from '@mui/icons-material/Minimize.js';
+import GridItem from 'components/Grid/GridItem.js';
+import GridContainer from 'components/Grid/GridContainer.js';
+import Card from 'components/Card/Card.js';
+import CardHeader from 'components/Card/CardHeader.js';
+import CardBody from 'components/Card/CardBody.js';
+import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs.js';
+import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput.js';
+
+import { makeSelectCurrentID as makeSelectClusterID } from '../../../app/ducks/clusters/selectors';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../../app/ducks/namespaces/selectors';
+import {
+  makeSelectCurrentID,
+  makeSelectCurrent,
+  makeSelectURL,
+} from '../../../app/ducks/ingresses/selectors';
+
+import * as actions from '../../../app/ducks/ingresses/actions';
+
+import IngressRuleTable from './IngressRuleTable';
+import messages from './messages';
+import useStyles from './styles';
+
+export const IngressDetailPage = ({
+  clusterID,
+  namespaceID,
+  ingressID,
+  ingress,
+  url,
+  readIngress,
+}) => {
+  const classes = useStyles();
+  useEffect(() => {
+    if (url) {
+      readIngress(ingressID, {
+        clusterID,
+        namespaceID,
+        url: `${url}/${ingressID}`,
+      });
+    }
+    return () => {
+      // try cancel something when unmount
+    };
+  }, [clusterID, ingressID, namespaceID, readIngress, url]);
+
+  return (
+    <div className={classes.root}>
+      <Helmet title={messages.pageTitle} description={messages.pageDesc} />
+      <CssBaseline />
+      <div className={classes.content}>
+        <Breadcrumbs
+          data={[
+            {
+              path: `/clusters/${clusterID}/namespaces/${namespaceID}/ingresses`,
+              name: <FormattedMessage {...messages.pageTitle} />,
+            },
+            {
+              name: <FormattedMessage {...messages.ingressDetail} />,
+            },
+          ]}
+        />
+        <GridContainer className={classes.grid}>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader>
+                <h4>
+                  <FormattedMessage {...messages.ingressDetail} />
+                </h4>
+              </CardHeader>
+              <CardBody>
+                <GridContainer style={{ margin: 0 }}>
+                  <GridItem xs={3} sm={3} md={3}>
+                    <ReadOnlyInput
+                      labelText={<FormattedMessage {...messages.formName} />}
+                      value={ingress.get('name')}
+                      fullWidth
+                    />
+                  </GridItem>
+                  <GridItem xs={3} sm={3} md={3}>
+                    <ReadOnlyInput
+                      labelText={
+                        <FormattedMessage {...messages.formMaxBodySize} />
+                      }
+                      value={ingress.get('maxBodySize')}
+                      fullWidth
+                      inputProps={{
+                        type: 'number',
+                        autoComplete: 'off',
+                        endAdornment: 'M',
+                      }}
+                    />
+                  </GridItem>
+                </GridContainer>
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+
+        <GridContainer className={classes.grid} style={{ paddingTop: 0 }}>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader>
+                <h4>
+                  <FormattedMessage {...messages.configurationDetails} />
+                </h4>
+              </CardHeader>
+              <CardBody>
+                <IngressRuleTable ingress={ingress} />
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+      </div>
+    </div>
+  );
+};
+
+const mapStateToProps = createStructuredSelector({
+  clusterID: makeSelectClusterID(),
+  namespaceID: makeSelectNamespaceID(),
+  ingressID: makeSelectCurrentID(),
+  url: makeSelectURL(),
+  ingress: makeSelectCurrent(),
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(
+    {
+      ...actions,
+    },
+    dispatch
+  );
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withConnect)(IngressDetailPage);

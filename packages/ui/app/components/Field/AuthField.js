@@ -10,9 +10,9 @@ import InputLabel from '@mui/material/InputLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import FormGroup from '@mui/material/FormGroup';
 import Checkbox from '@mui/material/Checkbox';
-import Button from 'components/CustomButtons/Button';
+import Button from '../CustomButtons/Button.js';
 
-import messages from 'containers/UsersPage/messages';
+import messages from '../../containers/UsersPage/messages.js';
 
 const CustomCheckbox = ({
   label,

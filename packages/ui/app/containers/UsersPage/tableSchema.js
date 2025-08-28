@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 import Chip from '@mui/material/Chip';
 import PersonIcon from '@mui/icons-material/Person';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
-import Button from 'components/CustomButtons/Button';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
+import Button from '../../components/CustomButtons/Button.js';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
 

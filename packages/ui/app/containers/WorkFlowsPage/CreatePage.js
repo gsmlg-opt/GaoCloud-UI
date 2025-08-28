@@ -16,40 +16,40 @@ import {
 } from 'redux-form/immutable';
 import { usePush } from 'hooks/router';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import parseCmd from 'utils/parseCmd';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import parseCmd from '../../../src/utils/parseCmd.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 
-import * as sActions from 'ducks/secrets/actions';
+import * as sActions from '../../ducks/secrets/actions.js';
 import {
   makeSelectSecrets,
   makeSelectURL as makeSelectSecretURL,
-} from 'ducks/secrets/selectors';
-import * as cActions from 'ducks/configMaps/actions';
-import * as pActions from 'ducks/persistentVolumeClaims/actions';
+} from '../../ducks/secrets/selectors.js';
+import * as cActions from '../../ducks/configMaps/actions.js';
+import * as pActions from '../../ducks/persistentVolumeClaims/actions.js';
 import {
   makeSelectConfigMaps,
   makeSelectURL as makeSelectConfigMapURL,
-} from 'ducks/configMaps/selectors';
+} from '../../ducks/configMaps/selectors.js';
 import {
   makeSelectStorageClasses,
   makeSelectURL as makeSelectStorageClassesURL,
-} from 'ducks/storageClasses/selectors';
+} from '../../ducks/storageClasses/selectors.js';
 import {
   makeSelectPersistentVolumeClaims,
   makeSelectURL as makeSelectPvcURL,
-} from 'ducks/persistentVolumeClaims/selectors';
-import * as storagesAction from 'ducks/storageClasses/actions';
-import { makeSelectURL } from 'ducks/workFlows/selectors';
-import * as actions from 'ducks/workFlows/actions';
+} from '../../ducks/persistentVolumeClaims/selectors.js';
+import * as storagesAction from '../../ducks/storageClasses/actions.js';
+import { makeSelectURL } from '../../ducks/workFlows/selectors.js';
+import * as actions from '../../ducks/workFlows/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

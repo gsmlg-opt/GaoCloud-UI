@@ -12,16 +12,16 @@ import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectJobsList } from 'ducks/jobs/selectors';
-import * as actions from 'ducks/jobs/actions';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectJobsList } from '../../ducks/jobs/selectors.js';
+import * as actions from '../../ducks/jobs/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

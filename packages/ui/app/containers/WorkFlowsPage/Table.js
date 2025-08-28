@@ -11,18 +11,18 @@ import { bindActionCreators, compose } from 'redux';
 import { Map, List } from 'immutable';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
 import {
   makeSelectLocation,
-} from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+} from '../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectWorkFlowsList,
   makeSelectURL,
-} from 'ducks/workFlows/selectors';
-import * as actions from 'ducks/workFlows/actions';
+} from '../../ducks/workFlows/selectors.js';
+import * as actions from '../../ducks/workFlows/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

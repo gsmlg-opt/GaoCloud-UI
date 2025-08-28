@@ -11,8 +11,8 @@ import {
 } from 'connected-react-router/immutable';
 import {
   makeSelectCurrent as makeSelectCurrentNamespace,
-  makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
+  makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../namespaces/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../clusters/selectors.js';
 
 import * as c from './constants';
 import { initialState } from './index';

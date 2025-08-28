@@ -12,7 +12,7 @@ import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
-import Menubar from 'components/Menubar';
+import Menubar from "../../components/Menubar/index.js";
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
@@ -20,35 +20,35 @@ import Paper from '@mui/material/Paper';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Table from 'components/Table/Table';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Table from '../../components/Table/Table.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import * as sActions from 'ducks/serviceNetworks/actions';
-import * as pActions from 'ducks/podNetworks/actions';
-import * as nActions from 'ducks/nodeNetworks/actions';
+import * as sActions from '../../ducks/serviceNetworks/actions.js';
+import * as pActions from '../../ducks/podNetworks/actions.js';
+import * as nActions from '../../ducks/nodeNetworks/actions.js';
 import {
   makeSelectCurrentID as makeSelectClusterID,
   makeSelectCurrent as makeSelectCurrentCluster,
-} from 'ducks/clusters/selectors';
+} from '../../ducks/clusters/selectors.js';
 import {
   makeSelectServiceNetworksList,
   makeSelectURL as makeSelectServiceNetworksURL,
-} from 'ducks/serviceNetworks/selectors';
+} from '../../ducks/serviceNetworks/selectors.js';
 import {
   makeSelectPodNetworksList,
   makeSelectURL as makeSelectPodNetworksURL,
-} from 'ducks/podNetworks/selectors';
+} from '../../ducks/podNetworks/selectors.js';
 import {
   makeSelectNodeNetworksList,
   makeSelectURL as makeSelectNodeNetworksURL,
-} from 'ducks/nodeNetworks/selectors';
+} from '../../ducks/nodeNetworks/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

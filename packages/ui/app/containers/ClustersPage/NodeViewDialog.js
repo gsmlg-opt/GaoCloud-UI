@@ -9,16 +9,16 @@ import { FormattedMessage } from 'react-intl';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from 'components/Icons/Close';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
+import CloseIcon from '../../components/Icons/Close.js';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
 import Paper from '@mui/material/Paper';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
 
-import * as actions from 'ducks/clusters/actions';
+import * as actions from '../../ducks/clusters/actions.js';
 
 import useStyles from './styles';
 import messages from './messages';

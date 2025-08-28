@@ -17,16 +17,16 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Fab from '@mui/material/Fab';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
 import { usePush } from 'hooks/router';
 
-import { makeSelectURL } from 'ducks/clusters/selectors';
-import * as actions from 'ducks/clusters/actions';
+import { makeSelectURL } from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/clusters/actions.js';
 
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 import messages from './messages';
 import useStyles from './styles';
 import ClusterForm from './CreateForm';

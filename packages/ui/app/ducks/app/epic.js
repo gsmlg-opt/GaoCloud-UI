@@ -4,9 +4,9 @@ import {
   mergeMap,
 } from 'rxjs/operators';
 import { ofType, combineEpics } from 'redux-observable';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 
-import { loadRole } from 'ducks/role/actions';
+import { loadRole } from '../role/actions.js';
 
 import * as c from './constants';
 import * as a from './actions';

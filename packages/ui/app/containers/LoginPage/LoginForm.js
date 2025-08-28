@@ -2,7 +2,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 import { Field, reduxForm } from 'redux-form/immutable';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 import classNames from 'classnames';
 
 import InputAdornment from '@mui/material/InputAdornment';
@@ -16,17 +16,17 @@ import FormHelperText from '@mui/material/FormHelperText';
 
 import People from '@mui/icons-material/People';
 
-import Button from 'components/CustomButtons/Button';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
-import CustomInput from 'components/CustomInput/CustomInput';
-import Danger from 'components/Typography/Danger';
-import UserIcon from 'components/Icons/User';
-import PasswordIcon from 'components/Icons/Password';
+import Button from '../../components/CustomButtons/Button.js';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import CustomInput from '../../components/CustomInput/CustomInput.js';
+import Danger from '../../components/Typography/Danger.js';
+import UserIcon from '../../components/Icons/User.js';
+import PasswordIcon from '../../components/Icons/Password.js';
 
-import loginLogo from 'images/login-logo.jpg';
+import loginLogo from '../../images/login-logo.jpg';
 
 import messages from './messages';
 

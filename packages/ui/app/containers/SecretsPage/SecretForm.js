@@ -3,24 +3,24 @@ import { compose } from 'redux';
 import { fromJS } from 'immutable';
 import { Field, FieldArray, reduxForm } from 'redux-form/immutable';
 import { FormattedMessage } from 'react-intl';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 
 import List from '@mui/material/List';
 import Button from '@mui/material/Button';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
-import MinusIcon from 'components/Icons/Minus';
+import MinusIcon from '../../components/Icons/Minus.js';
 
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import ConfirmDialog from 'components/Confirm/ConfirmDialog';
+import Danger from '../../components/Typography/Danger.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import InputField from '../../components/Field/InputField.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import ConfirmDialog from '../../components/Confirm/ConfirmDialog.js';
 
 import messages from './messages';
 

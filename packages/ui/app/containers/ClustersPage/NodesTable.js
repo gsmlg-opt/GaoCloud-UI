@@ -12,10 +12,10 @@ import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/styles';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import * as actions from 'ducks/clusters/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/clusters/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -5,26 +5,26 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import { FormattedMessage } from 'react-intl';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
 import Button from '@mui/material/Button';
-import ShellIcon from 'components/Icons/Shell';
-import Confirm from 'components/Confirm/Confirm';
+import ShellIcon from '../../components/Icons/Shell.js';
+import Confirm from '../../components/Confirm/Confirm.js';
 
-import checkIcon from 'images/clusters/check.png';
-import failIcon from 'images/clusters/fail.png';
-import loadingIcon from 'images/clusters/loading.png';
-import logIcon from 'images/clusters/log.png';
-import stopIcon from 'images/clusters/stop.png';
-import unableStopIcon from 'images/clusters/unableStop.png';
+import checkIcon from '../../images/clusters/check.png';
+import failIcon from '../../images/clusters/fail.png';
+import loadingIcon from '../../images/clusters/loading.png';
+import logIcon from '../../images/clusters/log.png';
+import stopIcon from '../../images/clusters/stop.png';
+import unableStopIcon from '../../images/clusters/unableStop.png';
 
 import {
   makeSelectURL,
   makeSelectCurrent,
   makeSelectCurrentID,
-} from 'ducks/clusters/selectors';
-import * as actions from 'ducks/clusters/actions';
-import * as appActions from 'ducks/app/actions';
+} from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/clusters/actions.js';
+import * as appActions from '../../ducks/app/actions.js';
 
 import LogViewDialog from './LogViewDialog';
 import messages from './messages';

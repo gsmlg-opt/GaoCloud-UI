@@ -9,9 +9,9 @@ import { createEpicMiddleware } from 'redux-observable';
 import { ajax } from 'rxjs/ajax';
 import { BehaviorSubject, concat, of, throwError } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import getByKey from 'utils/getByKey';
+import getByKey from '../src/utils/getByKey.js';
 
-import { httpError } from 'ducks/app/actions';
+import { httpError } from './ducks/app/actions.js';
 
 import createReducer from './reducers';
 import createEpic from './epics';

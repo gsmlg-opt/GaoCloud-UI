@@ -8,13 +8,13 @@ import ListItem from '@mui/material/ListItem';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import CheckboxesField from 'components/Field/CheckboxesField';
-import PlusIcon from 'components/Icons/Plus';
-import MinusIcon from 'components/Icons/Minus';
+import Danger from '../../../components/Typography/Danger.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import InputField from '../../../components/Field/InputField.js';
+import CheckboxesField from '../../../components/Field/CheckboxesField.js';
+import PlusIcon from '../../../components/Icons/Plus.js';
+import MinusIcon from '../../../components/Icons/Minus.js';
 
 import messages from '../messages';
 

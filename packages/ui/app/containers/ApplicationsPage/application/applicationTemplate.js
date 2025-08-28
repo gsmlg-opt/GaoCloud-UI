@@ -1,10 +1,10 @@
 import React, { PureComponent, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import GridItem from 'components/Grid/GridItem';
+import GridItem from '../../../components/Grid/GridItem.js';
 import IconButton from '@mui/material/IconButton';
-import Button from 'components/CustomButtons/Button';
-import DeleteIcon from 'components/Icons/Delete';
-import Confirm from 'components/Confirm/Confirm';
+import Button from '../../../components/CustomButtons/Button.js';
+import DeleteIcon from '../../../components/Icons/Delete.js';
+import Confirm from '../../../components/Confirm/Confirm.js';
 
 import messages from '../messages';
 import useStyles from '../styles';

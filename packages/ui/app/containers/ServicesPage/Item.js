@@ -8,12 +8,12 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
 
 import messages from './messages';
 import useStyles from './styles';

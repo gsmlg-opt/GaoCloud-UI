@@ -14,43 +14,43 @@ import {
   SubmissionError,
   submit,
 } from 'redux-form/immutable';
-import parseCmd from 'utils/parseCmd';
+import parseCmd from '../../../src/utils/parseCmd.js';
 
 import { usePush } from 'hooks/router';
 
-import list2str from 'utils/list2str';
+import list2str from '../../../src/utils/list2str.js';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectURL,
   makeSelectCurrent,
   makeSelectCurrentID,
-} from 'ducks/statefulSets/selectors';
-import * as sActions from 'ducks/secrets/actions';
+} from '../../ducks/statefulSets/selectors.js';
+import * as sActions from '../../ducks/secrets/actions.js';
 import {
   makeSelectSecrets,
   makeSelectURL as makeSelectSecretURL,
-} from 'ducks/secrets/selectors';
-import * as cActions from 'ducks/configMaps/actions';
+} from '../../ducks/secrets/selectors.js';
+import * as cActions from '../../ducks/configMaps/actions.js';
 import {
   makeSelectConfigMaps,
   makeSelectURL as makeSelectConfigMapURL,
-} from 'ducks/configMaps/selectors';
+} from '../../ducks/configMaps/selectors.js';
 import {
   makeSelectStorageClasses,
   makeSelectURL as makeSelectStorageClassesURL,
-} from 'ducks/storageClasses/selectors';
-import * as storagesAction from 'ducks/storageClasses/actions';
-import * as actions from 'ducks/statefulSets/actions';
+} from '../../ducks/storageClasses/selectors.js';
+import * as storagesAction from '../../ducks/storageClasses/actions.js';
+import * as actions from '../../ducks/statefulSets/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

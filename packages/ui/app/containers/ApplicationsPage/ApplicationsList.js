@@ -10,15 +10,15 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import GridContainer from 'components/Grid/GridContainer';
+import GridContainer from '../../components/Grid/GridContainer.js';
 
-import * as actions from 'ducks/applications/actions';
+import * as actions from '../../ducks/applications/actions.js';
 import {
   makeSelectApplications,
   makeSelectApplicationsList,
-} from 'ducks/applications/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
+} from '../../ducks/applications/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { withStyles } from '@mui/styles';
-import logo from 'images/favicon.png';
+import logo from '../../images/favicon.png';
 
 import styles from './styles';
 

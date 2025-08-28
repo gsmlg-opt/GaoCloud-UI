@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 import { FormattedMessage } from 'react-intl';
-import TimeCell from 'components/Cells/TimeCell';
+import TimeCell from '../../components/Cells/TimeCell.js';
 import { Link } from 'react-router-dom';
-import Button from 'components/CustomButtons/Button';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
-import Info from 'components/Typography/Info';
-import Danger from 'components/Typography/Danger';
+import Button from '../../components/CustomButtons/Button.js';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
+import Info from '../../components/Typography/Info.js';
+import Danger from '../../components/Typography/Danger.js';
 
 import messages from './messages';
 

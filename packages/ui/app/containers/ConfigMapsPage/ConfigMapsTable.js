@@ -12,20 +12,20 @@ import { bindActionCreators, compose } from 'redux';
 
 import { withStyles } from '@mui/styles';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 import Dialog from '@mui/material/Dialog';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/mode-yaml';
 import 'ace-builds/src-noconflict/theme-github';
 
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import * as actions from 'ducks/configMaps/actions';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import * as actions from '../../ducks/configMaps/actions.js';
 import {
   makeSelectURL,
   makeSelectConfigMaps,
   makeSelectConfigMapsList,
-} from 'ducks/configMaps/selectors';
+} from '../../ducks/configMaps/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

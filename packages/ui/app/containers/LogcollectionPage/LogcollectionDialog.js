@@ -16,25 +16,25 @@ import {
 } from 'redux-form/immutable';
 
 import { FormattedMessage } from 'react-intl';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
 import Dialog from '@mui/material/Dialog';
-import CButton from 'components/CustomButtons/Button';
+import CButton from '../../components/CustomButtons/Button.js';
 import Button from '@mui/material/Button';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from 'components/Icons/Close';
+import CloseIcon from '../../components/Icons/Close.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectURL,
   makeSelectCurrent,
-} from 'ducks/fluentbitconfigs/selectors';
-import * as actions from 'ducks/fluentbitconfigs/actions';
+} from '../../ducks/fluentbitconfigs/selectors.js';
+import * as actions from '../../ducks/fluentbitconfigs/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

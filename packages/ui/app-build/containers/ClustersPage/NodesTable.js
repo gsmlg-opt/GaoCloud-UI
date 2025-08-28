@@ -1,0 +1,67 @@
+/**
+ *
+ * NodesPage
+ *
+ */
+
+import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
+import { createStructuredSelector } from 'reselect';
+import { bindActionCreators, compose } from 'redux';
+
+import { withStyles } from '@mui/styles.js';
+import Paper from '@mui/material/Paper.js';
+import { SimpleTable } from 'com';
+
+import { makeSelectCurrentID as makeSelectClusterID } from '../../../app/ducks/clusters/selectors';
+import * as actions from '../../../app/ducks/clusters/actions';
+
+import messages from './messages';
+import useStyles from './styles';
+import schema from './nodeTableSchema';
+
+/* eslint-disable react/prefer-stateless-function */
+export const NodesTable = ({ data, clusterID, setNodes, nodes }) => {
+  const classes = useStyles();
+  const mapedSchema = schema
+    .map((sche) => ({
+      ...sche,
+      label: <FormattedMessage {...messages[`tableTitle${sche.label}`]} />,
+    }))
+    .map((sch) => {
+      if (sch.id === 'actions') {
+        return {
+          ...sch,
+          props: { nodes, setNodes },
+        };
+      }
+      return sch;
+    });
+
+  return (
+    <Paper className={classes.tableWrapper}>
+      <SimpleTable
+        className={classes.table}
+        schema={mapedSchema}
+        data={nodes}
+      />
+    </Paper>
+  );
+};
+
+const mapStateToProps = createStructuredSelector({
+  clusterID: makeSelectClusterID(),
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(
+    {
+      ...actions,
+    },
+    dispatch
+  );
+
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
+
+export default compose(withConnect)(NodesTable);

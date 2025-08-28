@@ -6,15 +6,15 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import SelectField from 'components/Field/SelectField';
-import PlusIcon from 'components/Icons/Plus';
-import MinusIcon from 'components/Icons/Minus';
-import RadioField from 'components/Field/RadioField';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
+import Danger from '../../../components/Typography/Danger.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import InputField from '../../../components/Field/InputField.js';
+import SelectField from '../../../components/Field/SelectField.js';
+import PlusIcon from '../../../components/Icons/Plus.js';
+import MinusIcon from '../../../components/Icons/Minus.js';
+import RadioField from '../../../components/Field/RadioField.js';
+import ReadOnlyInput from '../../../components/CustomInput/ReadOnlyInput.js';
 
 import useStyles from '../styles';
 import messages from '../messages';

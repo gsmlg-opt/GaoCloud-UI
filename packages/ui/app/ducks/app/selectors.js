@@ -5,20 +5,20 @@ import {
   getLocation,
 } from 'connected-react-router/immutable';
 
-import OverviewIcon from 'components/Icons/Overview';
-import ManagementIcon from 'components/Icons/Management';
-import AppConfigurationIcon from 'components/Icons/AppConfiguration';
-import SystemIcon from 'components/Icons/System';
-import BasicResourcesIcon from 'components/Icons/BasicResources';
-import ContinuousIntegrationIcon from 'components/Icons/ContinuousIntegration';
-import UserQuotasIcon from 'components/Icons/UserQuotas';
-import SystenToolsIcon from 'components/Icons/SystenTools';
-import ApplicationStoreIcon from 'components/Icons/ApplicationStore';
-import ServiceAndRoutingIcon from 'components/Icons/ServiceAndRouting';
-import ServiceGovernanceIcon from 'components/Icons/ServiceGovernance';
-import { makeSelectRole, makeSelectIsAdmin } from 'ducks/role/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
+import OverviewIcon from '../../components/Icons/Overview.js';
+import ManagementIcon from '../../components/Icons/Management.js';
+import AppConfigurationIcon from '../../components/Icons/AppConfiguration.js';
+import SystemIcon from '../../components/Icons/System.js';
+import BasicResourcesIcon from '../../components/Icons/BasicResources.js';
+import ContinuousIntegrationIcon from '../../components/Icons/ContinuousIntegration.js';
+import UserQuotasIcon from '../../components/Icons/UserQuotas.js';
+import SystenToolsIcon from '../../components/Icons/SystenTools.js';
+import ApplicationStoreIcon from '../../components/Icons/ApplicationStore.js';
+import ServiceAndRoutingIcon from '../../components/Icons/ServiceAndRouting.js';
+import ServiceGovernanceIcon from '../../components/Icons/ServiceGovernance.js';
+import { makeSelectRole, makeSelectIsAdmin } from '../role/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../namespaces/selectors.js';
 
 import { prefix } from './constants';
 

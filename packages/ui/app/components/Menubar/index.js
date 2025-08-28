@@ -13,16 +13,16 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import CloudIcon from '@mui/icons-material/Cloud';
-import logo from 'images/page-logo.png';
+import logo from '../../images/page-logo.png';
 
-import logoICon from 'images/logo.svg';
-import ZcloudICon from 'images/Zcloud.svg';
-import ZcloudWhiteICon from 'images/ZcloudWhite.svg';
+import logoICon from '../../images/logo.svg';
+import ZcloudICon from '../../images/Zcloud.svg';
+import ZcloudWhiteICon from '../../images/ZcloudWhite.svg';
 
 
-import MenuIcon from 'components/Icons/Menu';
-import MenuRotateIcon from 'components/Icons/MenuRotate';
-import Brand from 'components/Brand/Brand';
+import MenuIcon from '../Icons/Menu.js';
+import MenuRotateIcon from '../Icons/MenuRotate.js';
+import Brand from '../Brand/Brand.js';
 
 import styles from './styles';
 

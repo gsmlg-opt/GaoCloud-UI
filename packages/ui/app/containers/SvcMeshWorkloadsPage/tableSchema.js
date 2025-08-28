@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 import { Link } from 'react-router-dom';
-import Button from 'components/CustomButtons/Button';
+import Button from '../../components/CustomButtons/Button.js';
 import {
   getMeshed,
   getSuccessRate,

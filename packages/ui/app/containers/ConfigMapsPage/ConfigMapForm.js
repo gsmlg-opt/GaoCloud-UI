@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { fromJS } from 'immutable';
 import { Field, FieldArray, reduxForm } from 'redux-form/immutable';
 import { FormattedMessage } from 'react-intl';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 import AceEditor from 'react-ace';
 import 'ace-builds/src-noconflict/theme-tomorrow_night';
 
@@ -14,18 +14,18 @@ import Dialog from '@mui/material/Dialog';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
-import CustomInput from 'components/CustomInput/CustomInput';
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import MinusIcon from 'components/Icons/Minus';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import ConfirmDialog from 'components/Confirm/ConfirmDialog';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import CustomInput from '../../components/CustomInput/CustomInput.js';
+import Danger from '../../components/Typography/Danger.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import InputField from '../../components/Field/InputField.js';
+import MinusIcon from '../../components/Icons/Minus.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import ConfirmDialog from '../../components/Confirm/ConfirmDialog.js';
 
 import messages from './messages';
 

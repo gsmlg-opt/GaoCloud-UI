@@ -11,17 +11,17 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../../src/com/index.js';
 import { usePush } from 'hooks/router';
 import { fromJS } from 'immutable';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
+import { makeSelectLocation } from '../../../ducks/app/selectors.js';
 import {
   makeSelectCurrent,
   makeSelectCurrentID as makeSelectCurrentNamespaceID,
-} from 'ducks/namespaces/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import * as actions from 'ducks/namespaces/actions';
+} from '../../../ducks/namespaces/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../../ducks/clusters/selectors.js';
+import * as actions from '../../../ducks/namespaces/actions.js';
 
 import messages from '../messages';
 import useStyles from '../styles';

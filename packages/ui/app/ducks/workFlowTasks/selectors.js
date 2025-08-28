@@ -11,9 +11,9 @@ import {
 } from 'connected-react-router/immutable';
 import {
   makeSelectCurrent as makeSelectCurrentWorkFlow,
-  makeSelectCurrentID as makeSelectCurrentWorkFlowID } from 'ducks/workFlows/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
+  makeSelectCurrentID as makeSelectCurrentWorkFlowID } from '../workFlows/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../namespaces/selectors.js';
 
 import * as c from './constants';
 import { initialState } from './index';

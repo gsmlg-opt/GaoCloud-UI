@@ -10,34 +10,34 @@ import { connect } from 'react-redux';
 
 import { fromJS } from 'immutable';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Link } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import TrueIcon from 'components/Icons/True';
-import FalseIcon from 'components/Icons/False';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import TrueIcon from '../../components/Icons/True.js';
+import FalseIcon from '../../components/Icons/False.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 import { makeSelectCurrentID,
   makeSelectCurrent,
   makeSelectURL as makeSelectWorkFlowsURL,
-} from 'ducks/workFlows/selectors';
+} from '../../ducks/workFlows/selectors.js';
 import {
   makeSelectURL,
   makeSelectWorkFlowTasks,
-} from 'ducks/workFlowTasks/selectors';
-import * as actions from 'ducks/workFlowTasks/actions';
-import * as wActions from 'ducks/workFlows/actions';
+} from '../../ducks/workFlowTasks/selectors.js';
+import * as actions from '../../ducks/workFlowTasks/actions.js';
+import * as wActions from '../../ducks/workFlows/actions.js';
 
 import { useLogs } from 'hooks/logs';
 import useStyles from './styles';

@@ -3,12 +3,12 @@ import { fromJS, is } from 'immutable';
 import { compose } from 'redux';
 import { FormattedMessage } from 'react-intl';
 
-import LogView from 'components/Log/LogView';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
+import LogView from '../../../components/Log/LogView.js';
+import Card from '../../../components/Card/Card.js';
+import CardBody from '../../../components/Card/CardBody.js';
+import CardHeader from '../../../components/Card/CardHeader.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
 
 import { useLogs } from 'hooks/logs';
 
@@ -17,7 +17,7 @@ import Tab from '@mui/material/Tab';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
 
-import Confirm from 'components/Confirm/Confirm';
+import Confirm from '../../../components/Confirm/Confirm.js';
 
 import { returnActiveIcon, returnActiveColor } from '../utils/utils';
 

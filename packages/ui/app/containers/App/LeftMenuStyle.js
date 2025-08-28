@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import hexToRgb from 'utils/hexToRgb';
+import hexToRgb from '../../../src/utils/hexToRgb.js';
 
 export const styles = (theme) => ({
   root: {
@@ -92,7 +92,7 @@ export const styles = (theme) => ({
       display: 'block',
       left: 0,
       top: 0,
-      content: '" "',
+      content: ' "',
       backgroundColor: theme.palette.leftMemu.highlight,
     },
   },

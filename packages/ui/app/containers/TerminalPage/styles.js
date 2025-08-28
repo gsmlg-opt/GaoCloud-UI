@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import dialogStyles from 'jss/dialog';
+import dialogStyles from '../../jss/dialog.js';
 
 export const styles = (theme) => ({
   ...dialogStyles(theme),

@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import SwitchField from 'components/Field/SwitchField';
-import RadioField from 'components/Field/RadioField';
-import CheckboxesField from 'components/Field/CheckboxesField';
-import SelectField from 'components/Field/SelectField';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import InputField from '../../../components/Field/InputField.js';
+import SwitchField from '../../../components/Field/SwitchField.js';
+import RadioField from '../../../components/Field/RadioField.js';
+import CheckboxesField from '../../../components/Field/CheckboxesField.js';
+import SelectField from '../../../components/Field/SelectField.js';
 
 import useStyles from '../styles';
 

@@ -12,35 +12,35 @@ import { fromJS } from 'immutable';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
 import { SubmissionError, submit } from 'redux-form';
 
-import Helmet from 'components/Helmet/Helmet';
-import Menubar from 'components/Menubar';
+import Helmet from '../../components/Helmet/Helmet.js';
+import Menubar from "../../components/Menubar/index.js";
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
-import AddIcon from 'components/Icons/Add';
+import AddIcon from '../../components/Icons/Add.js';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import CardFooter from 'components/Card/CardFooter';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import * as actions from 'ducks/storages/actions';
-import { makeSelectURL } from 'ducks/storages/selectors';
-import * as bdActions from 'ducks/blockDevices/actions';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/storages/actions.js';
+import { makeSelectURL } from '../../ducks/storages/selectors.js';
+import * as bdActions from '../../ducks/blockDevices/actions.js';
 import {
   makeSelectURL as makeSelectBlockDevicesURL,
   makeSelectBlockDevicesList,
-} from 'ducks/blockDevices/selectors';
-import * as nodesActions from 'ducks/nodes/actions';
+} from '../../ducks/blockDevices/selectors.js';
+import * as nodesActions from '../../ducks/nodes/actions.js';
 import {
   makeSelectURL as makeSelectNodesURL,
   makeSelectNodesList,
-} from 'ducks/nodes/selectors';
+} from '../../ducks/nodes/selectors.js';
 
 import { usePush, useLocation } from 'hooks/router';
 

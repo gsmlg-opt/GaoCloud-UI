@@ -12,21 +12,21 @@ import { bindActionCreators, compose } from 'redux';
 import { Link } from 'react-router-dom';
 import { SubmissionError, submit } from 'redux-form';
 import { reduxForm, getFormValues } from 'redux-form/immutable';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 import Button from '@mui/material/Button';
 
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectURL } from 'ducks/applications/selectors';
-import * as actions from 'ducks/applications/actions';
-import ErrorInfo from 'components/ErrorInfo/ErrorInfo';
-import Helmet from 'components/Helmet/Helmet';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectURL } from '../../ducks/applications/selectors.js';
+import * as actions from '../../ducks/applications/actions.js';
+import ErrorInfo from '../../components/ErrorInfo/ErrorInfo.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -9,15 +9,15 @@ import { FormattedMessage, injectIntl } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
 
-import * as cActions from 'ducks/configMaps/actions';
-import * as actions from 'ducks/deployments/actions';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectConfigMaps } from 'ducks/configMaps/selectors';
+import * as cActions from '../../ducks/configMaps/actions.js';
+import * as actions from '../../ducks/deployments/actions.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectConfigMaps } from '../../ducks/configMaps/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

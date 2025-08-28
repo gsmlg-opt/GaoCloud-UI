@@ -13,11 +13,11 @@ import { bindActionCreators, compose } from 'redux';
 import { withStyles } from '@mui/styles';
 import Paper from '@mui/material/Paper';
 
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import { makeSelectNodes, makeSelectNodesList } from 'ducks/nodes/selectors';
-import { makeSelectLocation } from 'ducks/app/selectors';
-import * as actions from 'ducks/nodes/actions';
+import { makeSelectNodes, makeSelectNodesList } from '../../ducks/nodes/selectors.js';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import * as actions from '../../ducks/nodes/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

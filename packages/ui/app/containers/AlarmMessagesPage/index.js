@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 
 import history from '../../utils/history.js';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Link } from 'react-router-dom';
@@ -18,16 +18,16 @@ import Typography from '@mui/material/Typography';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
 
-import BackIcon from 'components/Icons/Back';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import BackIcon from '../../components/Icons/Back.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 
-import { makeSelectURL } from 'ducks/alarms/selectors';
-import * as actions from 'ducks/alarms/actions';
+import { makeSelectURL } from '../../ducks/alarms/selectors.js';
+import * as actions from '../../ducks/alarms/actions.js';
 
 import useStyles from './styles';
 import messages from './messages';

@@ -1,10 +1,10 @@
 import React, { PureComponent, Fragment, useState } from 'react';
 
-import TrueIcon from 'components/Icons/True';
-import FalseIcon from 'components/Icons/False';
+import TrueIcon from '../../../components/Icons/True.js';
+import FalseIcon from '../../../components/Icons/False.js';
 import CloseIcon from '@mui/icons-material/Close';
-import HookIcon from 'components/Icons/Hook';
-import HourglassIcon from 'components/Icons/Hourglass';
+import HookIcon from '../../../components/Icons/Hook.js';
+import HourglassIcon from '../../../components/Icons/Hourglass.js';
 import LoaddingIcon from '../images/loadding.gif';
 import RunningIcon from '../images/running.gif';
 import RunningHlIcon from '../images/runningHl.gif';

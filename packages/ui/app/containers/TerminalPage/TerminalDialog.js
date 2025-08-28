@@ -11,15 +11,15 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 
 import Paper from '@mui/material/Paper';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
 import Dialog from '@mui/material/Dialog';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from 'components/Icons/Close';
+import CloseIcon from '../../components/Icons/Close.js';
 
-import { makeSelectTermUrl } from 'ducks/app/selectors';
-import * as actions from 'ducks/app/actions';
+import { makeSelectTermUrl } from '../../ducks/app/selectors.js';
+import * as actions from '../../ducks/app/actions.js';
 
 import { useTerm } from 'hooks/term';
 

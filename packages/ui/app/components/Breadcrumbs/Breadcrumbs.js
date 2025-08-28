@@ -1,11 +1,11 @@
 import React from 'react';
-import withStyles from '@mui/styles';
+import { withStyles } from '@mui/styles';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import { Link } from 'react-router-dom';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import homeIcon from 'images/clusters/home.png';
+import homeIcon from '../../images/clusters/home.png';
 
 const style = {
   breadcrumbs: {

@@ -17,25 +17,25 @@ import {
 
 import { usePush } from 'hooks/router';
 
-import Helmet from 'components/Helmet/Helmet';
+import Helmet from '../../components/Helmet/Helmet.js';
 import { FormattedMessage } from 'react-intl';
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
 import {
   makeSelectServices,
   makeSelectURL as makeSelectServicesURL,
-} from 'ducks/services/selectors';
+} from '../../ducks/services/selectors.js';
 
-import { makeSelectURL } from 'ducks/ingresses/selectors';
-import * as actions from 'ducks/ingresses/actions';
-import * as sActions from 'ducks/services/actions';
+import { makeSelectURL } from '../../ducks/ingresses/selectors.js';
+import * as actions from '../../ducks/ingresses/actions.js';
+import * as sActions from '../../ducks/services/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

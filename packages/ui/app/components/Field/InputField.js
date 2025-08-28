@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field } from 'redux-form/immutable';
-import CustomInput from 'components/CustomInput/CustomInput';
+import CustomInput from '../CustomInput/CustomInput.js';
 
 const Input = ({ label, input, meta, inputProps, ...custom }) => (
   <CustomInput

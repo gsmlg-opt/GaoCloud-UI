@@ -1,14 +1,14 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
-import TimeCell from 'components/Cells/TimeCell';
-import Button from 'components/CustomButtons/Button';
+import { ucfirst } from '../../../src/utils/index.js';
+import TimeCell from '../../components/Cells/TimeCell.js';
+import Button from '../../components/CustomButtons/Button.js';
 import { FormattedMessage } from 'react-intl';
-import Confirm from 'components/Confirm/Confirm';
-import IconButton from 'components/CustomIconButtons/IconButton';
-import RestartIcon from 'components/Icons/Restart';
+import Confirm from '../../components/Confirm/Confirm.js';
+import IconButton from '../../components/CustomIconButtons/IconButton.js';
+import RestartIcon from '../../components/Icons/Restart.js';
 // import IconButton from '@mui/material/IconButton';
-import ShellIcon from 'components/Icons/Shell';
-import LogIcon from 'components/Icons/Log';
+import ShellIcon from '../../components/Icons/Shell.js';
+import LogIcon from '../../components/Icons/Log.js';
 import Chip from '@mui/material/Chip';
 import messages from './messages';
 

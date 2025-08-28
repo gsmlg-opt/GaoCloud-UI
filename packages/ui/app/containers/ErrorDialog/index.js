@@ -9,26 +9,26 @@ import { connect } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../src/utils/getByKey.js';
 
 import { Link } from 'react-router-dom';
-import Menubar from 'components/Menubar';
+import Menubar from '../../components/Menubar/index.js';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Card from 'components/Card/Card';
-import CardHeader from 'components/Card/CardHeader';
-import CardBody from 'components/Card/CardBody';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Card from '../../components/Card/Card.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardBody from '../../components/Card/CardBody.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 import IconButton from '@mui/material/IconButton';
-import AddIcon from 'components/Icons/Add';
-import Helmet from 'components/Helmet/Helmet';
-import DangerText from 'components/Typography/Danger';
-import ErrorDialog from 'components/Dialog/ErrorDialog';
+import AddIcon from '../../components/Icons/Add.js';
+import Helmet from '../../components/Helmet/Helmet.js';
+import DangerText from '../../components/Typography/Danger.js';
+import ErrorDialog from '../../components/Dialog/ErrorDialog.js';
 
-import { makeSelectHttpError } from 'ducks/app/selectors';
-import * as actions from 'ducks/app/actions';
+import { makeSelectHttpError } from '../../ducks/app/selectors.js';
+import * as actions from '../../ducks/app/actions.js';
 
 import messages from './messages';
 

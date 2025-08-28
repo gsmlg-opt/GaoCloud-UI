@@ -9,14 +9,14 @@ import {
   FormSection,
   reduxForm,
 } from 'redux-form/immutable';
-import getByKey from 'utils/getByKey';
+import getByKey from '../../../../src/utils/getByKey.js';
 
-import Danger from 'components/Typography/Danger';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import InputField from 'components/Field/InputField';
-import SelectField from 'components/Field/SelectField';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
+import Danger from '../../../components/Typography/Danger.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
+import InputField from '../../../components/Field/InputField.js';
+import SelectField from '../../../components/Field/SelectField.js';
+import ReadOnlyInput from '../../../components/CustomInput/ReadOnlyInput.js';
 
 import useStyles from '../LeftMenuStyle';
 import messages from '../messages';

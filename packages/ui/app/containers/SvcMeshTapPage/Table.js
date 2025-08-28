@@ -13,20 +13,20 @@ import throttleRender from 'com/throttleRender';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 
-import { makeSelectLocation } from 'ducks/app/selectors';
-import { makeSelectCurrentID as makeSelectClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectNamespaceID } from 'ducks/namespaces/selectors';
-import { makeSelectSvcMeshTapsList } from 'ducks/svcMeshTap/selectors';
-import * as actions from 'ducks/svcMeshTap/actions';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
+import { makeSelectCurrentID as makeSelectClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectNamespaceID } from '../../ducks/namespaces/selectors.js';
+import { makeSelectSvcMeshTapsList } from '../../ducks/svcMeshTap/selectors.js';
+import * as actions from '../../ducks/svcMeshTap/actions.js';
 
 import messages from './messages';
 import useStyles from './styles';

@@ -1,0 +1,121 @@
+/**
+ * Duck: Alarms
+ * epic: alarms
+ *
+ */
+import { push } from 'connected-react-router';
+import { Observable, interval, of, timer, concat } from 'rxjs';
+import {
+  mergeMap,
+  map,
+  mapTo,
+  debounce,
+  debounceTime,
+  reduce,
+  scan,
+  takeUntil,
+  throttleTime,
+  throttle,
+  catchError,
+} from 'rxjs/operators.js';
+import { webSocket } from 'rxjs/webSocket.js';
+import { ofType, combineEpics } from 'redux-observable';
+
+import * as c from './constants';
+import * as a from './actions';
+
+export const loadAlarmsEpic = (action$, state$, { ajax, catchAjaxError }) =>
+  action$.pipe(
+    ofType(c.LOAD_ALARMS),
+    mergeMap(({ payload, meta }) =>
+      ajax(payload).pipe(
+        map((resp) => {
+          meta.resolve && meta.resolve(resp);
+          return a.loadAlarmsSuccess(resp, meta);
+        }),
+        catchAjaxError((error) => {
+          meta.reject && meta.reject(error);
+          return a.loadAlarmsFailure(error, meta);
+        })
+      )
+    )
+  );
+
+export const updateAlarmEpic = (action$, state$, { ajax, catchAjaxError }) =>
+  action$.pipe(
+    ofType(c.UPDATE_ALARM),
+    mergeMap(({ payload, meta }) =>
+      ajax({
+        url: `${meta.url}`,
+        method: 'PUT',
+        body: payload,
+      }).pipe(
+        map((resp) => {
+          meta.resolve && meta.resolve(resp);
+          return a.updateAlarmSuccess(resp, meta);
+        }),
+        catchAjaxError((error) => {
+          meta.reject && meta.reject(error);
+          return a.updateAlarmFailure(error, meta);
+        })
+      )
+    )
+  );
+
+export const removeAlarmEpic = (action$, state$, { ajax, catchAjaxError }) =>
+  action$.pipe(
+    ofType(c.REMOVE_ALARM),
+    mergeMap(({ payload, meta }) =>
+      ajax({
+        url: `${meta.url}`,
+        method: 'DELETE',
+      }).pipe(
+        map((resp) => {
+          meta.resolve && meta.resolve(resp);
+          return a.removeAlarmSuccess(resp, { ...meta, id: payload });
+        }),
+        catchAjaxError((error) => {
+          meta.reject && meta.reject(error);
+          return a.removeAlarmFailure(error, { ...meta, id: payload });
+        })
+      )
+    )
+  );
+
+export const openAlarmChannelEpic = (action$, state$) =>
+  action$.pipe(
+    ofType(c.OPEN_ALARM_CHANNEL),
+    mergeMap(() => {
+      const { protocol, hostname, port } = window.location;
+      const subject = webSocket(
+        `${
+          protocol === 'https:' ? 'wss:' : 'ws:'
+        }//${hostname}:${port}/apis/ws.gaocloud.cn/v1/alarm`
+      );
+
+      return subject
+        .pipe(
+          takeUntil(action$.pipe(ofType(c.CLOSE_ALARM_CHANNEL))),
+          catchError((error) => of(a.alarmConnectionError(error)))
+        )
+        .pipe(
+          map(({ type, payload }) => {
+            switch (type) {
+              case 'UnackNumber':
+                return a.setUntrackNumber(payload);
+              case 'UnackAlarm':
+                return a.newAlarm(payload);
+              default:
+                return a.unknownEvent(payload);
+            }
+          })
+        );
+    })
+  );
+
+export default combineEpics(
+  loadAlarmsEpic,
+  updateAlarmEpic,
+  removeAlarmEpic,
+  openAlarmChannelEpic
+);

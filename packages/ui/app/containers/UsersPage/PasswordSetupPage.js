@@ -17,23 +17,23 @@ import encHex from 'crypto-js/enc-hex';
 
 import CssBaseline from '@mui/material/CssBaseline';
 import Button from '@mui/material/Button';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
-import Helmet from 'components/Helmet/Helmet';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import * as actions from 'ducks/users/actions';
+import * as actions from '../../ducks/users/actions.js';
 import {
   makeSelectCurrent,
   makeSelectCurrentID,
   makeSelectURL,
-} from 'ducks/users/selectors';
-import { makeSelectRole, makeSelectIsAdmin } from 'ducks/role/selectors';
-import { makeSelectLocation } from 'ducks/app/selectors';
+} from '../../ducks/users/selectors.js';
+import { makeSelectRole, makeSelectIsAdmin } from '../../ducks/role/selectors.js';
+import { makeSelectLocation } from '../../ducks/app/selectors.js';
 
 import { usePush } from 'hooks/router';
 

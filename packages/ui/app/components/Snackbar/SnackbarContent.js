@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Snack from '@mui/material/SnackbarContent';
 import IconButton from '@mui/material/IconButton';
 // @mui/icons-material
-import CloseIcon from 'components/Icons/Close';
+import CloseIcon from '../Icons/Close.js';
 // core components
 import useStyles from './styles';
 

@@ -8,14 +8,14 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Button from '@mui/material/Button';
 
 
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
+import Card from '../../../components/Card/Card.js';
+import CardBody from '../../../components/Card/CardBody.js';
+import CardHeader from '../../../components/Card/CardHeader.js';
+import GridItem from '../../../components/Grid/GridItem.js';
+import GridContainer from '../../../components/Grid/GridContainer.js';
 
-import BlankIcon from 'components/Icons/Blank';
-import StatusArrowIcon from 'components/Icons/StatusArrow';
+import BlankIcon from '../../../components/Icons/Blank.js';
+import StatusArrowIcon from '../../../components/Icons/StatusArrow.js';
 
 import { returnActiveStyle, returnStatusIcon } from '../utils/utils';
 import messages from '../messages';

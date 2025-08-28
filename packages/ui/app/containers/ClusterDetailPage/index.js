@@ -11,21 +11,21 @@ import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
 import { push } from 'connected-react-router';
 
-import Breadcrumbs from 'components/Breadcrumbs/Breadcrumbs';
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs.js';
 import CssBaseline from '@mui/material/CssBaseline';
-import GridItem from 'components/Grid/GridItem';
-import GridContainer from 'components/Grid/GridContainer';
-import Helmet from 'components/Helmet/Helmet';
+import GridItem from '../../components/Grid/GridItem.js';
+import GridContainer from '../../components/Grid/GridContainer.js';
+import Helmet from '../../components/Helmet/Helmet.js';
 
-import { makeSelectLastNamespace } from 'ducks/app/selectors';
-import * as appActions from 'ducks/app/actions';
+import { makeSelectLastNamespace } from '../../ducks/app/selectors.js';
+import * as appActions from '../../ducks/app/actions.js';
 import {
   makeSelectCurrent,
   makeSelectCurrentID,
   makeSelectURL,
-} from 'ducks/clusters/selectors';
-import * as actions from 'ducks/clusters/actions';
-import { makeSelectNamespaces } from 'ducks/namespaces/selectors';
+} from '../../ducks/clusters/selectors.js';
+import * as actions from '../../ducks/clusters/actions.js';
+import { makeSelectNamespaces } from '../../ducks/namespaces/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

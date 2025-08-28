@@ -13,12 +13,12 @@ import { bindActionCreators, compose } from 'redux';
 import { Map, List } from 'immutable';
 
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 
-import * as actions from 'ducks/applications/actions';
-import { makeSelectCurrent } from 'ducks/applications/selectors';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
+import * as actions from '../../ducks/applications/actions.js';
+import { makeSelectCurrent } from '../../ducks/applications/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../../ducks/clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../../ducks/namespaces/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

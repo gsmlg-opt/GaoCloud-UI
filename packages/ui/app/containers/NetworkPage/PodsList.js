@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { bindActionCreators, compose } from 'redux';
-import long2ip from 'utils/long2ip';
-import ip2long from 'utils/ip2long';
+import long2ip from '../../../src/utils/long2ip.js';
+import ip2long from '../../../src/utils/ip2long.js';
 import _ from 'lodash';
 
 import { Link } from 'react-router-dom';
@@ -21,9 +21,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import ReadOnlyInput from 'components/CustomInput/ReadOnlyInput';
-import DownIcon from 'components/Icons/Down';
-import HostIcon from 'components/Icons/Host';
+import ReadOnlyInput from '../../components/CustomInput/ReadOnlyInput.js';
+import DownIcon from '../../components/Icons/Down.js';
+import HostIcon from '../../components/Icons/Host.js';
 
 import messages from './messages';
 import useStyles from './styles';

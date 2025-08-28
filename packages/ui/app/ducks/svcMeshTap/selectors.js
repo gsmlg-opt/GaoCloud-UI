@@ -5,8 +5,8 @@
  */
 import { fromJS } from 'immutable';
 import { createSelector } from 'reselect';
-import { makeSelectCurrentID as makeSelectCurrentClusterID } from 'ducks/clusters/selectors';
-import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from 'ducks/namespaces/selectors';
+import { makeSelectCurrentID as makeSelectCurrentClusterID } from '../clusters/selectors.js';
+import { makeSelectCurrentID as makeSelectCurrentNamespaceID } from '../namespaces/selectors.js';
 import * as c from './constants';
 import { initialState } from './index';
 

@@ -11,19 +11,19 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
-import CloseIcon from 'components/Icons/Close';
-import Card from 'components/Card/Card';
-import CardBody from 'components/Card/CardBody';
-import CardHeader from 'components/Card/CardHeader';
-import CardFooter from 'components/Card/CardFooter';
+import CloseIcon from '../../components/Icons/Close.js';
+import Card from '../../components/Card/Card.js';
+import CardBody from '../../components/Card/CardBody.js';
+import CardHeader from '../../components/Card/CardHeader.js';
+import CardFooter from '../../components/Card/CardFooter.js';
 import Paper from '@mui/material/Paper';
-import LogView from 'components/Log/LogView';
+import LogView from '../../components/Log/LogView.js';
 
 import {
   makeSelectPodLogIsOpening,
   makeSelectLogURL,
-} from 'ducks/pods/selectors';
-import * as actions from 'ducks/pods/actions';
+} from '../../ducks/pods/selectors.js';
+import * as actions from '../../ducks/pods/actions.js';
 
 import { useLogs } from 'hooks/logs';
 

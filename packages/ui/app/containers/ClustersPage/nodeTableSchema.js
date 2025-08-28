@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
+import { ucfirst } from '../../../src/utils/index.js';
 import Chip from '@mui/material/Chip';
-import TimeCell from 'components/Cells/TimeCell';
+import TimeCell from '../../components/Cells/TimeCell.js';
 import { fromJS } from 'immutable';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
 
 const schema = ['name', 'address', 'roles'];
 

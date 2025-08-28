@@ -12,16 +12,16 @@ import { bindActionCreators, compose } from 'redux';
 
 import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
-import { SimpleTable } from 'com';
+import { SimpleTable } from '../../../src/com/index.js';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import ShellIcon from 'components/Icons/Shell';
-import SuccessIcon from 'components/Icons/Success';
-import FailureIcon from 'components/Icons/Failure';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
+import ShellIcon from '../../components/Icons/Shell.js';
+import SuccessIcon from '../../components/Icons/Success.js';
+import FailureIcon from '../../components/Icons/Failure.js';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
 
-import * as actions from 'ducks/clusters/actions';
-import { makeSelectClustersList } from 'ducks/clusters/selectors';
+import * as actions from '../../ducks/clusters/actions.js';
+import { makeSelectClustersList } from '../../ducks/clusters/selectors.js';
 
 import messages from './messages';
 import useStyles from './styles';

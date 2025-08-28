@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-import { ucfirst } from 'utils';
-import TimeCell from 'components/Cells/TimeCell';
+import { ucfirst } from '../../../src/utils/index.js';
+import TimeCell from '../../components/Cells/TimeCell.js';
 import { Link } from 'react-router-dom';
-import Button from 'components/CustomButtons/Button';
-import ConfirmDelete from 'components/ConfirmDelete/ConfirmDelete';
+import Button from '../../components/CustomButtons/Button.js';
+import ConfirmDelete from '../../components/ConfirmDelete/ConfirmDelete.js';
 
 const schema = ['name', 'schedule', 'creationTimestamp'];
 

@@ -10,110 +10,110 @@ import history from './utils/history.js';
 import languageProviderReducer from './containers/LanguageProvider/reducer.js';
 
 // import reducers start
-import appReducer from 'ducks/app';
-import roleReducer, { prefix as rolePrefix } from 'ducks/role';
-import usersReducer, { prefix as usersPrefix } from 'ducks/users';
-import secretsReducer, { prefix as secretsPrefix } from 'ducks/secrets';
-import cronJobsReducer, { prefix as cronJobsPrefix } from 'ducks/cronJobs';
-import jobsReducer, { prefix as jobsPrefix } from 'ducks/jobs';
-import podsReducer, { prefix as podsPrefix } from 'ducks/pods';
+import appReducer from 'ducks/app/index.js';
+import roleReducer, { prefix as rolePrefix } from 'ducks/role/index.js';
+import usersReducer, { prefix as usersPrefix } from 'ducks/users/index.js';
+import secretsReducer, { prefix as secretsPrefix } from 'ducks/secrets/index.js';
+import cronJobsReducer, { prefix as cronJobsPrefix } from 'ducks/cronJobs/index.js';
+import jobsReducer, { prefix as jobsPrefix } from 'ducks/jobs/index.js';
+import podsReducer, { prefix as podsPrefix } from 'ducks/pods/index.js';
 import podNetworksReducer, {
   prefix as podNetworksPrefix,
-} from 'ducks/podNetworks';
+} from 'ducks/podNetworks/index.js';
 import serviceNetworksReducer, {
   prefix as serviceNetworksPrefix,
-} from 'ducks/serviceNetworks';
+} from 'ducks/serviceNetworks/index.js';
 import nodeNetworksReducer, {
   prefix as nodeNetworksPrefix,
-} from 'ducks/nodeNetworks';
+} from 'ducks/nodeNetworks/index.js';
 import namespacesReducer, {
   prefix as namespacesPrefix,
-} from 'ducks/namespaces';
+} from 'ducks/namespaces/index.js';
 import resourceQuotasReducer, {
   prefix as resourceQuotasPrefix,
-} from 'ducks/resourceQuotas';
-import nodesReducer, { prefix as nodesPrefix } from 'ducks/nodes';
-import clustersReducer, { prefix as clustersPrefix } from 'ducks/clusters';
-import eventsReducer, { prefix as eventsPrefix } from 'ducks/events';
+} from 'ducks/resourceQuotas/index.js';
+import nodesReducer, { prefix as nodesPrefix } from 'ducks/nodes/index.js';
+import clustersReducer, { prefix as clustersPrefix } from 'ducks/clusters/index.js';
+import eventsReducer, { prefix as eventsPrefix } from 'ducks/events/index.js';
 import userQuotasReducer, {
   prefix as userQuotasPrefix,
-} from 'ducks/userQuotas';
-import servicesReducer, { prefix as servicesPrefix } from 'ducks/services';
+} from 'ducks/userQuotas/index.js';
+import servicesReducer, { prefix as servicesPrefix } from 'ducks/services/index.js';
 import deploymentsReducer, {
   prefix as deploymentsPrefix,
-} from 'ducks/deployments';
+} from 'ducks/deployments/index.js';
 import horizontalPodAutoscalersReducer, {
   prefix as horizontalPodAutoscalersPrefix,
-} from 'ducks/horizontalPodAutoscalers';
-import metricsReducer, { prefix as metricsPrefix } from 'ducks/metrics';
+} from 'ducks/horizontalPodAutoscalers/index.js';
+import metricsReducer, { prefix as metricsPrefix } from 'ducks/metrics/index.js';
 import statefulSetsReducer, {
   prefix as statefulSetsPrefix,
-} from 'ducks/statefulSets';
+} from 'ducks/statefulSets/index.js';
 import daemonSetsReducer, {
   prefix as daemonSetsPrefix,
-} from 'ducks/daemonSets';
-import ingressesReducer, { prefix as ingressesPrefix } from 'ducks/ingresses';
+} from 'ducks/daemonSets/index.js';
+import ingressesReducer, { prefix as ingressesPrefix } from 'ducks/ingresses/index.js';
 import udpIngressesReducer, {
   prefix as udpIngressesPrefix,
-} from 'ducks/udpIngresses';
+} from 'ducks/udpIngresses/index.js';
 import applicationsReducer, {
   prefix as applicationsPrefix,
-} from 'ducks/applications';
+} from 'ducks/applications/index.js';
 import registriesReducer, {
   prefix as registriesPrefix,
-} from 'ducks/registries';
-import monitorsReducer, { prefix as monitorsPrefix } from 'ducks/monitors';
-import efksReducer, { prefix as efksPrefix } from 'ducks/efks';
-import chartsReducer, { prefix as chartsPrefix } from 'ducks/charts';
+} from 'ducks/registries/index.js';
+import monitorsReducer, { prefix as monitorsPrefix } from 'ducks/monitors/index.js';
+import efksReducer, { prefix as efksPrefix } from 'ducks/efks/index.js';
+import chartsReducer, { prefix as chartsPrefix } from 'ducks/charts/index.js';
 import configMapsReducer, {
   prefix as configMapsPrefix,
-} from 'ducks/configMaps';
+} from 'ducks/configMaps/index.js';
 import storagesReducer, {
   prefix as storagesPrefix,
-} from 'ducks/storages';
+} from 'ducks/storages/index.js';
 import storageClassesReducer, {
   prefix as storageClassesPrefix,
-} from 'ducks/storageClasses';
+} from 'ducks/storageClasses/index.js';
 import blockDevicesReducer, {
   prefix as blockDevicesPrefix,
-} from 'ducks/blockDevices';
+} from 'ducks/blockDevices/index.js';
 import innerServicesReducer, {
   prefix as innerServicesPrefix,
-} from 'ducks/innerServices';
+} from 'ducks/innerServices/index.js';
 import outerServicesReducer, {
   prefix as outerServicesPrefix,
-} from 'ducks/outerServices';
+} from 'ducks/outerServices/index.js';
 import fluentbitconfigsReducer, {
   prefix as fluentbitconfigsPrefix,
-} from 'ducks/fluentbitconfigs';
+} from 'ducks/fluentbitconfigs/index.js';
 import svcMeshWorkloadsReducer, {
   prefix as svcMeshWorkloadsPrefix,
-} from 'ducks/svcMeshWorkloads';
+} from 'ducks/svcMeshWorkloads/index.js';
 import svcMeshPodsReducer, {
   prefix as svcMeshPodsPrefix,
-} from 'ducks/svcMeshPods';
+} from 'ducks/svcMeshPods/index.js';
 import svcMeshTapReducer, {
   prefix as svcMeshTapPrefix,
-} from 'ducks/svcMeshTap';
-import alarmsReducer, { prefix as alarmsPrefix } from 'ducks/alarms';
+} from 'ducks/svcMeshTap/index.js';
+import alarmsReducer, { prefix as alarmsPrefix } from 'ducks/alarms/index.js';
 import thresholdsReducer, {
   prefix as thresholdsPrefix,
-} from 'ducks/thresholds';
+} from 'ducks/thresholds/index.js';
 import persistentVolumeClaimsReducer, {
   prefix as persistentVolumeClaimsPrefix,
-} from 'ducks/persistentVolumeClaims';
+} from 'ducks/persistentVolumeClaims/index.js';
 import persistentVolumesReducer, {
   prefix as persistentVolumesPrefix,
-} from 'ducks/persistentVolumes';
+} from 'ducks/persistentVolumes/index.js';
 import auditLogsReducer, {
   prefix as auditLogsPrefix,
-} from 'ducks/auditLogs';
+} from 'ducks/auditLogs/index.js';
 import workFlowTasksReducer, {
   prefix as workFlowTasksPrefix,
-} from 'ducks/workFlowTasks';
+} from 'ducks/workFlowTasks/index.js';
 import workFlowsReducer, {
   prefix as workFlowsPrefix,
-} from 'ducks/workFlows';
+} from 'ducks/workFlows/index.js';
 
 // import reducers end
 
